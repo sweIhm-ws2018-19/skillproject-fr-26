@@ -1,4 +1,5 @@
 
-public class Geschäftskunde extends Kunde{
-
+public class Geschäftskunde extends Kunde {
+	private String firmware;
+	private Addresse domizilAdresse;
 }
