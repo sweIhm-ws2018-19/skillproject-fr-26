@@ -1,5 +1,5 @@
 
 public class Geschäftskunde extends Kunde {
-	private String firmware;
+	private String firmenname;
 	private Addresse domizilAdresse;
 }

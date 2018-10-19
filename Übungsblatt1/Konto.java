@@ -7,7 +7,7 @@ public class Konto {
 
 	}
 
-	public void einzahlen (GeldBetrag eingezahlterBetrag) {
+	public void einzahlen (GeldBetrag betrag) {
 		
 	}
 }
