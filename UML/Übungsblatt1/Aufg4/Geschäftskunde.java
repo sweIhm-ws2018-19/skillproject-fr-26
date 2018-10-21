@@ -1,5 +1,9 @@
 
-public class Gesch�ftskunde extends Kunde {
+public class Geschäftskunde extends Kunde {
 	private String firmenname;
-	private Addresse domizilAdresse;
+	private Adresse domizilAdresse;
+
+	public Geschäftskunde(Konto[] konto) {
+		super(konto);
+	}
 }
