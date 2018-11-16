@@ -4,6 +4,8 @@ import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
 
+import main.java.MUCtivities.attribute.Constants;
+
 import java.util.Optional;
 
 import static com.amazon.ask.request.Predicates.intentName;
@@ -13,19 +15,16 @@ import static com.amazon.ask.request.Predicates.intentName;
 //              safely deployed for any locale.
 public class FallbackIntentHandler implements RequestHandler {
 
-    @Override
-    public boolean canHandle(HandlerInput input) {
-        return input.matches(intentName("AMAZON.FallbackIntent"));
-    }
+	@Override
+	public boolean canHandle(HandlerInput input) {
+		return input.matches(intentName("AMAZON.FallbackIntent"));
+	}
 
-    @Override
-    public Optional<Response> handle(HandlerInput input) {
-        String speechText = "Tut mir leid, das weiss ich nicht. Sage einfach Hilfe.";
-        return input.getResponseBuilder()
-                .withSpeech(speechText)
-                .withSimpleCard("HelloWorld", speechText)
-                .withReprompt(speechText)
-                .build();
-    }
+	@Override
+	public Optional<Response> handle(HandlerInput input) {
+		//String speechText = "Tut mir leid, das weiss ich nicht. Sage einfach Hilfe.";
+		return input.getResponseBuilder().withSpeech(Constants.FallbackIntent).withSimpleCard(Constants.MUCtivities_Name, Constants.FallbackIntent)
+				.withReprompt(Constants.FallbackIntent).build();
+	}
 
 }

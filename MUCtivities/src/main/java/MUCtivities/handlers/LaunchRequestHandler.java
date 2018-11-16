@@ -18,6 +18,8 @@ import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.LaunchRequest;
 import com.amazon.ask.model.Response;
 
+import main.java.MUCtivities.attribute.Constants;
+
 import java.util.Optional;
 
 import static com.amazon.ask.request.Predicates.requestType;
@@ -30,11 +32,11 @@ public class LaunchRequestHandler implements RequestHandler {
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        String speechText = "Wilkommen zu dem Alexa Skill Kit, du kannst hallo sagen.";
+     //   String speechText = "Wilkommen zu dem Alexa Skill Kit, du kannst hallo sagen.";
         return input.getResponseBuilder()
-                .withSpeech(speechText)
-                .withSimpleCard("HelloWorld", speechText)
-                .withReprompt(speechText)
+                .withSpeech(Constants.LaunchRequest)
+                .withSimpleCard(Constants.MUCtivities_Name, Constants.LaunchRequest)
+                .withReprompt(Constants.WELCOME_REPROMT)
                 .build();
     }
 }
