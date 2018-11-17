@@ -1,31 +1,122 @@
 {
-	"languageModel": {
-		"intents": [
-			{
-				"name": "AMAZON.CancelIntent",
-				"samples": []
-			},
-			{
-				"name": "AMAZON.HelpIntent",
-				"samples": []
-			},
-			{
-				"name": "AMAZON.StopIntent",
-				"samples": []
-			},
-			{
-				"name": "MUCtivitiesIntent",
-				"samples": [
-					"Mir ist langweilig.",
-					"Was kann ich heute unternehmen"
-				],
-				"slots": []
-			},
-			{
-				"name": "AMAZON.FallbackIntent",
-				"samples": []
-			}
-		],
-		"invocationName": "muctivities"
-	}
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "muctivities",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "MUCtivitiesIntent",
+                    "slots": [],
+                    "samples": [
+                        "Was kann ich heute unternehmen",
+                        "Mir ist langweilig."
+                    ]
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "slots": [],
+                    "samples": []
+                },
+                {
+                    "name": "IndoorOutdoorIntent",
+                    "slots": [
+                        {
+                            "name": "lokalitaet",
+                            "type": "localiaet_list"
+                        }
+                    ],
+                    "samples": [
+                        "{lokalitaet}"
+                    ]
+                },
+                {
+                    "name": "DauerIntent",
+                    "slots": [
+                        {
+                            "name": "dauer",
+                            "type": "dauer_list"
+                        }
+                    ],
+                    "samples": [
+                        "{dauer}"
+                    ]
+                },
+                {
+                    "name": "KategorieIntent",
+                    "slots": [
+                        {
+                            "name": "kategorie",
+                            "type": "kategorie_list"
+                        }
+                    ],
+                    "samples": [
+                        "{kategorie}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "localiaet_list",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "drinnen"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "drauﬂen"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "dauer_list",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "paar Stunden"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ganzen Tag"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "kategorie_list",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Spaﬂ"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sport"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Kultur"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
 }
