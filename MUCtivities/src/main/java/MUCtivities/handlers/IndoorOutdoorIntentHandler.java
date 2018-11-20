@@ -56,8 +56,8 @@ public class IndoorOutdoorIntentHandler implements RequestHandler {
 	        } else {
 	            // Render an error since we don't know what the users favorite color is.
 	          //  speechText = "Ich kenne Deine Lieblingsfarbe nicht. Bitte versuche es noch einmal.";
-	            speechText="Drauﬂen oder Drinnen? Bitte versuche es noch einmal.";
-	        	repromptText="Drauﬂen oder Drinnen? Bitte versuche es noch einmal.";
+	            speechText="Drau√üen oder Drinnen? Bitte versuche es noch einmal.";
+	        	repromptText="Drau√üen oder Drinnen? Bitte versuche es noch einmal.";
 	              //      "Ich weiss nicht welches Deine Lieblingsfarbe ist. Sag mir Deine Lieblingsfarbe. Sage zum Beispiel: ich mag blau.";
 	            isAskResponse = true;
 	        }
