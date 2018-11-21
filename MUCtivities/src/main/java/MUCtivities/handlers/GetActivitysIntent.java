@@ -15,6 +15,7 @@ import com.amazon.ask.model.slu.entityresolution.Resolutions;
 import main.java.MUCtivities.attribute.Constants;
 import main.java.MUCtivities.eigeneKlassen.Wetterdienst;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -29,30 +30,40 @@ public class GetActivitysIntent implements RequestHandler {
 
 	@Override
 	public Optional<Response> handle(HandlerInput input) {
-	    	    
-        return input.getResponseBuilder()
-                .withShouldEndSession(false)
-                .addDelegateDirective(null)
-                .build();
 
-//        Request request = input.getRequestEnvelope().getRequest();
-//        IntentRequest intentRequest = (IntentRequest) request;
-//        Intent intent = intentRequest.getIntent();
-//        
-//        if (intentRequest.getDialogState() == DialogState.STARTED) {
-//            return input.getResponseBuilder()
-//                    .withShouldEndSession(false)
-//                    .addDelegateDirective(null)
-//                    .build();
-//        }
-//        
-//        Map<String, Slot> slots = intent.getSlots();
+        Request request = input.getRequestEnvelope().getRequest();
+        IntentRequest intentRequest = (IntentRequest) request;
+        Intent intent = intentRequest.getIntent();
+        
+        Map<String, Slot> slots = intent.getSlots();
+        String location = slots.get("location").getValue();
+        String duration = slots.get("duration").getValue();
+        String category = slots.get("category").getValue();
+//        List authority = slots.get("location").getResolutions().getResolutionsPerAuthority();
+//        authority.length != 0 ?  
+        
+        Boolean durationBool = slots.get("duration").toString().contains("true") ? true : false;
+        
+        
+        if (
+                location != null && !location.isEmpty()
+                && duration != null && !duration.isEmpty()
+                && category != null && !category.isEmpty() 
+        ) {
+            String output = location + ". "  + durationBool.toString() + ". " + category + ".";
+            return input.getResponseBuilder()
+                    .withSpeech(output)
+                    .build();
+        }
+	    
+
+        // CHECK BUGFIX
+//        return input.getResponseBuilder()
+//                .withShouldEndSession(false)
+//                .addDelegateDirective(null)
+//                .build();
 //
-//        Slot locationSlot = slots.get("location");
-//        String location = slots.get("location").getValue();
-//        String duration = slots.get("duration").getValue();
-//        String category = slots.get("category").getValue();
-//
+
 //               
 //        if (locationSlot.getResolutions().toString().contains("ER_SUCCESS_NO_MATCH") ) {
 //            return input.getResponseBuilder()
