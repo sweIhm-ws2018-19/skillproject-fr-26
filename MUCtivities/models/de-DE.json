@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "muctivities",
+            "invocationName": "dave",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
@@ -16,92 +16,87 @@
                     "samples": []
                 },
                 {
-                    "name": "MUCtivitiesIntent",
-                    "slots": [],
-                    "samples": [
-                        "Was kann ich heute unternehmen",
-                        "Mir ist langweilig."
-                    ]
-                },
-                {
                     "name": "AMAZON.FallbackIntent",
-                    "slots": [],
                     "samples": []
                 },
                 {
-                    "name": "IndoorOutdoorIntent",
+                    "name": "GetActivitysIntent",
                     "slots": [
                         {
-                            "name": "lokalitaet",
-                            "type": "localiaet_list"
+                            "name": "location",
+                            "type": "location_list",
+                            "samples": [
+                                "{location}"
+                            ]
+                        },
+                        {
+                            "name": "duration",
+                            "type": "duration_list",
+                            "samples": [
+                                "{duration}"
+                            ]
+                        },
+                        {
+                            "name": "category",
+                            "type": "category_list"
                         }
                     ],
                     "samples": [
-                        "{lokalitaet}"
-                    ]
-                },
-                {
-                    "name": "DauerIntent",
-                    "slots": [
-                        {
-                            "name": "dauer",
-                            "type": "dauer_list"
-                        }
-                    ],
-                    "samples": [
-                        "{dauer}"
-                    ]
-                },
-                {
-                    "name": "KategorieIntent",
-                    "slots": [
-                        {
-                            "name": "kategorie",
-                            "type": "kategorie_list"
-                        }
-                    ],
-                    "samples": [
-                        "{kategorie}"
+                        "Was kann ich unternehmen",
+                        "Mir ist langweilig",
+                        "Was kann ich machen"
                     ]
                 }
             ],
             "types": [
                 {
-                    "name": "localiaet_list",
+                    "name": "location_list",
                     "values": [
                         {
                             "name": {
-                                "value": "drinnen"
+                                "value": "false",
+                                "synonyms": [
+                                    "drinnen"
+                                ]
                             }
                         },
                         {
                             "name": {
-                                "value": "drau�en"
+                                "value": "true",
+                                "synonyms": [
+                                    "draußen"
+                                ]
                             }
                         }
                     ]
                 },
                 {
-                    "name": "dauer_list",
+                    "name": "duration_list",
                     "values": [
                         {
                             "name": {
-                                "value": "paar Stunden"
+                                "value": "false",
+                                "synonyms": [
+                                    "paar Stunden"
+                                ]
                             }
                         },
                         {
                             "name": {
-                                "value": "ganzen Tag"
+                                "value": "true",
+                                "synonyms": [
+                                    "ganzen Tag"
+                                ]
                             }
                         }
                     ]
                 },
                 {
-                    "name": "kategorie_list",
+                    "name": "category_list",
                     "values": [
                         {
                             "name": {
-                                "value": "Spa�"
+                                "value": "Spaß"
                             }
                         },
                         {
@@ -117,6 +112,118 @@
                     ]
                 }
             ]
-        }
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "GetActivitysIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "location",
+                            "type": "location_list",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.781288801424.836474543101"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.584619114038.1490838143449.699014969349"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "duration",
+                            "type": "duration_list",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.781288801424.740061457985"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.584619114038.1401011793169.687616039061"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "category",
+                            "type": "category_list",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.781288801424.520268035724"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.584619114038.414825183627.518529920292"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.781288801424.836474543101",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Möchtest du drinnen oder draußen was unternehmen?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.781288801424.520268035724",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Alles klar. Ich habe schon viele Ideen für dich. Worauf hast du denn Lust. Du kannst auswählen zwischen. Kultur. Sport. Und Spaß."
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.781288801424.740061457985",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Möchtest du nur ein paar Stunden unterwegs sein oder hast du den ganzen Tag Zeit"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.584619114038.1490838143449.699014969349",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Drinnen oder Draußen?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.584619114038.1401011793169.687616039061",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "ganzen Tag oder ein paar Stunden?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.584619114038.414825183627.518529920292",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Spaß, Sport und Kultur"
+                    }
+                ]
+            }
+        ]
     }
 }

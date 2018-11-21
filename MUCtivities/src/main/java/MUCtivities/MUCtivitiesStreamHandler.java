@@ -18,14 +18,13 @@ import com.amazon.ask.SkillStreamHandler;
 import com.amazon.ask.Skills;
 
 import main.java.MUCtivities.handlers.CancelandStopIntentHandler;
-import main.java.MUCtivities.handlers.DauerIntentHandler;
+
 import main.java.MUCtivities.handlers.FallbackIntentHandler;
 import main.java.MUCtivities.handlers.GetActivitysIntent;
 import main.java.MUCtivities.handlers.HelpIntentHandler;
-import main.java.MUCtivities.handlers.IndoorOutdoorIntentHandler;
-import main.java.MUCtivities.handlers.KategorieIntentHandler;
+
 import main.java.MUCtivities.handlers.LaunchRequestHandler;
-import main.java.MUCtivities.handlers.MUCtivitiesIntentHandler;
+
 import main.java.MUCtivities.handlers.SessionEndedRequestHandler;
 
 
@@ -34,10 +33,6 @@ public class MUCtivitiesStreamHandler extends SkillStreamHandler {
     private static Skill getSkill() {
         return Skills.standard()
                 .addRequestHandlers(
-//                        new MUCtivitiesIntentHandler(),
-//                        new DauerIntentHandler(),
-//                        new IndoorOutdoorIntentHandler(),
-//                        new KategorieIntentHandler(),
                         new LaunchRequestHandler(),
                         new CancelandStopIntentHandler(),
                         new SessionEndedRequestHandler(),

@@ -3,7 +3,7 @@ package main.java.MUCtivities.attribute;
 public class Constants {
 	public static String MUCtivities_Name = "MUCtivities";
 
-	public static String LaunchRequest = "Willkommen bei MUCtivities. Du kannst mich fragen, was du heute unternehmen kannst";
+	public static String LaunchRequest = "Servus! Ein schöner Tag, um mal wieder etwas zu unternehmen. Sage \"Tipp des Tages\" um eine Vorschlag für eine beliebige Aktivität zu erhalten. Für eine personalisierte Idee, sage \"Was kann ich heute unternehmen?\"";
 	public static String WELCOME_REPROMT = "Hallo Schlaffmütze";
 
 	public static String CancelandStopIntent = "Komm morgen wieder, um die Erfahrung wieder zu spielen. Sag einfach \"Alexa, öffne Muctivities\" <break time=\"0.05s\" />, um die Fertigkeit erneut zu öffnen.";
@@ -13,7 +13,4 @@ public class Constants {
 	public static String MUCtivitie_SONNIG = "Heute wird ein sonniger Tag. Möchtest du etwas draußen oder drinnen unternehmen?";
 	public static String MUCtivitie_REGEN = "Heute ist ein greisliges Wetter draußen, am besten bleibst du heut drin oder magst du etwas drau�en unternehmen?";
 
-	public static String DAUER_FRAGE = "Möchtest du nur ein paar Stunden unterwegs sein oder hast du den ganzen Tag Zeit?";
-
-	public static String KATEGORIE_FRAGE = "Alles klar. Ich habe schon viele Ideen für dich. Worauf hast du denn Lust? Du kannst auswählen zwischen. Kultur. Sport. Und Spaß.";
-}
+	}
