@@ -22,9 +22,10 @@ public class MUCtivitiesIntentHandler implements RequestHandler {
 	public Optional<Response> handle(HandlerInput input) {
 		// String speechText = "Hallo Welt";
 		// wetter muss noch angepasst werden.
-		String speechText = Wetterdienst.wetterVorhersage() ? Constants.MUCtivitie_SONNIG : Constants.MUCtivitie_REGEN;
-		return input.getResponseBuilder().withSpeech(speechText).withSimpleCard(Constants.MUCtivities_Name, speechText)
-				.withShouldEndSession(false).build();
+//		String speechText = Wetterdienst.wetterVorhersage() ? Constants.MUCtivitie_SONNIG : Constants.MUCtivitie_REGEN;
+//		return input.getResponseBuilder().withSpeech(speechText).withSimpleCard(Constants.MUCtivities_Name, speechText)
+//				.withShouldEndSession(false).build();
+	    return null;
 
 	}
 
