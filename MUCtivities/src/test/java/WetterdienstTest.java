@@ -1,10 +1,12 @@
-package main.java.MUCtivities.eigeneKlassen;
+package test.java;
 
 import org.junit.Assert;
 
 import java.util.Optional;
 
 import org.junit.Test;
+
+import main.java.MUCtivities.eigeneKlassen.Wetterdienst;
 
 public class WetterdienstTest {
 
