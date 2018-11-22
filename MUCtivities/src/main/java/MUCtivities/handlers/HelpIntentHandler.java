@@ -17,7 +17,7 @@ import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
 
-import main.java.MUCtivities.attribute.Constants;
+import main.java.MUCtivities.PhrasesAndConstants.PrasesAndConstants;
 
 import java.util.Optional;
 
@@ -33,9 +33,9 @@ public class HelpIntentHandler implements RequestHandler {
     public Optional<Response> handle(HandlerInput input) {
        // String speechText = "Du kannst hallo zu mir sagen.";
         return input.getResponseBuilder()
-                .withSpeech(Constants.HelpIntent)
-                .withSimpleCard(Constants.MUCtivities_Name, Constants.HelpIntent)
-                .withReprompt(Constants.HelpIntent)
+                .withSpeech(PrasesAndConstants.HelpIntent)
+                .withSimpleCard(PrasesAndConstants.MUCtivities_Name, PrasesAndConstants.HelpIntent)
+                .withReprompt(PrasesAndConstants.HelpIntent)
                 .build();
     }
 }

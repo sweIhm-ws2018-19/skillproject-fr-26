@@ -1,6 +1,6 @@
-package main.java.MUCtivities.attribute;
+package main.java.MUCtivities.PhrasesAndConstants;
 
-public class Constants {
+public class PrasesAndConstants {
 	public static String MUCtivities_Name = "MUCtivities";
 
 	public static String LaunchRequest = "Servus! Ein schöner Tag, um mal wieder etwas zu unternehmen. Sage \"Tipp des Tages\" um eine Vorschlag für eine beliebige Aktivität zu erhalten. Für eine personalisierte Idee, sage \"Was kann ich heute unternehmen?\"";

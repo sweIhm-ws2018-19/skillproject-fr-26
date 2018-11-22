@@ -17,7 +17,7 @@ import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
 
-import main.java.MUCtivities.attribute.Constants;
+import main.java.MUCtivities.PhrasesAndConstants.PrasesAndConstants;
 
 import java.util.Optional;
 
@@ -32,7 +32,7 @@ public class CancelandStopIntentHandler implements RequestHandler {
 	@Override
 	public Optional<Response> handle(HandlerInput input) {
 		// String speechText = "Auf Wiedersehen";
-		return input.getResponseBuilder().withSpeech(Constants.CancelandStopIntent)
-				.withSimpleCard(Constants.MUCtivities_Name, Constants.CancelandStopIntent).build();
+		return input.getResponseBuilder().withSpeech(PrasesAndConstants.CancelandStopIntent)
+				.withSimpleCard(PrasesAndConstants.MUCtivities_Name, PrasesAndConstants.CancelandStopIntent).build();
 	}
 }

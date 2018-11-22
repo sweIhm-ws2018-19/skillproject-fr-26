@@ -1,4 +1,4 @@
-package main.java.MUCtivities.eigeneKlassen;
+package main.java.MUCtivities.model;
 
 public class DbAktivität {
 	public static String suggestionOfActivitie(Boolean location, Boolean duration, String categorie) {

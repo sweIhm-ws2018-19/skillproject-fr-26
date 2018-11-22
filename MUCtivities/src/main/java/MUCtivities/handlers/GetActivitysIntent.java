@@ -12,8 +12,8 @@ import com.amazon.ask.model.SlotConfirmationStatus;
 import com.amazon.ask.model.slu.entityresolution.Resolution;
 import com.amazon.ask.model.slu.entityresolution.Resolutions;
 
-import main.java.MUCtivities.attribute.Constants;
-import main.java.MUCtivities.eigeneKlassen.Wetterdienst;
+import main.java.MUCtivities.PhrasesAndConstants.PrasesAndConstants;
+import main.java.MUCtivities.model.Wetterdienst;
 
 import java.util.Collections;
 import java.util.List;

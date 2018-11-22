@@ -1,4 +1,4 @@
-package main.java.MUCtivities.eigeneKlassen;
+package main.java.MUCtivities.model;
 
 public class Kartendienst {
 	static String routeBerechnen(String abfahrt, String ziel) {
