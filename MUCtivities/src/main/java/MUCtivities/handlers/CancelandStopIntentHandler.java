@@ -11,26 +11,28 @@
      the specific language governing permissions and limitations under the License.
 */
 
-package main.java.resources.handlers;
+package MUCtivities.handlers;
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
-import com.amazon.ask.model.SessionEndedRequest;
+
+import MUCtivities.phrasesAndConstants.Phrases;
 
 import java.util.Optional;
 
-import static com.amazon.ask.request.Predicates.requestType;
+import static com.amazon.ask.request.Predicates.intentName;
 
-public class SessionEndedRequestHandler implements RequestHandler {
-    @Override
-    public boolean canHandle(HandlerInput input) {
-        return input.matches(requestType(SessionEndedRequest.class));
-    }
+public class CancelandStopIntentHandler implements RequestHandler {
+	@Override
+	public boolean canHandle(HandlerInput input) {
+		return input.matches(intentName("AMAZON.StopIntent").or(intentName("AMAZON.CancelIntent")));
+	}
 
-    @Override
-    public Optional<Response> handle(HandlerInput input) {
-        // any cleanup logic goes here
-        return input.getResponseBuilder().build();
-    }
+	@Override
+	public Optional<Response> handle(HandlerInput input) {
+		// String speechText = "Auf Wiedersehen";
+		return input.getResponseBuilder().withSpeech(Phrases.CancelandStopIntent)
+				.withSimpleCard(Phrases.MUCtivities_Name, Phrases.CancelandStopIntent).build();
+	}
 }

@@ -11,32 +11,31 @@
      the specific language governing permissions and limitations under the License.
 */
 
-package main.java.resources.handlers;
+package MUCtivities.handlers;
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
-import com.amazon.ask.model.LaunchRequest;
 import com.amazon.ask.model.Response;
 
-import main.java.resources.PhrasesAndConstants.PrasesAndConstants;
+import MUCtivities.phrasesAndConstants.Phrases;
 
 import java.util.Optional;
 
-import static com.amazon.ask.request.Predicates.requestType;
+import static com.amazon.ask.request.Predicates.intentName;
 
-public class LaunchRequestHandler implements RequestHandler {
+public class HelpIntentHandler implements RequestHandler {
     @Override
     public boolean canHandle(HandlerInput input) {
-        return input.matches(requestType(LaunchRequest.class));
+        return input.matches(intentName("AMAZON.HelpIntent"));
     }
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-     //   String speechText = "Wilkommen zu dem Alexa Skill Kit, du kannst hallo sagen.";
+       // String speechText = "Du kannst hallo zu mir sagen.";
         return input.getResponseBuilder()
-                .withSpeech(PrasesAndConstants.LaunchRequest)
-                .withSimpleCard(PrasesAndConstants.MUCtivities_Name, PrasesAndConstants.LaunchRequest)
-                .withReprompt(PrasesAndConstants.WELCOME_REPROMT)
+                .withSpeech(Phrases.HelpIntent)
+                .withSimpleCard(Phrases.MUCtivities_Name, Phrases.HelpIntent)
+                .withReprompt(Phrases.HelpIntent)
                 .build();
     }
 }
