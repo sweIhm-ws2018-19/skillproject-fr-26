@@ -2,8 +2,7 @@ language: java
 jdk:
  - oraclejdk8
  
-before_script:
-  - cd $TRAVIS_BUILD_DIR
+before_install: cd MUCtivities
 
 install:
   - mvn -N io.takari:maven:wrapper
@@ -14,5 +13,5 @@ addons:
        organization: "sweihmws2018-19"
 
 script:
-  - cd $TRAVIS_BUILD_DIR/MUCtivities  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install -Pdev sonar:sonar
-  - cd $TRAVIS_BUILD_DIR/MUCtivities   - mvn org.apache.maven.plugins:maven-assembly-plugin:2.6:assembly -DdescriptorId=jar-with-dependencies package
+ - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install -Pdev sonar:sonar
+ - mvn org.apache.maven.plugins:maven-assembly-plugin:2.6:assembly -DdescriptorId=jar-with-dependencies package
