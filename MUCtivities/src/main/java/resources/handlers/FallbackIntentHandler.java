@@ -1,10 +1,10 @@
-package main.java.MUCtivities.handlers;
+package main.java.resources.handlers;
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
 
-import main.java.MUCtivities.PhrasesAndConstants.PrasesAndConstants;
+import main.java.resources.PhrasesAndConstants.PrasesAndConstants;
 
 import java.util.Optional;
 

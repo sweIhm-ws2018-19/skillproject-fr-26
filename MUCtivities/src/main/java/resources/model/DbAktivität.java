@@ -1,4 +1,4 @@
-package main.java.MUCtivities.model;
+package main.java.resources.model;
 
 public class DbAktivität {
 	public static String suggestionOfActivitie(Boolean location, Boolean duration, String categorie) {
