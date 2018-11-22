@@ -11,21 +11,21 @@
      the specific language governing permissions and limitations under the License.
 */
 
-package main.java.resources;
+package MUCtivities;
 
 import com.amazon.ask.Skill;
 import com.amazon.ask.SkillStreamHandler;
 import com.amazon.ask.Skills;
 
-import main.java.resources.handlers.CancelandStopIntentHandler;
+import MUCtivities.handlers.CancelandStopIntentHandler;
 
-import main.java.resources.handlers.FallbackIntentHandler;
-import main.java.resources.handlers.GetActivitysIntent;
-import main.java.resources.handlers.HelpIntentHandler;
+import MUCtivities.handlers.FallbackIntentHandler;
+import MUCtivities.handlers.GetActivitysIntent;
+import MUCtivities.handlers.HelpIntentHandler;
 
-import main.java.resources.handlers.LaunchRequestHandler;
+import MUCtivities.handlers.LaunchRequestHandler;
 
-import main.java.resources.handlers.SessionEndedRequestHandler;
+import MUCtivities.handlers.SessionEndedRequestHandler;
 
 
 public class MUCtivitiesStreamHandler extends SkillStreamHandler {

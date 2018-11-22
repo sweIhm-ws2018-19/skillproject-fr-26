@@ -7,7 +7,7 @@
 	<packaging>jar</packaging>
 	<version>1.0</version>
 	<name>MUCtivities</name>
-	<url>http://developer.amazon.com/ask</url>
+	<url>https://github.com/sweIhm-ws2018-19/skillproject-fr-26</url>
 	<licenses>
 		<license>
 			<name>The Apache License, Version 2.0</name>
@@ -23,9 +23,9 @@
 		</developer>
 	</developers>
 	<scm>
-		<connection>scm:git:https://github.com/amzn/alexa-skills-kit-java.git</connection>
-		<developerConnection>scm:git:https://github.com/amzn/alexa-skills-kit-java.git</developerConnection>
-		<url>https://github.com/amzn/alexa-skills-kit-java.git</url>
+		<connection>scm:git:https://github.com/sweIhm-ws2018-19/skillproject-fr-26</connection>
+		<developerConnection>scm:git:https://github.com/sweIhm-ws2018-19/skillproject-fr-26</developerConnection>
+		<url>https://github.com/sweIhm-ws2018-19/skillproject-fr-26</url>
 	</scm>
 
 	<dependencies>
@@ -47,7 +47,7 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<sourceDirectory>src</sourceDirectory>
+
 		<pluginManagement>
 			<plugins>
 				<plugin>

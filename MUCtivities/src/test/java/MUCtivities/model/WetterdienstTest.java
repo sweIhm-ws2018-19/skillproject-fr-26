@@ -1,4 +1,4 @@
-package test.resources;
+package MUCtivities.model;
 
 
 
@@ -8,7 +8,8 @@ import java.util.Optional;
 
 import org.junit.Test;
 
-import main.java.resources.model.Wetterdienst;
+
+
 
 
 public class WetterdienstTest {

@@ -1,4 +1,4 @@
-package main.java.resources.model;
+package MUCtivities.model;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -28,14 +28,14 @@ public class Wetterdienst {
         return Optional.ofNullable(result);
     }
 
-    static public Boolean isGoodWeather(String responsebody) {
+    static Boolean isGoodWeather(String responsebody) {
         String weatherIcon = getWeatherIcon(responsebody);
         String FirstTwoCharsOfWeatherIcon = weatherIcon.substring(0, 2);
         int weather = new Integer(FirstTwoCharsOfWeatherIcon);
         return weather < 3 ? true : false;
     }
 
-    static public String getWeatherIcon(String responsebody) {
+    static String getWeatherIcon(String responsebody) {
         JSONObject json = new JSONObject(responsebody);
         return json.getJSONArray("weather").getJSONObject(0).getString("icon");
     }
