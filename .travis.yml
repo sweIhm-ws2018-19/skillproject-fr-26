@@ -1,6 +1,9 @@
 language: java
 jdk:
  - oraclejdk8
+ 
+before_script:
+  - cd $TRAVIS_BUILD_DIR/MUCtivities 
 
 install:
   - mvn -N io.takari:maven:wrapper
