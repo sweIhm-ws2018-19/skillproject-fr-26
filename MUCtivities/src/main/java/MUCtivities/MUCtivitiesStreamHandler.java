@@ -11,21 +11,21 @@
      the specific language governing permissions and limitations under the License.
 */
 
-package MUCtivities;
+package muctivities;
 
 import com.amazon.ask.Skill;
 import com.amazon.ask.SkillStreamHandler;
 import com.amazon.ask.Skills;
 
-import MUCtivities.handlers.CancelandStopIntentHandler;
+import muctivities.handlers.CancelandStopIntentHandler;
 
-import MUCtivities.handlers.FallbackIntentHandler;
-import MUCtivities.handlers.GetActivitysIntent;
-import MUCtivities.handlers.HelpIntentHandler;
+import muctivities.handlers.FallbackIntentHandler;
+import muctivities.handlers.GetActivitysIntent;
+import muctivities.handlers.HelpIntentHandler;
 
-import MUCtivities.handlers.LaunchRequestHandler;
+import muctivities.handlers.LaunchRequestHandler;
 
-import MUCtivities.handlers.SessionEndedRequestHandler;
+import muctivities.handlers.SessionEndedRequestHandler;
 
 
 public class MUCtivitiesStreamHandler extends SkillStreamHandler {

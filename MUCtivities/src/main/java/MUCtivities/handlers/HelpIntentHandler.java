@@ -11,13 +11,13 @@
      the specific language governing permissions and limitations under the License.
 */
 
-package MUCtivities.handlers;
+package muctivities.handlers;
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
 
-import MUCtivities.phrasesAndConstants.Phrases;
+import muctivities.phrasesAndConstants.Phrases;
 
 import java.util.Optional;
 

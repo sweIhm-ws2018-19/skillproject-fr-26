@@ -1,4 +1,4 @@
-package MUCtivities.model;
+package muctivities.model;
 
 import java.util.List;
 import java.util.Random;

@@ -1,4 +1,4 @@
-package MUCtivities.model;
+package muctivities.model;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
