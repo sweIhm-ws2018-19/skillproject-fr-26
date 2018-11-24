@@ -1,4 +1,4 @@
-package MUCtivities.phrasesAndConstants;
+package muctivities.phrasesAndConstants;
 
 public class Phrases {
 	public static String MUCtivities_Name = "MUCtivities";

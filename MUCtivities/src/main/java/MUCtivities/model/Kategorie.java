@@ -1,4 +1,4 @@
-package MUCtivities.model;
+package muctivities.model;
 
 public enum Kategorie {
 	kultur, spaß, sport;

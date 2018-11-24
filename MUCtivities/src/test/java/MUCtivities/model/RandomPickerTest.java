@@ -1,4 +1,4 @@
-package MUCtivities.model;
+package muctivities.model;
 
 import static org.junit.Assert.*;
 

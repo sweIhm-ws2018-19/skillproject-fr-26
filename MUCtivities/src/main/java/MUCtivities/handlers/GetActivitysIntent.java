@@ -1,4 +1,4 @@
-package MUCtivities.handlers;
+package muctivities.handlers;
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
@@ -12,8 +12,8 @@ import com.amazon.ask.model.SlotConfirmationStatus;
 import com.amazon.ask.model.slu.entityresolution.Resolution;
 import com.amazon.ask.model.slu.entityresolution.Resolutions;
 
-import MUCtivities.model.Wetterdienst;
-import MUCtivities.phrasesAndConstants.Phrases;
+import muctivities.model.Wetterdienst;
+import muctivities.phrasesAndConstants.Phrases;
 
 import java.util.Collections;
 import java.util.List;
