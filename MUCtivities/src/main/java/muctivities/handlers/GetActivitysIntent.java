@@ -9,8 +9,12 @@ import com.amazon.ask.model.Request;
 import com.amazon.ask.model.Response;
 import com.amazon.ask.model.Slot;
 
+import muctivities.model.Activity;
+
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Random;
 
 import static com.amazon.ask.request.Predicates.intentName;
 
@@ -36,8 +40,17 @@ public class GetActivitysIntent implements RequestHandler {
 
 		boolean isEndOfDialog = intentRequest.getDialogState() == DialogState.COMPLETED;
 		if (isEndOfDialog) {
-			String output = "Lokalität: " + locationBool.toString() + ". Dauer: " + durationBool.toString()
-					+ ". Kategorie: " + category + ".";
+			String output = "";
+			try {
+				List<Activity> liste = muctivities.model.Database.suggestionOfActivities(locationBool, durationBool,
+						category);
+				int size = liste.size();
+				Random random = new Random();
+				output = liste.get(random.nextInt(size)).getName();
+			} catch (Exception e) {
+				output = "Leider habe ich keine passende Aktivität gefunden";
+			}
+
 			return input.getResponseBuilder().withSpeech(output).build();
 		}
 
