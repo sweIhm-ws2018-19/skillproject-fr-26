@@ -1,13 +1,13 @@
 package muctivities.model;
 
 public class Activity {
-	
+
 	private final boolean isOutdoor;
 	private final boolean isAllday;
 	private final Kategorie category;
 	private final String name;
 	private final String description;
-	
+
 	public Activity(boolean isOutdoor, boolean isAllday, Kategorie category, String name, String description) {
 		this.isOutdoor = isOutdoor;
 		this.isAllday = isAllday;

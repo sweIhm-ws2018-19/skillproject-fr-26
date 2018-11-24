@@ -8,9 +8,9 @@ public class KategorieTest {
 
 	@Test
 	public void testParseString() {
-		assertEquals(Kategorie.spaß, Kategorie.parseString("spaß"));
-		assertEquals(Kategorie.spaß, Kategorie.parseString("Spaß"));
-		assertEquals(Kategorie.spaß, Kategorie.parseString("sPaß"));
+		assertEquals(Kategorie.SPAẞ, Kategorie.parseString("spaß"));
+		assertEquals(Kategorie.SPAẞ, Kategorie.parseString("Spaß"));
+		assertEquals(Kategorie.SPAẞ, Kategorie.parseString("sPaß"));
 		assertEquals(null, Kategorie.parseString("asdf"));
 	}
 

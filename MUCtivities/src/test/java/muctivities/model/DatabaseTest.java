@@ -17,7 +17,7 @@ public class DatabaseTest {
 		try {
 			activities = Database.getDatabaseEntries();
 			Assert.assertEquals(38, activities.size());
-		} catch (JSONException | IOException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
@@ -32,29 +32,25 @@ public class DatabaseTest {
 			e.printStackTrace();
 		}
 	}
-	
+
 	@Test
 	public void testParseJSONObject() {
-		JSONObject exampleFromDatabase = new JSONObject("  {\r\n" + 
-		"    \"location\": false,\r\n" + 
-		"    \"duration\": false,\r\n" + 
-		"    \"category\": \"Spaß\",\r\n" + 
-		"    \"name\": \"Museum\",\r\n" + 
-		"    \"info\": \"asdf\"\r\n" + 
-		"  },\r\n");
+		JSONObject exampleFromDatabase = new JSONObject("  {\r\n" + "    \"location\": false,\r\n"
+				+ "    \"duration\": false,\r\n" + "    \"category\": \"Spaß\",\r\n" + "    \"name\": \"Museum\",\r\n"
+				+ "    \"info\": \"asdf\"\r\n" + "  },\r\n");
 		Activity activity = Database.parseJSONObject(exampleFromDatabase);
 		Assert.assertEquals("Museum", activity.getName());
 		Assert.assertEquals("asdf", activity.getDescription());
-		Assert.assertEquals(false , activity.isAllday());
-		Assert.assertEquals(false , activity.isOutdoor());
-		Assert.assertEquals(Kategorie.spaß, activity.getCategory());
+		Assert.assertEquals(false, activity.isAllday());
+		Assert.assertEquals(false, activity.isOutdoor());
+		Assert.assertEquals(Kategorie.SPAẞ, activity.getCategory());
 	}
 
 	@Test
-	public void suggestionOfActivities() throws JSONException, IOException {
+	public void suggestionOfActivities() throws Exception {
 		List<Activity> suggestions = Database.suggestionOfActivities(true, true, "spaß");
 		suggestions.forEach(activity -> {
-			Assert.assertEquals(Kategorie.spaß, activity.getCategory());
+			Assert.assertEquals(Kategorie.SPAẞ, activity.getCategory());
 		});
 		Assert.assertEquals(3, suggestions.size());
 	}

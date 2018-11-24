@@ -17,25 +17,21 @@ import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
 
-import muctivities.phrasesAndConstants.Phrases;
+import muctivities.constants.Phrases;
 
 import java.util.Optional;
 
 import static com.amazon.ask.request.Predicates.intentName;
 
 public class HelpIntentHandler implements RequestHandler {
-    @Override
-    public boolean canHandle(HandlerInput input) {
-        return input.matches(intentName("AMAZON.HelpIntent"));
-    }
+	@Override
+	public boolean canHandle(HandlerInput input) {
+		return input.matches(intentName("AMAZON.HelpIntent"));
+	}
 
-    @Override
-    public Optional<Response> handle(HandlerInput input) {
-       // String speechText = "Du kannst hallo zu mir sagen.";
-        return input.getResponseBuilder()
-                .withSpeech(Phrases.HelpIntent)
-                .withSimpleCard(Phrases.MUCtivities_Name, Phrases.HelpIntent)
-                .withReprompt(Phrases.HelpIntent)
-                .build();
-    }
+	@Override
+	public Optional<Response> handle(HandlerInput input) {
+		return input.getResponseBuilder().withSpeech(Phrases.HELP_INTENT)
+				.withSimpleCard(Phrases.MUCTIVITIES_NAME, Phrases.HELP_INTENT).withReprompt(Phrases.HELP_INTENT).build();
+	}
 }

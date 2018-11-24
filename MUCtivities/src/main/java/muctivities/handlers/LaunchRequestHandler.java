@@ -18,25 +18,22 @@ import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.LaunchRequest;
 import com.amazon.ask.model.Response;
 
-import muctivities.phrasesAndConstants.Phrases;
+import muctivities.constants.Phrases;
 
 import java.util.Optional;
 
 import static com.amazon.ask.request.Predicates.requestType;
 
 public class LaunchRequestHandler implements RequestHandler {
-    @Override
-    public boolean canHandle(HandlerInput input) {
-        return input.matches(requestType(LaunchRequest.class));
-    }
+	@Override
+	public boolean canHandle(HandlerInput input) {
+		return input.matches(requestType(LaunchRequest.class));
+	}
 
-    @Override
-    public Optional<Response> handle(HandlerInput input) {
-     //   String speechText = "Wilkommen zu dem Alexa Skill Kit, du kannst hallo sagen.";
-        return input.getResponseBuilder()
-                .withSpeech(Phrases.LaunchRequest)
-                .withSimpleCard(Phrases.MUCtivities_Name, Phrases.LaunchRequest)
-                .withReprompt(Phrases.WELCOME_REPROMT)
-                .build();
-    }
+	@Override
+	public Optional<Response> handle(HandlerInput input) {
+		return input.getResponseBuilder().withSpeech(Phrases.LAUNCH_REQUEST)
+				.withSimpleCard(Phrases.MUCTIVITIES_NAME, Phrases.LAUNCH_REQUEST).withReprompt(Phrases.WELCOME_REPROMT)
+				.build();
+	}
 }

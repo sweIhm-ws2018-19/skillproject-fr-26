@@ -4,7 +4,7 @@ import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
 
-import muctivities.phrasesAndConstants.Phrases;
+import muctivities.constants.Phrases;
 
 import java.util.Optional;
 
@@ -22,9 +22,9 @@ public class FallbackIntentHandler implements RequestHandler {
 
 	@Override
 	public Optional<Response> handle(HandlerInput input) {
-		//String speechText = "Tut mir leid, das weiss ich nicht. Sage einfach Hilfe.";
-		return input.getResponseBuilder().withSpeech(Phrases.FallbackIntent).withSimpleCard(Phrases.MUCtivities_Name, Phrases.FallbackIntent)
-				.withReprompt(Phrases.FallbackIntent).build();
+		return input.getResponseBuilder().withSpeech(Phrases.FALLBACK_INTENT)
+				.withSimpleCard(Phrases.MUCTIVITIES_NAME, Phrases.FALLBACK_INTENT).withReprompt(Phrases.FALLBACK_INTENT)
+				.build();
 	}
 
 }
