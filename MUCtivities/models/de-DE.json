@@ -77,6 +77,20 @@
                             "name": {
                                 "value": "false",
                                 "synonyms": [
+                                    "ich möchte nur kurz unterwegs sein",
+                                    "ich will nur kurz unterwegs sein",
+                                    "ich kann nur kurz unterwegs sein",
+                                    "ich möchte nur paar Stunden unterwegs sein",
+                                    "ich will nur paar Stunden unterwegs sein",
+                                    "ich kann nur paar Stunden unterwegs sein",
+                                    "es sollte nicht zu lange dauern",
+                                    "eher was kürzes",
+                                    "halbtags",
+                                    "abends",
+                                    "nachmittags",
+                                    "vormittags",
+                                    "nicht so lang",
+                                    "kurz",
                                     "paar Stunden"
                                 ]
                             }
@@ -85,6 +99,24 @@
                             "name": {
                                 "value": "true",
                                 "synonyms": [
+                                    "Die Aktivität darf den ganzen Tag dauern",
+                                    "Die Aktivität soll den ganzen Tag dauern",
+                                    "Ist mir egal",
+                                    "Viele Stunden",
+                                    "Mehrere Stunden",
+                                    "ich hab ewig Zeit",
+                                    "ich hab viel Zeit",
+                                    "ich hab lang Zeit",
+                                    "ich hab den ganzen Tag Zeit",
+                                    "ich hab keine Termine",
+                                    "ich hab nichts vor",
+                                    "ganztags",
+                                    "eher was längeres",
+                                    "nicht so kurz",
+                                    "darf länger dauern",
+                                    "kann länger dauern",
+                                    "lang",
+                                    "ganzer Tag",
                                     "ganzen Tag"
                                 ]
                             }
