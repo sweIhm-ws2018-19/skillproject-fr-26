@@ -5,6 +5,7 @@ import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
 
 import muctivities.constants.Phrases;
+import muctivities.model.Wetterdienst;
 
 import java.util.Optional;
 
@@ -19,9 +20,13 @@ public class MUCtivitiesIntentHandler implements RequestHandler {
 
 	@Override
 	public Optional<Response> handle(HandlerInput input) {
-		String speechText = "test";
-		return input.getResponseBuilder().withSpeech(speechText).withSimpleCard(Phrases.MUCTIVITIES_NAME, speechText)
-				.build();
+		// String speechText = "Hallo Welt";
+		// wetter muss noch angepasst werden.
+		String speechText = Wetterdienst.wetterVorhersage().get() ? Phrases.MUCtivitie_SONNIG : Phrases.MUCtivitie_REGEN;
+		return input.getResponseBuilder().withSpeech(speechText).withSimpleCard(Phrases.MUCtivities_Name, speechText)
+				.withShouldEndSession(false).build();
+//	    return null;
+
 	}
 
 }
