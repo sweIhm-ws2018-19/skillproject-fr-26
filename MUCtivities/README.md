@@ -1,8 +1,8 @@
 # Skill Name: MUCtivities
 ## Kategorie:
 - Freizeitaktivitäten 
-- Tourismus
-- Spaß
+- Tourismus 🏝🏖
+- Spaß 🤣
 ## Kurzbeschreibung:
 - Personalisierte Ideen für Freizeitaktivitäten in München & Umland
 - Skill filtert Schritt für Schritt:
