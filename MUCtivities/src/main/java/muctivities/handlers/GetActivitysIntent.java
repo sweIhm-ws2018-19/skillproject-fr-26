@@ -9,7 +9,8 @@ import com.amazon.ask.model.Request;
 import com.amazon.ask.model.Response;
 import com.amazon.ask.model.Slot;
 
-import muctivities.model.Activity;
+import muctivities.constants.Attributes;
+import muctivities.model.*;
 
 import java.util.List;
 import java.util.Map;
@@ -44,9 +45,12 @@ public class GetActivitysIntent implements RequestHandler {
 			try {
 				List<Activity> liste = muctivities.model.Database.suggestionOfActivities(locationBool, durationBool,
 						category);
-				int size = liste.size();
-				Random random = new Random();
-				output = liste.get(random.nextInt(size)).getName();
+
+				// int size = liste.size();
+				// Random random = new Random();
+				output = RandomPicker.get(liste).getName();
+			//	Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
+			//	sessionAttributes.put(Attributes.STATE_KEY, value)
 			} catch (Exception e) {
 				output = "Leider habe ich keine passende Aktivität gefunden";
 			}
