@@ -3,7 +3,6 @@ package muctivities.handlers;
 import static com.amazon.ask.request.Predicates.intentName;
 import static com.amazon.ask.request.Predicates.sessionAttribute;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -22,10 +21,11 @@ import muctivities.model.*;
 
 public class CategorieHandler implements RequestHandler {
 
-
 	@Override
 	public boolean canHandle(HandlerInput input) {
-			return input.matches(intentName("CategoryIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.Kategorie_State)));
+		return input.matches(intentName("AttributesIntent")
+				.and(sessionAttribute(Attributes.STATE_KEY, Attributes.Categorie_State)));
+
 	}
 
 	@Override
@@ -34,49 +34,33 @@ public class CategorieHandler implements RequestHandler {
 		IntentRequest intentRequest = (IntentRequest) request;
 		Intent intent = intentRequest.getIntent();
 		Map<String, Slot> slots = intent.getSlots();
-	Slot kategorieSlot = slots.get(Attributes.CATEGORIE_SLOT);
+		Slot kategorieSlot = slots.get(Attributes.CATEGORIE_SLOT);
+
 		String category = slots.get(Attributes.CATEGORIE_SLOT).getValue();
 		boolean durationBool = (boolean) input.getAttributesManager().getSessionAttributes()
-				.get(Attributes.DAUER_KEY);
-	boolean locationBool = (boolean) input.getAttributesManager().getSessionAttributes()
-		.get(Attributes.LOCALITAET_KEY);
-			String speechText, repromptText;
+				.get(Attributes.DURATION_KEY);
+
+		boolean locationBool = (boolean) input.getAttributesManager().getSessionAttributes()
+				.get(Attributes.LOCATION_KEY);
+		String speechText, repromptText;
 		boolean isAskResponse = false;
 
-		// Check for favorite color and create output to user.
-		// if (favoriteColorSlot != null) {
 		if (kategorieSlot.getResolutions().toString().contains("ER_SUCCESS_MATCH")) {
 
-			// Store the user's favorite color in the Session and create response.
-		//	String favoriteColor = kategorieSlot.getValue();
-		//	input.getAttributesManager().setSessionAttributes(Collections.singletonMap(KATEGORIE_KEY, favoriteColor));
 			try {
 				List<Activity> liste = muctivities.model.Database.suggestionOfActivities(locationBool, durationBool,
 						category);
-			Activity activitie=	RandomPicker.get(liste);
-			Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
-			sessionAttributes.put(Attributes.AKTIVITIE_KEY, activitie);
-			speechText=activitie.getName();
+				Activity activitie = RandomPicker.get(liste);
+				Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
+				sessionAttributes.put(Attributes.ACTIVITY_KEY, activitie);
+				speechText = activitie.getName();
 			} catch (Exception e) {
-				speechText="Ein Fehler ist passiert";
+				speechText = "Ein Fehler ist passiert";
 			}
-			//speechText = "Lokalität: " + locationBool+". Dauer: " + durationBool
-				//	+ ". Kategorie: " + category + ".";
-			//speechText= category;
-			// speechText = String
-			// .format("Deine Lieblingsfarbe ist %s. Du kannst mich jetzt nach Deiner
-			// Lieblingsfarbe fragen. "
-			// + "Frage einfach: was ist meine Lieblingsfarbe?", favoriteColor);
-			// repromptText = "Frage nach meiner Lieblingsfarbe.";
 
 		} else {
-			// Render an error since we don't know what the users favorite color is.
-			// speechText = "Ich kenne Deine Lieblingsfarbe nicht. Bitte versuche es noch
-			// einmal.";
 			speechText = "Ich kenne deine Kategorie nicht. Bitte versucht es erneut.";
 
-			// repromptText = "Ich weiss nicht welches Deine Lieblingsfarbe ist. Sag mir
-			// Deine Lieblingsfarbe. Sage zum Beispiel: ich mag blau.";
 			isAskResponse = true;
 
 		}

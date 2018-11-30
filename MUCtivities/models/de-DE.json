@@ -48,10 +48,25 @@
                     ]
                 },
                 {
-                    "name": "MUCtivitiesIntent",
-                    "slots": [],
+                    "name": "AttributesIntent",
+                    "slots": [
+                        {
+                            "name": "location",
+                            "type": "location_list"
+                        },
+                        {
+                            "name": "duration",
+                            "type": "duration_list"
+                        },
+                        {
+                            "name": "categorie",
+                            "type": "category_list"
+                        }
+                    ],
                     "samples": [
-                        "Das ist ein Testlauf"
+                        "{categorie}",
+                        "{duration}",
+                        "{location}"
                     ]
                 },
                 {
@@ -62,34 +77,11 @@
                     ]
                 },
                 {
-                    "name": "LocationIntent",
-                    "slots": [
-                        {
-                            "name": "location",
-                            "type": "location_list"
-                        }
-                    ],
-                    "samples": []
-                },
-                {
-                    "name": "DurationIntent",
-                    "slots": [
-                        {
-                            "name": "duration",
-                            "type": "duration_list"
-                        }
-                    ],
-                    "samples": []
-                },
-                {
-                    "name": "CategoryIntent",
-                    "slots": [
-                        {
-                            "name": "category",
-                            "type": "category_list"
-                        }
-                    ],
-                    "samples": []
+                    "name": "MUCtivitiesIntent",
+                    "slots": [],
+                    "samples": [
+                        "Das ist ein Testlauf"
+                    ]
                 }
             ],
             "types": [

@@ -20,12 +20,10 @@ import muctivities.constants.*;
 
 public class LocationHandler implements RequestHandler {
 
-
-
 	@Override
 	public boolean canHandle(HandlerInput input) {
-		return input.matches(intentName("LocationIntent")
-				.and(sessionAttribute(Attributes.STATE_KEY, Attributes.Location_State)));
+		return input.matches(
+				intentName("AttributesIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.Location_State)));
 	}
 
 	@Override
@@ -34,16 +32,20 @@ public class LocationHandler implements RequestHandler {
 		IntentRequest intentRequest = (IntentRequest) request;
 		Intent intent = intentRequest.getIntent();
 		Map<String, Slot> slots = intent.getSlots();
-		Slot locationSlot = slots.get(Attributes.LOCALIION_SLOT);
+
+		Slot locationSlot = slots.get(Attributes.LOCATION_SLOT);
+
 		String speechText, repromptText;
 		boolean isAskResponse = false;
 		Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
 		if (locationSlot.getResolutions().toString().contains("ER_SUCCESS_MATCH")) {
-			Boolean locationBool = slots.get(Attributes.LOCALIION_SLOT).toString().contains("true");
+			Boolean locationBool = slots.get(Attributes.LOCATION_SLOT).toString().contains("true");
+
 			sessionAttributes.put(Attributes.STATE_KEY, Attributes.Duration_State);
-			sessionAttributes.put(Attributes.LOCALITAET_KEY, locationBool);
+			sessionAttributes.put(Attributes.LOCATION_KEY, locationBool);
 			speechText = Phrases.DURATION_QUESTION;
 			repromptText = Phrases.DURATION_QUESTION;
+
 		} else {
 			sessionAttributes.put(Attributes.STATE_KEY, Attributes.Location_State);
 			speechText = "Draußen oder Drinnen? Bitte versuche es noch einmal.";

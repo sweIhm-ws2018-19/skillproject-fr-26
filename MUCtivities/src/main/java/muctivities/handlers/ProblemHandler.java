@@ -8,7 +8,7 @@ import com.amazon.ask.model.Response;
 
 import muctivities.constants.Phrases;
 
-public class ProblemHandler implements RequestHandler{
+public class ProblemHandler implements RequestHandler {
 
 	@Override
 	public boolean canHandle(HandlerInput input) {
@@ -18,8 +18,7 @@ public class ProblemHandler implements RequestHandler{
 
 	@Override
 	public Optional<Response> handle(HandlerInput input) {
-	
-		return input.getResponseBuilder().withSpeech("Ein Fehler ist aufgetreten. Es muss noch implementiert werden").withSimpleCard(Phrases.MUCTIVITIES_Name, "hallo dave")
+		return input.getResponseBuilder().withSpeech("Ein Problem ist aufgetreten. Problem Handler")
 				.withShouldEndSession(false).build();
 	}
 

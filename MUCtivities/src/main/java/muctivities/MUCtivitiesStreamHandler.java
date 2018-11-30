@@ -25,7 +25,6 @@ public class MUCtivitiesStreamHandler extends SkillStreamHandler {
     private static Skill getSkill() {
         return Skills.standard()
                 .addRequestHandlers(
-                		
                         new LaunchRequestHandler(),
                         new CancelandStopIntentHandler(),
                         new SessionEndedRequestHandler(),
@@ -34,12 +33,11 @@ public class MUCtivitiesStreamHandler extends SkillStreamHandler {
                         new GetActivitysIntent(),
                         new CategorieHandler(),
                         new LocationHandler(),
-                        new DurationtHandler(),
+                        new DurationHandler(),
                         new MUCtivitiesIntentHandler(),
                         new TippDesTagesHandler(),
                         new ProblemHandler()
-                     
-                )
+                		)
                 // Add your skill id below
                 //.withSkillId("")
                 .build();
