@@ -18,61 +18,40 @@ import com.amazon.ask.response.ResponseBuilder;
 
 import muctivities.constants.*;
 
-public class DauerIntentHandler implements RequestHandler {
+public class DurationtHandler implements RequestHandler {
 
-	public static final String DAUER_SLOT = "dauer";
+	
 
 	@Override
 	public boolean canHandle(HandlerInput input) {
-		// TODO Auto-generated method stub
-		// return input.matches(intentName("DauerIntent"));
-		return input.matches(sessionAttribute(Attributes.STATE_KEY, Attributes.Duration_State));
+		return input.matches(
+				intentName("DurationIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.Duration_State)));
 	}
 
 	@Override
 	public Optional<Response> handle(HandlerInput input) {
-		// TODO Auto-generated method stub
+
 		Request request = input.getRequestEnvelope().getRequest();
 		IntentRequest intentRequest = (IntentRequest) request;
 		Intent intent = intentRequest.getIntent();
 		Map<String, Slot> slots = intent.getSlots();
 
-		// Get the color slot from the list of slots.
-		Slot favoriteColorSlot = slots.get(DAUER_SLOT);
+		Slot durationSlot = slots.get(Attributes.DURATION_SLOT);
 
 		String speechText, repromptText;
 		boolean isAskResponse = false;
 		Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
-		// Check for favorite color and create output to user.
-		// if (favoriteColorSlot != null) {
-		if (favoriteColorSlot.getResolutions().toString().contains("ER_SUCCESS_MATCH")) {
-			// Store the user's favorite color in the Session and create response.
-		//	String favoriteColor = favoriteColorSlot.getValue();
-			boolean durationBool = slots.get(DAUER_SLOT).toString().contains("true");
-			
-			// input.getAttributesManager().setSessionAttributes(Collections.singletonMap(Attributes.DAUER_KEY,
-			// favoriteColor));
+		if (durationSlot.getResolutions().toString().contains("ER_SUCCESS_MATCH")) {
+			boolean durationBool = slots.get(Attributes.DURATION_SLOT).toString().contains("true");
 			boolean location = (boolean) sessionAttributes.get(Attributes.LOCALITAET_KEY);
 			sessionAttributes.put(Attributes.STATE_KEY, Attributes.Kategorie_State);
 			sessionAttributes.put(Attributes.LOCALITAET_KEY, location);
 			sessionAttributes.put(Attributes.DAUER_KEY, durationBool);
-			//sessionAttributes.put(Attributes.DAUER_KEY, favoriteColor);
-			speechText = Phrases.KATEGORIE_FRAGE;
-			// String.format("Deine Lieblingsfarbe ist %s. Du kannst mich jetzt nach Deiner
-			// Lieblingsfarbe fragen. "
-			// + "Frage einfach: was ist meine Lieblingsfarbe?", favoriteColor);
-			repromptText = Phrases.KATEGORIE_FRAGE;
-
-			// "Frage nach meiner Lieblingsfarbe.";
-
+			speechText = Phrases.CATEGORIE_QUESTION;
+			repromptText = Phrases.CATEGORIE_QUESTION;
 		} else {
-			// Render an error since we don't know what the users favorite color is.
-			// speechText = "Ich kenne Deine Lieblingsfarbe nicht. Bitte versuche es noch
-			// einmal.";
 			speechText = "Ganzer Tag oder paar Stunden? Ich habe dich nicht verstanden, bitte versuche es erneut";
 			repromptText = "Ganzer Tag oder paar Stunden? Ich habe dich nicht verstanden, bitte versuche es erneut";
-			// "Ich weiss nicht welches Deine Lieblingsfarbe ist. Sag mir Deine
-			// Lieblingsfarbe. Sage zum Beispiel: ich mag blau.";
 			isAskResponse = true;
 		}
 

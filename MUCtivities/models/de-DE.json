@@ -48,42 +48,6 @@
                     ]
                 },
                 {
-                    "name": "IndoorOutdoorIntent",
-                    "slots": [
-                        {
-                            "name": "lokalitaet",
-                            "type": "location_list"
-                        }
-                    ],
-                    "samples": [
-                        "{lokalitaet}"
-                    ]
-                },
-                {
-                    "name": "DauerIntent",
-                    "slots": [
-                        {
-                            "name": "dauer",
-                            "type": "duration_list"
-                        }
-                    ],
-                    "samples": [
-                        "{dauer}"
-                    ]
-                },
-                {
-                    "name": "KategorieIntent",
-                    "slots": [
-                        {
-                            "name": "kategorie",
-                            "type": "category_list"
-                        }
-                    ],
-                    "samples": [
-                        "{kategorie}"
-                    ]
-                },
-                {
                     "name": "MUCtivitiesIntent",
                     "slots": [],
                     "samples": [
@@ -96,6 +60,36 @@
                     "samples": [
                         "Tipp des Tages"
                     ]
+                },
+                {
+                    "name": "LocationIntent",
+                    "slots": [
+                        {
+                            "name": "location",
+                            "type": "location_list"
+                        }
+                    ],
+                    "samples": []
+                },
+                {
+                    "name": "DurationIntent",
+                    "slots": [
+                        {
+                            "name": "duration",
+                            "type": "duration_list"
+                        }
+                    ],
+                    "samples": []
+                },
+                {
+                    "name": "CategoryIntent",
+                    "slots": [
+                        {
+                            "name": "category",
+                            "type": "category_list"
+                        }
+                    ],
+                    "samples": []
                 }
             ],
             "types": [

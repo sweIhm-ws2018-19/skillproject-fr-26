@@ -17,17 +17,7 @@ import com.amazon.ask.Skill;
 import com.amazon.ask.SkillStreamHandler;
 import com.amazon.ask.Skills;
 
-import muctivities.handlers.CancelandStopIntentHandler;
-import muctivities.handlers.DauerIntentHandler;
-import muctivities.handlers.FallbackIntentHandler;
-import muctivities.handlers.GetActivitysIntent;
-import muctivities.handlers.HelpIntentHandler;
-import muctivities.handlers.IndoorOutdoorIntentHandler;
-import muctivities.handlers.KategorieIntentHandler;
-import muctivities.handlers.LaunchRequestHandler;
-import muctivities.handlers.MUCtivitiesIntentHandler;
-import muctivities.handlers.SessionEndedRequestHandler;
-import muctivities.handlers.TippDesTagesHandler;
+import muctivities.handlers.*;
 
 
 public class MUCtivitiesStreamHandler extends SkillStreamHandler {
@@ -35,17 +25,20 @@ public class MUCtivitiesStreamHandler extends SkillStreamHandler {
     private static Skill getSkill() {
         return Skills.standard()
                 .addRequestHandlers(
+                		
                         new LaunchRequestHandler(),
                         new CancelandStopIntentHandler(),
                         new SessionEndedRequestHandler(),
                         new HelpIntentHandler(),
                         new FallbackIntentHandler(),
                         new GetActivitysIntent(),
-                        new KategorieIntentHandler(),
-                        new IndoorOutdoorIntentHandler(),
-                        new DauerIntentHandler(),
+                        new CategorieHandler(),
+                        new LocationHandler(),
+                        new DurationtHandler(),
                         new MUCtivitiesIntentHandler(),
-                        new TippDesTagesHandler()
+                        new TippDesTagesHandler(),
+                        new ProblemHandler()
+                     
                 )
                 // Add your skill id below
                 //.withSkillId("")

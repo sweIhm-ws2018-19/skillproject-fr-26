@@ -13,13 +13,13 @@ public class Phrases {
 	public static final String CANCEL_AND_STOP_INTENT = "Komm morgen wieder, um die Erfahrung wieder zu spielen. Sag einfach \"Alexa, öffne Muctivities\" <break time=\"0.05s\" />, um die Fertigkeit erneut zu öffnen.";
 
 	public static final String HELP_INTENT = "Danke für das öffnen von MUCtivities. Möchtest du die Erfahrung beginnen?";
-	public static final String FALLBACK_INTENT = "Tut mir leid, ich verstehe das Wort nicht. Wiederhole es oder sage einfach Hilfe.";
-	public static String MUCtivitie_SONNIG = "Heute wird ein sonniger Tag. Möchtest du etwas draußen oder drinnen unternehmen?";
-	public static String MUCtivitie_REGEN = "Heute ist ein greisliges Wetter draußen, am besten bleibst du heut drin oder magst du etwas draußen unternehmen?";
+	public static final String FALLBACK_INTENT = "Ein Problem ist aufgetreten. (Fallback-Intent)";
+	public static final  String WEATHER_SUNNY = "Heute wird ein sonniger Tag. Möchtest du etwas draußen oder drinnen unternehmen?";
+	public static final String WEATHER_RAIN = "Heute ist ein greisliges Wetter draußen, am besten bleibst du heut drin oder magst du etwas draußen unternehmen?";
 
-	public static String DAUER_FRAGE = "Möchtest du nur ein paar Stunden unterwegs sein oder hast du den ganzen Tag Zeit?";
+	public static final String DURATION_QUESTION = "Möchtest du nur ein paar Stunden unterwegs sein oder hast du den ganzen Tag Zeit?";
 
-	public static String KATEGORIE_FRAGE = "Alles klar. Ich habe schon viele Ideen für dich. Worauf hast du denn Lust? Du kannst auswählen zwischen. Kultur. Sport. Und Spaß.";
-	public static String MUCtivities_Name = "MUCtivities";
+	public static final String CATEGORIE_QUESTION = "Alles klar. Ich habe schon viele Ideen für dich. Worauf hast du denn Lust? Du kannst auswählen zwischen. Kultur. Sport. Und Spaß.";
+	public static final String MUCTIVITIES_Name = "MUCtivities";
 	
 }

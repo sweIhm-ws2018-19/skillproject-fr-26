@@ -45,12 +45,7 @@ public class GetActivitysIntent implements RequestHandler {
 			try {
 				List<Activity> liste = muctivities.model.Database.suggestionOfActivities(locationBool, durationBool,
 						category);
-
-				// int size = liste.size();
-				// Random random = new Random();
 				output = RandomPicker.get(liste).getName();
-			//	Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
-			//	sessionAttributes.put(Attributes.STATE_KEY, value)
 			} catch (Exception e) {
 				output = "Leider habe ich keine passende Aktivität gefunden";
 			}

@@ -24,10 +24,9 @@ public class TippDesTagesHandler  implements RequestHandler{
 		String speechText;
 		try {
 			speechText = "Der Tipp des Tages ist"+ muctivities.model.Database.randomActivity().getName();
-			return input.getResponseBuilder().withSpeech(speechText).withSimpleCard(Phrases.MUCtivities_Name, speechText)
+			return input.getResponseBuilder().withSpeech(speechText).withSimpleCard(Phrases.MUCTIVITIES_Name, speechText)
 					.build();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;

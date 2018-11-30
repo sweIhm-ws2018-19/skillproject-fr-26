@@ -20,44 +20,27 @@ import com.amazon.ask.response.ResponseBuilder;
 import muctivities.constants.*;
 import muctivities.model.*;
 
-public class KategorieIntentHandler implements RequestHandler {
-	public static final String KATEGORIE_KEY = "KATEGORIE";
-	public static final String KATEGORIE_SLOT = "kategorie";
+public class CategorieHandler implements RequestHandler {
+
 
 	@Override
 	public boolean canHandle(HandlerInput input) {
-		// TODO Auto-generated method stub
-	//	return input.matches(intentName("KategorieIntent"));
-		return input.matches(sessionAttribute(Attributes.STATE_KEY, Attributes.Kategorie_State));
-
-	
+			return input.matches(intentName("CategoryIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.Kategorie_State)));
 	}
 
 	@Override
 	public Optional<Response> handle(HandlerInput input) {
-		// TODO Auto-generated method stub
 		Request request = input.getRequestEnvelope().getRequest();
 		IntentRequest intentRequest = (IntentRequest) request;
 		Intent intent = intentRequest.getIntent();
 		Map<String, Slot> slots = intent.getSlots();
-
-		// Get the color slot from the list of slots.
-		Slot kategorieSlot = slots.get(KATEGORIE_SLOT);
-
-		String category = slots.get(KATEGORIE_SLOT).getValue();
+	Slot kategorieSlot = slots.get(Attributes.CATEGORIE_SLOT);
+		String category = slots.get(Attributes.CATEGORIE_SLOT).getValue();
 		boolean durationBool = (boolean) input.getAttributesManager().getSessionAttributes()
 				.get(Attributes.DAUER_KEY);
-
 	boolean locationBool = (boolean) input.getAttributesManager().getSessionAttributes()
 		.get(Attributes.LOCALITAET_KEY);
-		
-		
-		
-		
-		// String locationBool =
-		// slots.get(IndoorOutdoorIntentHandler.LOCALITAET_SLOT).toString().contains("true");
-
-		String speechText, repromptText;
+			String speechText, repromptText;
 		boolean isAskResponse = false;
 
 		// Check for favorite color and create output to user.
@@ -109,20 +92,7 @@ public class KategorieIntentHandler implements RequestHandler {
 		}
 
 		return responseBuilder.build();
-		/*
-		 * String speechText; String favoriteColor = (String)
-		 * input.getAttributesManager().getSessionAttributes().get(COLOR_KEY);
-		 * 
-		 * if (favoriteColor != null && !favoriteColor.isEmpty()) { speechText =
-		 * String.format("Deine Lieblingsfarbe ist %s. Auf Wiedersehen.",
-		 * favoriteColor); } else { // Since the user's favorite color is not set render
-		 * an error message. speechText =
-		 * "Ich weiss nicht welches Deine Lieblingsfarbe ist. Sag mir Deine Lieblingsfarbe. Sage zum Beispiel: ich mag rot."
-		 * ; }
-		 * 
-		 * return input.getResponseBuilder().withSpeech(speechText).withSimpleCard(
-		 * "ColorSession", speechText).build();
-		 */
+
 	}
 
 }
