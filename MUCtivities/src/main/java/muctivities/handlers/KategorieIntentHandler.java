@@ -1,8 +1,10 @@
 package muctivities.handlers;
 
 import static com.amazon.ask.request.Predicates.intentName;
+import static com.amazon.ask.request.Predicates.sessionAttribute;
 
 import java.util.Collections;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -15,6 +17,9 @@ import com.amazon.ask.model.Response;
 import com.amazon.ask.model.Slot;
 import com.amazon.ask.response.ResponseBuilder;
 
+import muctivities.constants.*;
+import muctivities.model.*;
+
 public class KategorieIntentHandler implements RequestHandler {
 	public static final String KATEGORIE_KEY = "KATEGORIE";
 	public static final String KATEGORIE_SLOT = "kategorie";
@@ -22,7 +27,10 @@ public class KategorieIntentHandler implements RequestHandler {
 	@Override
 	public boolean canHandle(HandlerInput input) {
 		// TODO Auto-generated method stub
-		return input.matches(intentName("KategorieIntent"));
+	//	return input.matches(intentName("KategorieIntent"));
+		return input.matches(sessionAttribute(Attributes.STATE_KEY, Attributes.Kategorie_State));
+
+	
 	}
 
 	@Override
@@ -37,11 +45,11 @@ public class KategorieIntentHandler implements RequestHandler {
 		Slot kategorieSlot = slots.get(KATEGORIE_SLOT);
 
 		String category = slots.get(KATEGORIE_SLOT).getValue();
-		String durationBool = (String) input.getAttributesManager().getSessionAttributes()
-				.get(DauerIntentHandler.DAUER_KEY);
+		boolean durationBool = (boolean) input.getAttributesManager().getSessionAttributes()
+				.get(Attributes.DAUER_KEY);
 
-	//String locationBool = (String) input.getAttributesManager().getSessionAttributes()
-		//	.get(IndoorOutdoorIntentHandler.LOCALITAET_KEY);
+	boolean locationBool = (boolean) input.getAttributesManager().getSessionAttributes()
+		.get(Attributes.LOCALITAET_KEY);
 		
 		
 		
@@ -57,10 +65,20 @@ public class KategorieIntentHandler implements RequestHandler {
 		if (kategorieSlot.getResolutions().toString().contains("ER_SUCCESS_MATCH")) {
 
 			// Store the user's favorite color in the Session and create response.
-			String favoriteColor = kategorieSlot.getValue();
-			input.getAttributesManager().setSessionAttributes(Collections.singletonMap(KATEGORIE_KEY, favoriteColor));
-			speechText = "Lokalität: " + ". Dauer: " + durationBool.toString()
-					+ ". Kategorie: " + category + ".";
+		//	String favoriteColor = kategorieSlot.getValue();
+		//	input.getAttributesManager().setSessionAttributes(Collections.singletonMap(KATEGORIE_KEY, favoriteColor));
+			try {
+				List<Activity> liste = muctivities.model.Database.suggestionOfActivities(locationBool, durationBool,
+						category);
+			Activity activitie=	RandomPicker.get(liste);
+			Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
+			sessionAttributes.put(Attributes.AKTIVITIE_KEY, activitie);
+			speechText=activitie.getName();
+			} catch (Exception e) {
+				speechText="Ein Fehler ist passiert";
+			}
+			//speechText = "Lokalität: " + locationBool+". Dauer: " + durationBool
+				//	+ ". Kategorie: " + category + ".";
 			//speechText= category;
 			// speechText = String
 			// .format("Deine Lieblingsfarbe ist %s. Du kannst mich jetzt nach Deiner
