@@ -49,8 +49,24 @@
                 },
                 {
                     "name": "MUCtivitiesIntent",
-                    "slots": [],
+                    "slots": [
+                        {
+                            "name": "location",
+                            "type": "location_list"
+                        },
+                        {
+                            "name": "duration",
+                            "type": "duration_list"
+                        },
+                        {
+                            "name": "categorie",
+                            "type": "category_list"
+                        }
+                    ],
                     "samples": [
+                        "{categorie}",
+                        "{duration}",
+                        "{location}",
                         "Das ist ein Testlauf"
                     ]
                 },
@@ -60,36 +76,6 @@
                     "samples": [
                         "Tipp des Tages"
                     ]
-                },
-                {
-                    "name": "LocationIntent",
-                    "slots": [
-                        {
-                            "name": "location",
-                            "type": "location_list"
-                        }
-                    ],
-                    "samples": []
-                },
-                {
-                    "name": "DurationIntent",
-                    "slots": [
-                        {
-                            "name": "duration",
-                            "type": "duration_list"
-                        }
-                    ],
-                    "samples": []
-                },
-                {
-                    "name": "CategoryIntent",
-                    "slots": [
-                        {
-                            "name": "category",
-                            "type": "category_list"
-                        }
-                    ],
-                    "samples": []
                 }
             ],
             "types": [

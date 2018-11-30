@@ -9,13 +9,11 @@ import com.amazon.ask.model.Request;
 import com.amazon.ask.model.Response;
 import com.amazon.ask.model.Slot;
 
-import muctivities.constants.Attributes;
 import muctivities.model.*;
 
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import java.util.Random;
 
 import static com.amazon.ask.request.Predicates.intentName;
 
@@ -35,7 +33,6 @@ public class GetActivitysIntent implements RequestHandler {
 
 		Map<String, Slot> slots = intent.getSlots();
 		String category = slots.get("category").getValue();
-
 		Boolean durationBool = slots.get("duration").toString().contains("true");
 		Boolean locationBool = slots.get("location").toString().contains("true");
 
