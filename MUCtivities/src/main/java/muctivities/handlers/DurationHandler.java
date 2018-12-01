@@ -23,11 +23,7 @@ public class DurationHandler implements RequestHandler {
 	@Override
 	public boolean canHandle(HandlerInput input) {
 		return input.matches(
-<<<<<<< HEAD:MUCtivities/src/main/java/muctivities/handlers/DurationHandler.java
 				intentName("AttributesIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.Duration_State)));
-=======
-				intentName("MUCtivitiesIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.Duration_State)));
->>>>>>> 13f8b9eea3c8665541bdf8205348c9c8463639fc:MUCtivities/src/main/java/muctivities/handlers/DurationHandler.java
 	}
 
 	@Override
@@ -39,10 +35,11 @@ public class DurationHandler implements RequestHandler {
 		Slot durationSlot = slots.get(Attributes.DURATION_SLOT);
 
 		String speechText, repromptText;
-		boolean isAskResponse = false;
+
 		Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
 
-		if (durationSlot.getResolutions().toString().contains("ER_SUCCESS_MATCH")) {
+		if (durationSlot != null && durationSlot.getResolutions() != null
+				&& durationSlot.getResolutions().toString().contains("ER_SUCCESS_MATCH")) {
 			boolean durationBool = slots.get(Attributes.DURATION_SLOT).toString().contains("true");
 			boolean location = (boolean) sessionAttributes.get(Attributes.LOCATION_KEY);
 			sessionAttributes.put(Attributes.STATE_KEY, Attributes.Categorie_State);
@@ -53,16 +50,13 @@ public class DurationHandler implements RequestHandler {
 		} else {
 			speechText = "Ganzer Tag oder paar Stunden? Ich habe dich nicht verstanden, bitte versuche es erneut";
 			repromptText = "Ganzer Tag oder paar Stunden? Ich habe dich nicht verstanden, bitte versuche es erneut";
-			isAskResponse = true;
+
 		}
 
 		ResponseBuilder responseBuilder = input.getResponseBuilder();
 
-		responseBuilder.withSimpleCard("DauerSession", speechText).withSpeech(speechText).withShouldEndSession(false);
-
-		if (isAskResponse) {
-			responseBuilder.withShouldEndSession(false).withReprompt(repromptText);
-		}
+		responseBuilder.withSimpleCard("DauerSession", speechText).withSpeech(speechText).withReprompt(repromptText)
+				.withShouldEndSession(false);
 
 		return responseBuilder.build();
 	}

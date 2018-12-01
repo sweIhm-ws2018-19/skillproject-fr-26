@@ -23,11 +23,7 @@ public class LocationHandler implements RequestHandler {
 	@Override
 	public boolean canHandle(HandlerInput input) {
 		return input.matches(
-<<<<<<< HEAD
 				intentName("AttributesIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.Location_State)));
-=======
-				intentName("MUCtivitiesIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.Location_State)));
->>>>>>> 13f8b9eea3c8665541bdf8205348c9c8463639fc
 	}
 
 	@Override
@@ -39,10 +35,12 @@ public class LocationHandler implements RequestHandler {
 
 		Slot locationSlot = slots.get(Attributes.LOCATION_SLOT);
 
-		String speechText, repromptText;
-		boolean isAskResponse = false;
+		String speechText;
+		String repromptText;
+
 		Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
-		if (locationSlot.getResolutions().toString().contains("ER_SUCCESS_MATCH")) {
+		if (locationSlot != null && locationSlot.getResolutions() != null
+				&& locationSlot.getResolutions().toString().contains("ER_SUCCESS_MATCH")) {
 			Boolean locationBool = slots.get(Attributes.LOCATION_SLOT).toString().contains("true");
 
 			sessionAttributes.put(Attributes.STATE_KEY, Attributes.Duration_State);
@@ -54,17 +52,13 @@ public class LocationHandler implements RequestHandler {
 			sessionAttributes.put(Attributes.STATE_KEY, Attributes.Location_State);
 			speechText = "Draußen oder Drinnen? Bitte versuche es noch einmal.";
 			repromptText = "Draußen oder Drinnen? Bitte versuche es noch einmal.";
-			isAskResponse = true;
+
 		}
 
 		ResponseBuilder responseBuilder = input.getResponseBuilder();
 
 		responseBuilder.withSimpleCard("LocalitaetSession", speechText).withSpeech(speechText)
-				.withShouldEndSession(false);
-
-		if (isAskResponse) {
-			responseBuilder.withShouldEndSession(false).withReprompt(repromptText);
-		}
+				.withReprompt(repromptText).withShouldEndSession(false);
 
 		return responseBuilder.build();
 	}

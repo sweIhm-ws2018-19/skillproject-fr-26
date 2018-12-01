@@ -23,14 +23,9 @@ public class CategorieHandler implements RequestHandler {
 
 	@Override
 	public boolean canHandle(HandlerInput input) {
-<<<<<<< HEAD
-		return input.matches(intentName("AttributesIntent")
-=======
-		// TODO Auto-generated method stub
-		// return input.matches(intentName("KategorieIntent"));
-		return input.matches(intentName("MUCtivitiesIntent")
->>>>>>> 13f8b9eea3c8665541bdf8205348c9c8463639fc
-				.and(sessionAttribute(Attributes.STATE_KEY, Attributes.Categorie_State)));
+
+		return input.matches(
+				intentName("AttributesIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.Categorie_State)));
 
 	}
 
@@ -51,7 +46,8 @@ public class CategorieHandler implements RequestHandler {
 		String speechText, repromptText;
 		boolean isAskResponse = false;
 
-		if (kategorieSlot.getResolutions().toString().contains("ER_SUCCESS_MATCH")) {
+		if (kategorieSlot != null && kategorieSlot.getResolutions() != null
+				&& kategorieSlot.getResolutions().toString().contains("ER_SUCCESS_MATCH")) {
 
 			try {
 				List<Activity> liste = muctivities.model.Database.suggestionOfActivities(locationBool, durationBool,
@@ -63,23 +59,19 @@ public class CategorieHandler implements RequestHandler {
 			} catch (Exception e) {
 				speechText = "Ein Fehler ist passiert";
 			}
+			repromptText = speechText;
 
 		} else {
 			speechText = "Ich kenne deine Kategorie nicht. Bitte versucht es erneut.";
 
-			isAskResponse = true;
+			repromptText = speechText;
 
 		}
 
 		ResponseBuilder responseBuilder = input.getResponseBuilder();
 
-		responseBuilder.withSimpleCard("KategorieSession", speechText).withSpeech(speechText)
+		responseBuilder.withSimpleCard("KategorieSession", speechText).withSpeech(speechText).withReprompt(repromptText)
 				.withShouldEndSession(false);
-
-		if (isAskResponse) {
-			repromptText = "Ich kenne deine Kategorie nicht. Bitte versucht es erneut.";
-			responseBuilder.withShouldEndSession(false).withReprompt(repromptText);
-		}
 
 		return responseBuilder.build();
 
