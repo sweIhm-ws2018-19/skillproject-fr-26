@@ -23,7 +23,11 @@ public class DurationHandler implements RequestHandler {
 	@Override
 	public boolean canHandle(HandlerInput input) {
 		return input.matches(
+<<<<<<< HEAD:MUCtivities/src/main/java/muctivities/handlers/DurationHandler.java
 				intentName("AttributesIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.Duration_State)));
+=======
+				intentName("MUCtivitiesIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.Duration_State)));
+>>>>>>> 13f8b9eea3c8665541bdf8205348c9c8463639fc:MUCtivities/src/main/java/muctivities/handlers/DurationHandler.java
 	}
 
 	@Override
