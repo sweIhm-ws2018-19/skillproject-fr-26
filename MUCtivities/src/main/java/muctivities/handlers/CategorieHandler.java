@@ -23,7 +23,13 @@ public class CategorieHandler implements RequestHandler {
 
 	@Override
 	public boolean canHandle(HandlerInput input) {
+<<<<<<< HEAD
 		return input.matches(intentName("AttributesIntent")
+=======
+		// TODO Auto-generated method stub
+		// return input.matches(intentName("KategorieIntent"));
+		return input.matches(intentName("MUCtivitiesIntent")
+>>>>>>> 13f8b9eea3c8665541bdf8205348c9c8463639fc
 				.and(sessionAttribute(Attributes.STATE_KEY, Attributes.Categorie_State)));
 
 	}

@@ -23,7 +23,11 @@ public class LocationHandler implements RequestHandler {
 	@Override
 	public boolean canHandle(HandlerInput input) {
 		return input.matches(
+<<<<<<< HEAD
 				intentName("AttributesIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.Location_State)));
+=======
+				intentName("MUCtivitiesIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.Location_State)));
+>>>>>>> 13f8b9eea3c8665541bdf8205348c9c8463639fc
 	}
 
 	@Override

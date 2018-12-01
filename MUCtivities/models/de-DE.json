@@ -48,7 +48,11 @@
                     ]
                 },
                 {
+<<<<<<< HEAD
                     "name": "AttributesIntent",
+=======
+                    "name": "MUCtivitiesIntent",
+>>>>>>> 13f8b9eea3c8665541bdf8205348c9c8463639fc
                     "slots": [
                         {
                             "name": "location",
@@ -66,7 +70,12 @@
                     "samples": [
                         "{categorie}",
                         "{duration}",
+<<<<<<< HEAD
                         "{location}"
+=======
+                        "{location}",
+                        "Das ist ein Testlauf"
+>>>>>>> 13f8b9eea3c8665541bdf8205348c9c8463639fc
                     ]
                 },
                 {
@@ -75,6 +84,7 @@
                     "samples": [
                         "Tipp des Tages"
                     ]
+<<<<<<< HEAD
                 },
                 {
                     "name": "MUCtivitiesIntent",
@@ -82,6 +92,8 @@
                     "samples": [
                         "Das ist ein Testlauf"
                     ]
+=======
+>>>>>>> 13f8b9eea3c8665541bdf8205348c9c8463639fc
                 }
             ],
             "types": [
