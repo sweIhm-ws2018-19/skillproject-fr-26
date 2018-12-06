@@ -11,11 +11,11 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.when;
 
 public class LaunchRequestHandlerTest {
-    private HelpIntentHandler handler;
+    private LaunchRequestHandler handler;
 
     @Before
     public void setup() {
-        handler = new HelpIntentHandler();
+        handler = new LaunchRequestHandler();
     }
 
     @Test
