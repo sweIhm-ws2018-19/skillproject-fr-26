@@ -21,6 +21,4 @@ public class Phrases {
 	public static final String DURATION_QUESTION = "Möchtest du nur ein paar Stunden unterwegs sein oder hast du den ganzen Tag Zeit?";
 	public static final String CATEGORIE_FRAGE = "Alles klar. Ich habe schon viele Ideen für dich. Worauf hast du denn Lust? Du kannst auswählen zwischen. Kultur. Sport. Und Spaß.";
 
-	public static final String MUCtivities_Name = "MUCtivities";
-
 }

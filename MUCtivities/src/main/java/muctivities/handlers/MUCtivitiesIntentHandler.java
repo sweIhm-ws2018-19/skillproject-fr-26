@@ -29,9 +29,8 @@ public class MUCtivitiesIntentHandler implements RequestHandler {
         Boolean orElse = aBoolean.orElse(true);
 
         String speechText = orElse ? Phrases.WEATHER_SUNNY : Phrases.WEATHER_RAINY;
-        return input.getResponseBuilder().withSpeech(speechText).withSimpleCard(Phrases.MUCtivities_Name, speechText)
+        return input.getResponseBuilder().withSpeech(speechText).withSimpleCard(Phrases.MUCTIVITIES_NAME, speechText)
                 .withShouldEndSession(false).build();
-
 
     }
 

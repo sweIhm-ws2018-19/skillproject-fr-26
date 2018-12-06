@@ -22,11 +22,11 @@ public class TippDesTagesHandler implements RequestHandler {
 		try {
 			speechText = "Der Tipp des Tages ist" + muctivities.model.Database.randomActivity().getName();
 			return input.getResponseBuilder().withSpeech(speechText)
-					.withSimpleCard(Phrases.MUCtivities_Name, speechText).build();
+					.withSimpleCard(Phrases.MUCTIVITIES_NAME, speechText).build();
 		} catch (Exception e) {
 			speechText = "Fehler. Tipp des Tages";
 		}
-		return input.getResponseBuilder().withSpeech(speechText).withSimpleCard(Phrases.MUCtivities_Name, speechText)
+		return input.getResponseBuilder().withSpeech(speechText).withSimpleCard(Phrases.MUCTIVITIES_NAME, speechText)
 				.build();
 
 	}
