@@ -18,7 +18,7 @@ public class DurationHandler implements RequestHandler {
 	@Override
 	public boolean canHandle(HandlerInput input) {
 		return input.matches(
-				intentName("AttributesIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.Duration_State)));
+				intentName("AttributesIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.DURATION_STATE)));
 	}
 
 	@Override
@@ -37,7 +37,7 @@ public class DurationHandler implements RequestHandler {
 				&& durationSlot.getResolutions().toString().contains("ER_SUCCESS_MATCH")) {
 			boolean durationBool = slots.get(Attributes.DURATION_SLOT).toString().contains("true");
 			boolean location = (boolean) sessionAttributes.get(Attributes.LOCATION_KEY);
-			sessionAttributes.put(Attributes.STATE_KEY, Attributes.Categorie_State);
+			sessionAttributes.put(Attributes.STATE_KEY, Attributes.CATEGORIE_STATE);
 			sessionAttributes.put(Attributes.LOCATION_KEY, location);
 			sessionAttributes.put(Attributes.DURATION_KEY, durationBool);
 			speechText = Phrases.CATEGORIE_FRAGE;

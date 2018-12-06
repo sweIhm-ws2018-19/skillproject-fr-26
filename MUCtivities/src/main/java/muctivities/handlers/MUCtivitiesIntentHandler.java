@@ -23,7 +23,7 @@ public class MUCtivitiesIntentHandler implements RequestHandler {
     @Override
     public Optional<Response> handle(HandlerInput input) {
         Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
-        sessionAttributes.put(Attributes.STATE_KEY, Attributes.Location_State);
+        sessionAttributes.put(Attributes.STATE_KEY, Attributes.LOCATION_STATE);
 
         Optional<Boolean> aBoolean = Wetterdienst.wetterVorhersage();
         Boolean orElse = aBoolean.orElse(true);

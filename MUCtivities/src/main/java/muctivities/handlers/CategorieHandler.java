@@ -25,7 +25,7 @@ public class CategorieHandler implements RequestHandler {
 	public boolean canHandle(HandlerInput input) {
 
 		return input.matches(
-				intentName("AttributesIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.Categorie_State)));
+				intentName("AttributesIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.CATEGORIE_STATE)));
 
 	}
 

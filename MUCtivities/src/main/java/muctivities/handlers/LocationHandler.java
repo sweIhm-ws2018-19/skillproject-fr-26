@@ -23,7 +23,7 @@ public class LocationHandler implements RequestHandler {
 	@Override
 	public boolean canHandle(HandlerInput input) {
 		return input.matches(
-				intentName("AttributesIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.Location_State)));
+				intentName("AttributesIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.LOCATION_STATE)));
 	}
 
 	@Override
@@ -43,13 +43,13 @@ public class LocationHandler implements RequestHandler {
 				&& locationSlot.getResolutions().toString().contains("ER_SUCCESS_MATCH")) {
 			Boolean locationBool = slots.get(Attributes.LOCATION_SLOT).toString().contains("true");
 
-			sessionAttributes.put(Attributes.STATE_KEY, Attributes.Duration_State);
+			sessionAttributes.put(Attributes.STATE_KEY, Attributes.DURATION_STATE);
 			sessionAttributes.put(Attributes.LOCATION_KEY, locationBool);
 			speechText = Phrases.DURATION_QUESTION;
 			repromptText = Phrases.DURATION_QUESTION;
 
 		} else {
-			sessionAttributes.put(Attributes.STATE_KEY, Attributes.Location_State);
+			sessionAttributes.put(Attributes.STATE_KEY, Attributes.LOCATION_STATE);
 			speechText = "Draußen oder Drinnen? Bitte versuche es noch einmal.";
 			repromptText = "Draußen oder Drinnen? Bitte versuche es noch einmal.";
 
