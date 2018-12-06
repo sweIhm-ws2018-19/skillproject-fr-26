@@ -12,7 +12,6 @@ public class ProblemHandler implements RequestHandler {
 
 	@Override
 	public boolean canHandle(HandlerInput input) {
-		// TODO Auto-generated method stub
 		return true;
 	}
 

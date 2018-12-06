@@ -38,7 +38,7 @@ public class GetActivitysIntent implements RequestHandler {
 
 		boolean isEndOfDialog = intentRequest.getDialogState() == DialogState.COMPLETED;
 		if (isEndOfDialog) {
-			String output = "";
+			String output;
 			try {
 				List<Activity> liste = muctivities.model.Database.suggestionOfActivities(locationBool, durationBool,
 						category);

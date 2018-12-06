@@ -15,21 +15,24 @@ import static com.amazon.ask.request.Predicates.intentName;
 
 public class MUCtivitiesIntentHandler implements RequestHandler {
 
-	@Override
-	public boolean canHandle(HandlerInput input) {
-		return input.matches(intentName("MUCtivitiesIntent"));
-	}
+    @Override
+    public boolean canHandle(HandlerInput input) {
+        return input.matches(intentName("MUCtivitiesIntent"));
+    }
 
-	@Override
-	public Optional<Response> handle(HandlerInput input) {
-		Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
-		sessionAttributes.put(Attributes.STATE_KEY, Attributes.Location_State);
+    @Override
+    public Optional<Response> handle(HandlerInput input) {
+        Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
+        sessionAttributes.put(Attributes.STATE_KEY, Attributes.Location_State);
 
-		String speechText = Wetterdienst.wetterVorhersage().get() ? Phrases.WEATHER_SUNNY : Phrases.WEATHER_RAINY;
-		return input.getResponseBuilder().withSpeech(speechText).withSimpleCard(Phrases.MUCtivities_Name, speechText)
-				.withShouldEndSession(false).build();
+        Optional<Boolean> aBoolean = Wetterdienst.wetterVorhersage();
+        Boolean orElse = aBoolean.orElse(true);
+
+        String speechText = orElse ? Phrases.WEATHER_SUNNY : Phrases.WEATHER_RAINY;
+        return input.getResponseBuilder().withSpeech(speechText).withSimpleCard(Phrases.MUCtivities_Name, speechText)
+                .withShouldEndSession(false).build();
 
 
-	}
+    }
 
 }

@@ -44,7 +44,6 @@ public class CategorieHandler implements RequestHandler {
 		boolean locationBool = (boolean) input.getAttributesManager().getSessionAttributes()
 				.get(Attributes.LOCATION_KEY);
 		String speechText, repromptText;
-		boolean isAskResponse = false;
 
 		if (kategorieSlot != null && kategorieSlot.getResolutions() != null
 				&& kategorieSlot.getResolutions().toString().contains("ER_SUCCESS_MATCH")) {

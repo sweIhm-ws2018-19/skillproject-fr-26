@@ -1,15 +1,13 @@
 package muctivities.handlers;
 
-import static com.amazon.ask.request.Predicates.intentName;
-
-import java.util.Optional;
-
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
-
 import muctivities.constants.Phrases;
-import muctivities.model.Wetterdienst;
+
+import java.util.Optional;
+
+import static com.amazon.ask.request.Predicates.intentName;
 
 public class TippDesTagesHandler implements RequestHandler {
 
