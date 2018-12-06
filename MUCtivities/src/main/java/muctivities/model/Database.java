@@ -3,11 +3,13 @@ package muctivities.model;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.apache.commons.io.IOUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -54,14 +56,11 @@ public final class Database {
 
 	static String readFile() throws IOException { // TODO throws declaration, best practice? or should we catch it?
 		ClassLoader cl = Database.class.getClassLoader();
-		String filePath = cl.getResource(AKTIVITES_DATABASE).getFile();
 
-		File file = new File(filePath);
-		FileInputStream fis = new FileInputStream(file);
+        InputStream fis = cl.getResourceAsStream(AKTIVITES_DATABASE);
+
 		try {
-			byte[] data = new byte[(int) file.length()];
-			fis.read(data);
-			fis.close();
+			byte[] data = IOUtils.toByteArray(fis);
 			return new String(data, StandardCharsets.UTF_8);
 		} catch (Exception e) {
 			throw new IOException(e);
