@@ -29,7 +29,8 @@ public class DurationHandler implements RequestHandler {
 		Map<String, Slot> slots = intent.getSlots();
 		Slot durationSlot = slots.get(Attributes.DURATION_SLOT);
 
-		String speechText, repromptText;
+		String speechText;
+		String repromptText;
 
 		Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
 

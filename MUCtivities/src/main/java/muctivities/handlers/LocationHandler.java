@@ -2,7 +2,6 @@ package muctivities.handlers;
 
 import static com.amazon.ask.request.Predicates.intentName;
 
-import java.util.Collections;
 import java.util.Map;
 import java.util.Optional;
 

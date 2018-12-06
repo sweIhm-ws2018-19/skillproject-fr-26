@@ -2,6 +2,7 @@ package muctivities.model;
 
 import org.apache.commons.io.IOUtils;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -35,7 +36,7 @@ public final class Database {
 		return RandomPicker.get(getDatabaseEntries());
 	}
 
-	static List<Activity> getDatabaseEntries() throws Exception {
+	static List<Activity> getDatabaseEntries() throws JSONException, IOException {
 		JSONArray database = new JSONArray(readFile());
 		List<Activity> activities = new ArrayList<>();
 		for (int i = 0; i < database.length(); i++) {
@@ -53,7 +54,7 @@ public final class Database {
 
     /**
      * // Multiple streams were opened. Only the last is closed.
-     * // TODO throws declaration, best practice? or should we catch it?
+     * // throws declaration, best practice? or should we catch it?
      * @return string
      * @throws IOException exception
      */
