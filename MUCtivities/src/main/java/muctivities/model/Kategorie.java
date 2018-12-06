@@ -1,7 +1,7 @@
 package muctivities.model;
 
 public enum Kategorie {
-	KULTUR, SPAẞ, SPORT;
+	KULTUR, SPASS, SPORT;
 
 	/**
 	 * Parses a string to a enum category. Prefer this instead of valueOf() to

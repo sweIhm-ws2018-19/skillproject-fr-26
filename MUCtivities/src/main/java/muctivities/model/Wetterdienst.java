@@ -38,10 +38,10 @@ public class Wetterdienst {
 	/**
 	 * Reads the Kelvin temperature and converts in to Celsius.
 	 * 
-	 * @param responseBody
+	 * @param responseBody resp
 	 * @return Temperature in Celsius
 	 */
-	static int getTemperature(JSONObject responseBody) {
+	private static int getTemperature(JSONObject responseBody) {
 		int kelvinTemp = responseBody.getJSONObject("main").getInt("temp");
 		return kelvinTemp - KELVIN_CELSIUS_DIFFERENCE;
 	}
@@ -60,7 +60,7 @@ public class Wetterdienst {
 		return new Integer(firstTwoCharsOfWeatherIcon);
 	}
 
-	static JSONObject getResponsebody(HttpsURLConnection apiConnection) throws IOException {
+	private static JSONObject getResponsebody(HttpsURLConnection apiConnection) throws IOException {
 		InputStream in = apiConnection.getInputStream();
 		ByteArrayOutputStream buffer = new ByteArrayOutputStream();
 		int byteBlock;
@@ -71,7 +71,7 @@ public class Wetterdienst {
 		return new JSONObject(responseBody);
 	}
 
-	static HttpsURLConnection callApi() throws IOException {
+	private static HttpsURLConnection callApi() throws IOException {
 		URL apiUrl = new URL(API);
 		HttpsURLConnection apiConnection = (HttpsURLConnection) apiUrl.openConnection();
 		apiConnection.setRequestMethod("GET");

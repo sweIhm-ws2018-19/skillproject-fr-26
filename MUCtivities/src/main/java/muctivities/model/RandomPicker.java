@@ -5,12 +5,14 @@ import java.util.Random;
 
 public final class RandomPicker {
 
-	private RandomPicker() {
-		// static class
-	}
+    /**
+     * static class
+     */
+    private RandomPicker() {
+    }
 
-	public static <U> U get(List<U> list) {
-		int randomIdx = new Random().nextInt(list.size());
-		return list.get(randomIdx);
-	}
+    public static <U> U get(List<U> list) {
+        int randomIdx = new Random().nextInt(list.size());
+        return list.get(randomIdx);
+    }
 }

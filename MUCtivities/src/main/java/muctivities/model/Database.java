@@ -1,18 +1,15 @@
 package muctivities.model;
 
-import java.io.File;
-import java.io.FileInputStream;
+import org.apache.commons.io.IOUtils;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-
-import org.apache.commons.io.IOUtils;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 public final class Database {
 
@@ -34,11 +31,11 @@ public final class Database {
 
 	}
 
-	public static Activity randomActivity() throws JSONException, Exception {
+	public static Activity randomActivity() throws Exception {
 		return RandomPicker.get(getDatabaseEntries());
 	}
 
-	static List<Activity> getDatabaseEntries() throws JSONException, Exception {
+	static List<Activity> getDatabaseEntries() throws Exception {
 		JSONArray database = new JSONArray(readFile());
 		List<Activity> activities = new ArrayList<>();
 		for (int i = 0; i < database.length(); i++) {
@@ -54,18 +51,20 @@ public final class Database {
 				Kategorie.parseString(obj.getString("category")), obj.getString("name"), obj.getString("info"));
 	}
 
-	static String readFile() throws IOException { // TODO throws declaration, best practice? or should we catch it?
+    /**
+     * // Multiple streams were opened. Only the last is closed.
+     * // TODO throws declaration, best practice? or should we catch it?
+     * @return string
+     * @throws IOException exception
+     */
+	static String readFile() throws IOException {
         ClassLoader cl = Database.class.getClassLoader();
 
-        InputStream fis = cl.getResourceAsStream(AKTIVITES_DATABASE);
-
-        try {
+        try (InputStream fis = cl.getResourceAsStream(AKTIVITES_DATABASE)) {
             byte[] data = IOUtils.toByteArray(fis);
             return new String(data, StandardCharsets.UTF_8);
         } catch (Exception e) {
             throw new IOException(e);
-        } finally {
-            fis.close(); // Multiple streams were opened. Only the last is closed.
         }
 
 	}
