@@ -21,11 +21,9 @@ public final class Database {
 	private Database() {
 	}
 
-<<<<<<< HEAD
-	public static List<Activity> suggestionOfActivities(boolean location, boolean duration, String categoryString) throws JSONException, IOException {
-=======
+
 	public static List<Activity> suggestionOfActivities(boolean location, boolean duration, String categoryString) throws IOException {
->>>>>>> d62771e91e5b414380d34a12d3223922df21c8de
+
 		Kategorie category = Kategorie.parseString(categoryString);
 		List<Activity> activities = getDatabaseEntries();
 		return activities.stream().filter(activity -> activity.isAllday() == duration)
