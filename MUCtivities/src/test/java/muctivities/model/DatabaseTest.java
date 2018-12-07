@@ -35,7 +35,7 @@ public class DatabaseTest {
     @Test
     public void testParseJSONObject() {
         JSONObject exampleFromDatabase = new JSONObject("  {\r\n" + "    \"location\": false,\r\n"
-                + "    \"duration\": false,\r\n" + "    \"category\": \"Spass\",\r\n" + "    \"name\": \"Museum\",\r\n"
+                + "    \"duration\": false,\r\n" + "    \"category\": \"Spaß\",\r\n" + "    \"name\": \"Museum\",\r\n"
                 + "    \"info\": \"asdf\"\r\n" + "  },\r\n");
         Activity activity = Database.parseJSONObject(exampleFromDatabase);
         Assert.assertEquals("Museum", activity.getName());

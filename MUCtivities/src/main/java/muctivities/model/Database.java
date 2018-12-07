@@ -2,7 +2,6 @@ package muctivities.model;
 
 import org.apache.commons.io.IOUtils;
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -22,7 +21,11 @@ public final class Database {
 	private Database() {
 	}
 
+<<<<<<< HEAD
 	public static List<Activity> suggestionOfActivities(boolean location, boolean duration, String categoryString) throws JSONException, IOException {
+=======
+	public static List<Activity> suggestionOfActivities(boolean location, boolean duration, String categoryString) throws IOException {
+>>>>>>> d62771e91e5b414380d34a12d3223922df21c8de
 		Kategorie category = Kategorie.parseString(categoryString);
 		List<Activity> activities = getDatabaseEntries();
 		return activities.stream().filter(activity -> activity.isAllday() == duration)
@@ -31,11 +34,11 @@ public final class Database {
 
 	}
 
-	public static Activity randomActivity() throws Exception {
+	public static Activity randomActivity() throws IOException  {
 		return RandomPicker.get(getDatabaseEntries());
 	}
 
-	static List<Activity> getDatabaseEntries() throws JSONException, IOException {
+	static List<Activity> getDatabaseEntries() throws IOException {
 		JSONArray database = new JSONArray(readFile());
 		List<Activity> activities = new ArrayList<>();
 		for (int i = 0; i < database.length(); i++) {
