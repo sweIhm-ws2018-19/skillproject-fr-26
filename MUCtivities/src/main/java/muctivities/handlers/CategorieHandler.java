@@ -55,6 +55,7 @@ public class CategorieHandler implements RequestHandler {
 				Activity activitie = RandomPicker.get(liste);
 				Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
 				sessionAttributes.put(Attributes.ACTIVITY_KEY, activitie);
+				sessionAttributes.put(Attributes.STATE_KEY, Attributes.INFO_STATE);
 				speechText = activitie.getName();
 			} catch (Exception e) {
 				speechText = "Ein Fehler ist passiert";

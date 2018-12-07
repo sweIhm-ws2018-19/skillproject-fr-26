@@ -31,6 +31,7 @@ public class MUCtivitiesStreamHandler extends SkillStreamHandler {
                         new HelpIntentHandler(),
                         new FallbackIntentHandler(),
                         new GetActivitysIntent(),
+                        new InfoHandler(),
                         new CategorieHandler(),
                         new LocationHandler(),
                         new DurationHandler(),

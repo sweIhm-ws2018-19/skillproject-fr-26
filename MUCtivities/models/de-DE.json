@@ -82,6 +82,17 @@
                     "samples": [
                         "Das ist ein Testlauf"
                     ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "Info",
+                    "slots": [],
+                    "samples": [
+                        "weitere Informationen"
+                    ]
                 }
             ],
             "types": [

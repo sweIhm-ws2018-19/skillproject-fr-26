@@ -32,7 +32,7 @@ public class Activity {
 		return name;
 	}
 
-	String getDescription() {
+	public String getDescription() {
 		return description;
 	}
 }
