@@ -27,8 +27,9 @@ public class MUCtivitiesIntentHandler implements RequestHandler {
 
         Optional<Boolean> aBoolean = Wetterdienst.wetterVorhersage();
         Boolean orElse = aBoolean.orElse(true);
-
+        sessionAttributes.put(Attributes.WEATHER_KEY, orElse);
         String speechText = orElse ? Phrases.WEATHER_SUNNY : Phrases.WEATHER_RAINY;
+        
         return input.getResponseBuilder().withSpeech(speechText).withSimpleCard(Phrases.MUCTIVITIES_NAME, speechText)
                 .withShouldEndSession(false).build();
 

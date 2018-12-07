@@ -24,9 +24,9 @@ public class TippDesTagesHandler implements RequestHandler {
 		try {
 			Activity activitie = muctivities.model.Database.randomActivity();
 			Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
-			sessionAttributes.put(Attributes.STATE_KEY, Attributes.INFO_STATE);
+			sessionAttributes.put(Attributes.STATE_KEY, Attributes.DESCRIPTION_STATE);
 			sessionAttributes.put(Attributes.ACTIVITY_KEY, activitie);
-			speechText = "Der Tipp des Tages ist " + activitie.getName();
+			speechText = "Der Tipp des Tages ist " + activitie.getName()+ "Magst du mehr Infos bekommen?";
 			//return input.getResponseBuilder().withSpeech(speechText)
 				//	.withSimpleCard(Phrases.MUCTIVITIES_NAME, speechText).build();
 		} catch (Exception e) {

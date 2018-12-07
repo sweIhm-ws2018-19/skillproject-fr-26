@@ -17,16 +17,19 @@ import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
 
+import muctivities.constants.Attributes;
 import muctivities.constants.Phrases;
 
 import java.util.Optional;
 
 import static com.amazon.ask.request.Predicates.intentName;
+import static com.amazon.ask.request.Predicates.sessionAttribute;
 
 public class CancelandStopIntentHandler implements RequestHandler {
 	@Override
 	public boolean canHandle(HandlerInput input) {
-		return input.matches(intentName("AMAZON.StopIntent").or(intentName("AMAZON.CancelIntent")));
+		return input.matches(intentName("AMAZON.StopIntent").or(intentName("AMAZON.CancelIntent"))) || input.matches(
+				intentName("AMAZON.NoIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.DESCRIPTION_STATE)));
 	}
 
 	@Override

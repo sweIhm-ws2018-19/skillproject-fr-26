@@ -15,8 +15,8 @@ public class Phrases {
 	public static final String HELP_INTENT = "Danke für das öffnen von MUCtivities. Möchtest du die Erfahrung beginnen?";
 	public static final String FALLBACK_INTENT = "Tut mir leid, ich verstehe das Wort nicht. Wiederhole es oder sage einfach Hilfe.";
 
-	public static final String WEATHER_SUNNY = "Heute wird ein sonniger Tag. Möchtest du etwas draußen oder drinnen unternehmen?";
-	public static final String WEATHER_RAINY = "Heute ist ein greisliges Wetter draußen, am besten bleibst du heut drin oder magst du etwas draußen unternehmen?";
+	public static final String WEATHER_SUNNY = "Heute wird ein sonniger Tag. Möchtest du etwas draußen  unternehmen?";
+	public static final String WEATHER_RAINY = "Heute ist ein greisliges Wetter draußen, am besten bleibst du heut drin?";
 
 	public static final String DURATION_QUESTION = "Möchtest du nur ein paar Stunden unterwegs sein oder hast du den ganzen Tag Zeit?";
 	public static final String CATEGORIE_FRAGE = "Alles klar. Ich habe schon viele Ideen für dich. Worauf hast du denn Lust? Du kannst auswählen zwischen. Kultur. Sport. Und Spaß.";
