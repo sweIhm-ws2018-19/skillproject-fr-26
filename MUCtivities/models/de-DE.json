@@ -20,40 +20,8 @@
                     "samples": []
                 },
                 {
-                    "name": "GetActivitysIntent",
-                    "slots": [
-                        {
-                            "name": "location",
-                            "type": "location_list",
-                            "samples": [
-                                "{location}"
-                            ]
-                        },
-                        {
-                            "name": "duration",
-                            "type": "duration_list",
-                            "samples": [
-                                "{duration}"
-                            ]
-                        },
-                        {
-                            "name": "category",
-                            "type": "category_list"
-                        }
-                    ],
-                    "samples": [
-                        "Was kann ich unternehmen",
-                        "Mir ist langweilig",
-                        "Was kann ich machen"
-                    ]
-                },
-                {
                     "name": "AttributesIntent",
                     "slots": [
-                        {
-                            "name": "location",
-                            "type": "location_list"
-                        },
                         {
                             "name": "duration",
                             "type": "duration_list"
@@ -65,8 +33,7 @@
                     ],
                     "samples": [
                         "{categorie}",
-                        "{duration}",
-                        "{location}"
+                        "{duration}"
                     ]
                 },
                 {
@@ -80,7 +47,9 @@
                     "name": "MUCtivitiesIntent",
                     "slots": [],
                     "samples": [
-                        "Das ist ein Testlauf"
+                        "Was kann ich unternehmen",
+                        "Mir ist langweilig",
+                        "Was kann ich machen"
                     ]
                 },
                 {
@@ -92,6 +61,18 @@
                     "slots": [],
                     "samples": [
                         "weitere Informationen"
+                    ]
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": [
+                        "Ja"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": [
+                        "Nein"
                     ]
                 }
             ],
@@ -191,118 +172,6 @@
                     ]
                 }
             ]
-        },
-        "dialog": {
-            "intents": [
-                {
-                    "name": "GetActivitysIntent",
-                    "confirmationRequired": false,
-                    "prompts": {},
-                    "slots": [
-                        {
-                            "name": "location",
-                            "type": "location_list",
-                            "confirmationRequired": false,
-                            "elicitationRequired": true,
-                            "prompts": {
-                                "elicitation": "Elicit.Slot.781288801424.836474543101"
-                            },
-                            "validations": [
-                                {
-                                    "type": "hasEntityResolutionMatch",
-                                    "prompt": "Slot.Validation.584619114038.1490838143449.699014969349"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "duration",
-                            "type": "duration_list",
-                            "confirmationRequired": false,
-                            "elicitationRequired": true,
-                            "prompts": {
-                                "elicitation": "Elicit.Slot.781288801424.740061457985"
-                            },
-                            "validations": [
-                                {
-                                    "type": "hasEntityResolutionMatch",
-                                    "prompt": "Slot.Validation.584619114038.1401011793169.687616039061"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "category",
-                            "type": "category_list",
-                            "confirmationRequired": false,
-                            "elicitationRequired": true,
-                            "prompts": {
-                                "elicitation": "Elicit.Slot.781288801424.520268035724"
-                            },
-                            "validations": [
-                                {
-                                    "type": "hasEntityResolutionMatch",
-                                    "prompt": "Slot.Validation.584619114038.414825183627.518529920292"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        "prompts": [
-            {
-                "id": "Elicit.Slot.781288801424.836474543101",
-                "variations": [
-                    {
-                        "type": "PlainText",
-                        "value": "Möchtest du drinnen oder draußen was unternehmen?"
-                    }
-                ]
-            },
-            {
-                "id": "Elicit.Slot.781288801424.520268035724",
-                "variations": [
-                    {
-                        "type": "PlainText",
-                        "value": "Alles klar. Ich habe schon viele Ideen für dich. Worauf hast du denn Lust. Du kannst auswählen zwischen. Kultur. Sport. Und Spaß."
-                    }
-                ]
-            },
-            {
-                "id": "Elicit.Slot.781288801424.740061457985",
-                "variations": [
-                    {
-                        "type": "PlainText",
-                        "value": "Möchtest du nur ein paar Stunden unterwegs sein oder hast du den ganzen Tag Zeit"
-                    }
-                ]
-            },
-            {
-                "id": "Slot.Validation.584619114038.1490838143449.699014969349",
-                "variations": [
-                    {
-                        "type": "PlainText",
-                        "value": "Drinnen oder Draußen?"
-                    }
-                ]
-            },
-            {
-                "id": "Slot.Validation.584619114038.1401011793169.687616039061",
-                "variations": [
-                    {
-                        "type": "PlainText",
-                        "value": "ganzen Tag oder ein paar Stunden?"
-                    }
-                ]
-            },
-            {
-                "id": "Slot.Validation.584619114038.414825183627.518529920292",
-                "variations": [
-                    {
-                        "type": "PlainText",
-                        "value": "Spaß, Sport und Kultur"
-                    }
-                ]
-            }
-        ]
+        }
     }
 }

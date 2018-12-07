@@ -37,9 +37,9 @@ public class DurationHandler implements RequestHandler {
 		if (durationSlot != null && durationSlot.getResolutions() != null
 				&& durationSlot.getResolutions().toString().contains("ER_SUCCESS_MATCH")) {
 			boolean durationBool = slots.get(Attributes.DURATION_SLOT).toString().contains("true");
-			boolean location = (boolean) sessionAttributes.get(Attributes.LOCATION_KEY);
+			//boolean location = (boolean) sessionAttributes.get(Attributes.LOCATION_KEY);
 			sessionAttributes.put(Attributes.STATE_KEY, Attributes.CATEGORIE_STATE);
-			sessionAttributes.put(Attributes.LOCATION_KEY, location);
+			//sessionAttributes.put(Attributes.LOCATION_KEY, location);
 			sessionAttributes.put(Attributes.DURATION_KEY, durationBool);
 			speechText = Phrases.CATEGORIE_FRAGE;
 			repromptText = Phrases.CATEGORIE_FRAGE;

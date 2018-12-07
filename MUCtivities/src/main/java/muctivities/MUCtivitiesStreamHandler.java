@@ -30,7 +30,7 @@ public class MUCtivitiesStreamHandler extends SkillStreamHandler {
                         new SessionEndedRequestHandler(),
                         new HelpIntentHandler(),
                         new FallbackIntentHandler(),
-                        new GetActivitysIntent(),
+                        new Suggestion2(),
                         new DescriptionHandler(),
                         new InfoHandler(),
                         new CategorieHandler(),

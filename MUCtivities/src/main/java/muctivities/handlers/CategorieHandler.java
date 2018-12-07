@@ -25,7 +25,9 @@ public class CategorieHandler implements RequestHandler {
 	public boolean canHandle(HandlerInput input) {
 
 		return input.matches(
-				intentName("AttributesIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.CATEGORIE_STATE)));
+				intentName("AttributesIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.CATEGORIE_STATE)))||
+				input.matches(
+						intentName("AMAZON.NoIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.SUGESTION3_STATE)));
 
 	}
 
@@ -53,10 +55,12 @@ public class CategorieHandler implements RequestHandler {
 				List<Activity> liste = muctivities.model.Database.suggestionOfActivities(locationBool, durationBool,
 						category);
 				Activity activitie = RandomPicker.get(liste);
+				liste.remove(activitie);
 				Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
 				sessionAttributes.put(Attributes.ACTIVITY_KEY, activitie);
 				sessionAttributes.put(Attributes.STATE_KEY, Attributes.INFO_STATE);
-				speechText = activitie.getName();
+				sessionAttributes.put(Attributes.LIST_KEY, liste);
+				speechText = activitie.getName() + "Passt die Aktivität?";
 			} catch (Exception e) {
 				speechText = "Ein Fehler ist passiert";
 			}
