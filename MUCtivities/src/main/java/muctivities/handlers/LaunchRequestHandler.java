@@ -18,8 +18,10 @@ import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.LaunchRequest;
 import com.amazon.ask.model.Response;
 
+import muctivities.constants.Attributes;
 import muctivities.constants.Phrases;
 
+import java.util.Map;
 import java.util.Optional;
 
 import static com.amazon.ask.request.Predicates.requestType;
@@ -32,8 +34,11 @@ public class LaunchRequestHandler implements RequestHandler {
 
 	@Override
 	public Optional<Response> handle(HandlerInput input) {
-		return input.getResponseBuilder().withSpeech(Phrases.LAUNCH_REQUEST)
-				.withSimpleCard(Phrases.MUCTIVITIES_NAME, Phrases.LAUNCH_REQUEST).withReprompt(Phrases.WELCOME_REPROMT)
+		Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
+
+		sessionAttributes.put(Attributes.REPEAT_KEY, Phrases.LAUNCH_REQUEST);
+
+		return input.getResponseBuilder().withSpeech(Phrases.LAUNCH_REQUEST).withReprompt(Phrases.LAUNCH_REQUEST)
 				.build();
 	}
 }

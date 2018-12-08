@@ -31,12 +31,14 @@ public class MUCtivitiesStreamHandler extends SkillStreamHandler {
                         new HelpIntentHandler(),
                         new FallbackIntentHandler(),
                         new Suggestion2(),
+                        new Suggestion3(),
+                        new NewCategorieHandler(),
                         new DescriptionHandler(),
                         new InfoHandler(),
                         new CategorieHandler(),
                         new LocationHandler(),
                         new DurationHandler(),
-                        new MUCtivitiesIntentHandler(),
+                        new WeatherIntentHandler(),
                         new TippDesTagesHandler(),
                         new ProblemHandler()
                 		)

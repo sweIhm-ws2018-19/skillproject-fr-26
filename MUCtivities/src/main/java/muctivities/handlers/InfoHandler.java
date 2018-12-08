@@ -22,7 +22,8 @@ public class InfoHandler implements RequestHandler {
 	public boolean canHandle(HandlerInput input) {
 		return input.matches(intentName("AMAZON.YesIntent"))
 				&& (input.matches(sessionAttribute(Attributes.STATE_KEY, Attributes.INFO_STATE))
-						|| input.matches(sessionAttribute(Attributes.STATE_KEY, Attributes.SUGESTION2_STATE))|| input.matches(sessionAttribute(Attributes.STATE_KEY, Attributes.SUGESTION3_STATE)));
+						|| input.matches(sessionAttribute(Attributes.STATE_KEY, Attributes.SUGESTION2_STATE))
+						|| input.matches(sessionAttribute(Attributes.STATE_KEY, Attributes.SUGESTION3_STATE)));
 
 	}
 
@@ -35,10 +36,10 @@ public class InfoHandler implements RequestHandler {
 
 		String speechText = "Magst du mehr Infos bekommen?";
 		String repromptText = speechText;
+		sessionAttributes.put(Attributes.REPEAT_KEY, speechText);
 		ResponseBuilder responseBuilder = input.getResponseBuilder();
 
-		responseBuilder.withSimpleCard("LocalitaetSession", speechText).withSpeech(speechText)
-				.withReprompt(repromptText).withShouldEndSession(false);
+		responseBuilder.withSpeech(speechText).withReprompt(repromptText).withShouldEndSession(false);
 
 		return responseBuilder.build();
 	}

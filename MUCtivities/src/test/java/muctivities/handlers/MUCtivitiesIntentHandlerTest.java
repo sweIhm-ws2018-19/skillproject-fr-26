@@ -11,11 +11,11 @@ import static org.mockito.Mockito.when;
 
 public class MUCtivitiesIntentHandlerTest {
 
-    private MUCtivitiesIntentHandler handler;
+    private WeatherIntentHandler handler;
 
     @Before
     public void setup() {
-        handler = new MUCtivitiesIntentHandler();
+        handler = new WeatherIntentHandler();
     }
 
     @Test

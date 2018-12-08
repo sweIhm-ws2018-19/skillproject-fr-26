@@ -25,7 +25,7 @@ public class DescriptionHandler implements RequestHandler{
 
 	@Override
 	public Optional<Response> handle(HandlerInput input) {
-		String speechtext;
+		String speechText;
 	
 			Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
 
@@ -33,10 +33,10 @@ public class DescriptionHandler implements RequestHandler{
 //			Activity activitie = (Activity) sessionAttributes.get(Attributes.ACTIVITY_KEY);
 			Map<String, String> activity = (LinkedHashMap<String, String>) sessionAttributes
 					.get(Attributes.ACTIVITY_KEY);
-			speechtext=	activity.get("description");
-			
+			speechText=	activity.get("description");
+			sessionAttributes.put(Attributes.REPEAT_KEY, speechText);
 	
-		return input.getResponseBuilder().withSpeech(speechtext)
+		return input.getResponseBuilder().withSpeech(speechText)
 				// .withReprompt(Phrases.WELCOME_REPROMT)
 				.build();
 	}

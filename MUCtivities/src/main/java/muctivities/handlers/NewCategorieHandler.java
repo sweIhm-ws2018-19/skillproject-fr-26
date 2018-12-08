@@ -13,12 +13,12 @@ import com.amazon.ask.model.Response;
 import muctivities.constants.Attributes;
 import muctivities.constants.Phrases;
 
-public class Suggestion3 implements RequestHandler {
+public class NewCategorieHandler implements RequestHandler {
 
 	@Override
 	public boolean canHandle(HandlerInput input) {
 		return input.matches(
-				intentName("AMAZON.NoIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.SUGESTION2_STATE)));
+				intentName("AMAZON.NoIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.SUGESTION3_STATE)));
 
 	}
 
@@ -26,12 +26,10 @@ public class Suggestion3 implements RequestHandler {
 	public Optional<Response> handle(HandlerInput input) {
 		Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
 
-		sessionAttributes.put(Attributes.STATE_KEY, Attributes.SUGESTION3_STATE);
-		String speechText = "Vorschlag 3. noch nicht implementiert";
+		sessionAttributes.put(Attributes.STATE_KEY, Attributes.CATEGORIE_KEY);
+		String speechText = Phrases.CATEGORIE_FRAGE;
 		sessionAttributes.put(Attributes.REPEAT_KEY, speechText);
-		return input.getResponseBuilder().withSpeech(speechText).withSimpleCard(Phrases.MUCTIVITIES_NAME, speechText)
-				.withShouldEndSession(false).build();
 
+		return input.getResponseBuilder().withSpeech(speechText).withShouldEndSession(false).build();
 	}
-
 }

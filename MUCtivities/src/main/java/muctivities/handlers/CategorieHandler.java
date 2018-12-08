@@ -25,9 +25,7 @@ public class CategorieHandler implements RequestHandler {
 	public boolean canHandle(HandlerInput input) {
 
 		return input.matches(
-				intentName("AttributesIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.CATEGORIE_STATE)))||
-				input.matches(
-						intentName("AMAZON.NoIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.SUGESTION3_STATE)));
+				intentName("AttributesIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.CATEGORIE_STATE)));
 
 	}
 
@@ -60,14 +58,17 @@ public class CategorieHandler implements RequestHandler {
 				sessionAttributes.put(Attributes.ACTIVITY_KEY, activitie);
 				sessionAttributes.put(Attributes.STATE_KEY, Attributes.INFO_STATE);
 				sessionAttributes.put(Attributes.LIST_KEY, liste);
+				sessionAttributes.put(Attributes.REPEAT_KEY, Phrases.DURATION_REPROMT);
+				
 				speechText = activitie.getName() + "Passt die Aktivität?";
+				sessionAttributes.put(Attributes.REPEAT_KEY, Phrases.INFO_REPROMT);
 			} catch (Exception e) {
 				speechText = "Ein Fehler ist passiert";
 			}
 			repromptText = speechText;
 
 		} else {
-			speechText = "Ich kenne deine Kategorie nicht. Bitte versucht es erneut.";
+			speechText =Phrases.CATEGORIE_REPROMT;
 
 			repromptText = speechText;
 
@@ -75,7 +76,7 @@ public class CategorieHandler implements RequestHandler {
 
 		ResponseBuilder responseBuilder = input.getResponseBuilder();
 
-		responseBuilder.withSimpleCard("KategorieSession", speechText).withSpeech(speechText).withReprompt(repromptText)
+		responseBuilder.withSpeech(speechText).withReprompt(repromptText)
 				.withShouldEndSession(false);
 
 		return responseBuilder.build();

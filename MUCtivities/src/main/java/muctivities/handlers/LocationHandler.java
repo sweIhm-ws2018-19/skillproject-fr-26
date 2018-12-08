@@ -29,47 +29,20 @@ public class LocationHandler implements RequestHandler {
 
 	@Override
 	public Optional<Response> handle(HandlerInput input) {
-		/*
-		 * Request request = input.getRequestEnvelope().getRequest(); IntentRequest
-		 * intentRequest = (IntentRequest) request; Intent intent =
-		 * intentRequest.getIntent(); Map<String, Slot> slots = intent.getSlots();
-		 * 
-		 * Slot locationSlot = slots.get(Attributes.LOCATION_SLOT);
-		 * 
-		 * String speechText; String repromptText;
-		 * 
-		 * Map<String, Object> sessionAttributes =
-		 * input.getAttributesManager().getSessionAttributes(); if (locationSlot != null
-		 * && locationSlot.getResolutions() != null &&
-		 * locationSlot.getResolutions().toString().contains("ER_SUCCESS_MATCH")) {
-		 * Boolean locationBool =
-		 * slots.get(Attributes.LOCATION_SLOT).toString().contains("true");
-		 * 
-		 * sessionAttributes.put(Attributes.STATE_KEY, Attributes.DURATION_STATE);
-		 * sessionAttributes.put(Attributes.LOCATION_KEY, locationBool); speechText =
-		 * Phrases.DURATION_QUESTION; repromptText = Phrases.DURATION_QUESTION;
-		 * 
-		 * } else { sessionAttributes.put(Attributes.STATE_KEY,
-		 * Attributes.LOCATION_STATE); speechText =
-		 * "Draußen oder Drinnen? Bitte versuche es noch einmal."; repromptText =
-		 * "Draußen oder Drinnen? Bitte versuche es noch einmal.";
-		 * 
-		 * }
-		 */
+
 		String speechText;
-		String repromptText;
+
 		Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
 		boolean locationBool = !input.matches(intentName("AMAZON.YesIntent"))
 				^ (boolean) sessionAttributes.get(Attributes.WEATHER_KEY);
 
 		sessionAttributes.put(Attributes.STATE_KEY, Attributes.DURATION_STATE);
 		sessionAttributes.put(Attributes.LOCATION_KEY, locationBool);
+		sessionAttributes.put(Attributes.REPEAT_KEY, Phrases.DURATION_REPROMT);
 		speechText = Phrases.DURATION_QUESTION;
-		repromptText = Phrases.DURATION_QUESTION;
 		ResponseBuilder responseBuilder = input.getResponseBuilder();
 
-		responseBuilder.withSimpleCard("LocalitaetSession", speechText).withSpeech(speechText)
-				.withReprompt(repromptText).withShouldEndSession(false);
+		responseBuilder.withSpeech(speechText).withShouldEndSession(false);
 
 		return responseBuilder.build();
 	}
