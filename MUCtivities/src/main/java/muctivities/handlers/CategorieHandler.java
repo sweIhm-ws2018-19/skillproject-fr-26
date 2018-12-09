@@ -69,9 +69,7 @@ public class CategorieHandler implements RequestHandler {
 
 		} else {
 			speechText =Phrases.CATEGORIE_REPROMT;
-
 			repromptText = speechText;
-
 		}
 
 		ResponseBuilder responseBuilder = input.getResponseBuilder();

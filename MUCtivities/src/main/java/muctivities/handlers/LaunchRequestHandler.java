@@ -20,6 +20,7 @@ import com.amazon.ask.model.Response;
 
 import muctivities.constants.Attributes;
 import muctivities.constants.Phrases;
+import muctivities.model.RandomPicker;
 
 import java.util.Map;
 import java.util.Optional;
@@ -27,18 +28,18 @@ import java.util.Optional;
 import static com.amazon.ask.request.Predicates.requestType;
 
 public class LaunchRequestHandler implements RequestHandler {
-	@Override
-	public boolean canHandle(HandlerInput input) {
-		return input.matches(requestType(LaunchRequest.class));
-	}
+    @Override
+    public boolean canHandle(HandlerInput input) {
+        return input.matches(requestType(LaunchRequest.class));
+    }
 
-	@Override
-	public Optional<Response> handle(HandlerInput input) {
-		Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
+    @Override
+    public Optional<Response> handle(HandlerInput input) {
+        Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
+        String PHRASE = RandomPicker.get(Phrases.LAUNCH_REQUEST);
 
-		sessionAttributes.put(Attributes.REPEAT_KEY, Phrases.LAUNCH_REQUEST);
-
-		return input.getResponseBuilder().withSpeech(Phrases.LAUNCH_REQUEST).withReprompt(Phrases.LAUNCH_REQUEST)
-				.build();
-	}
+        sessionAttributes.put(Attributes.REPEAT_KEY, PHRASE);
+        return input.getResponseBuilder().withSpeech(PHRASE).withReprompt(PHRASE)
+                .build();
+    }
 }

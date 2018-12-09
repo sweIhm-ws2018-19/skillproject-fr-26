@@ -12,6 +12,7 @@ import com.amazon.ask.model.Response;
 
 import muctivities.constants.Attributes;
 import muctivities.constants.Phrases;
+import muctivities.model.RandomPicker;
 
 public class NewCategorieHandler implements RequestHandler {
 
@@ -27,7 +28,7 @@ public class NewCategorieHandler implements RequestHandler {
 		Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
 
 		sessionAttributes.put(Attributes.STATE_KEY, Attributes.CATEGORIE_KEY);
-		String speechText = Phrases.CATEGORIE_FRAGE;
+		String speechText = RandomPicker.get(Phrases.CATEGORIE_QUESTION);
 		sessionAttributes.put(Attributes.REPEAT_KEY, speechText);
 
 		return input.getResponseBuilder().withSpeech(speechText).withShouldEndSession(false).build();

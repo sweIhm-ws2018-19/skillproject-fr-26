@@ -16,6 +16,7 @@ import com.amazon.ask.response.ResponseBuilder;
 import static com.amazon.ask.request.Predicates.sessionAttribute;
 
 import muctivities.constants.*;
+import muctivities.model.RandomPicker;
 
 public class LocationHandler implements RequestHandler {
 
@@ -39,7 +40,7 @@ public class LocationHandler implements RequestHandler {
 		sessionAttributes.put(Attributes.STATE_KEY, Attributes.DURATION_STATE);
 		sessionAttributes.put(Attributes.LOCATION_KEY, locationBool);
 		sessionAttributes.put(Attributes.REPEAT_KEY, Phrases.DURATION_REPROMT);
-		speechText = Phrases.DURATION_QUESTION;
+		speechText = RandomPicker.get(Phrases.DURATION_QUESTION);
 		ResponseBuilder responseBuilder = input.getResponseBuilder();
 
 		responseBuilder.withSpeech(speechText).withShouldEndSession(false);
