@@ -84,7 +84,36 @@
                 {
                     "name": "AMAZON.NoIntent",
                     "samples": [
-                        "Nein"
+                        "Nein",
+						"Nö",
+						"Ne",
+						"Auf keinen Fall",
+						"Will ich nicht",
+						"Mag ich nicht",
+						"Lieber was anderes",
+						"Keine Lust",
+						"Keinen Bock darauf",
+						"Nope",
+						"Ne danke",
+						"Nein danke",
+						"Brauch ich nicht",
+						"Nicht nötig",
+						"Unnötig",
+						"Ich brauche keine Infos",
+						"Ich möchte keine Infos",
+						"Ich will keine Infos",
+						"Lass stecken",
+						"Keine Zeit",
+						"Eigentlich nicht",
+						"Passt schon",
+						"Lieber nicht",
+						"Schlechte Idee",
+						"Blöde Idee",
+						"Gefällt mir nicht",
+						"Möchte ich nicht",
+						"Damit bin ich nicht einverstanden",
+						"Nicht in Ordnung",
+						"Nein, das ist nicht in Ordnung"
                     ]
                 }
             ],
