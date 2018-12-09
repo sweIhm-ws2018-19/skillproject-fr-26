@@ -36,10 +36,10 @@ public class LaunchRequestHandler implements RequestHandler {
     @Override
     public Optional<Response> handle(HandlerInput input) {
         Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
-        String PHRASE = RandomPicker.get(Phrases.LAUNCH_REQUEST);
+        String phrase = RandomPicker.get(Phrases.LAUNCH_REQUEST);
 
-        sessionAttributes.put(Attributes.REPEAT_KEY, PHRASE);
-        return input.getResponseBuilder().withSpeech(PHRASE).withReprompt(PHRASE)
+        sessionAttributes.put(Attributes.REPEAT_KEY, phrase);
+        return input.getResponseBuilder().withSpeech(phrase).withReprompt(phrase)
                 .build();
     }
 }
