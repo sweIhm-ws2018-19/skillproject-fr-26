@@ -18,8 +18,6 @@ public class Phrases {
         add("Grias di! Du kannst mich nach einem personalisierten Vorschlag für eine Aktivität in München fragen oder den Tipp des Tages anfordern. Was möchtest du gerne?");
     }};
 
-    public static final String CANCEL_AND_STOP_INTENT = "Komm morgen wieder, um die Erfahrung wieder zu spielen. Sag einfach \"Alexa, öffne Muctivities\" <break time=\"0.05s\" />, um die Fertigkeit erneut zu öffnen.";
-
     public static final String HELP_INTENT = "Danke für das öffnen von MUCtivities. Möchtest du die Erfahrung beginnen?";
     public static final String FALLBACK_INTENT = "Tut mir leid, ich verstehe das Wort nicht. Wiederhole es oder sage einfach Hilfe.";
 
@@ -53,4 +51,9 @@ public class Phrases {
         add("Mei, des wird gspassig. Würdest du gerne mehr darüber erfahren?");
     }};
 
+    public static final List<String> CANCEL_AND_STOP_INTENT = new ArrayList<String>() {{
+        add("Komm morgen wieder, um die Erfahrung wieder zu spielen. Sag einfach \"Alexa, öffne Muctivities\" <break time=\"0.05s\" />, um die Fertigkeit erneut zu öffnen.");
+        add("Alles klar. Ich wünsch dir einen schönen Tag und viel Spaß dabei. Bis zum nächsten Mal! Pfiad di Servus!");
+        add("Guad, dann wünsch ich dir viel Spaß in München. Bis zum nächsten Mal! Pfiat di, mach’s gut!");
+    }};
 }
