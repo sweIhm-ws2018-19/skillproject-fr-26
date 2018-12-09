@@ -37,6 +37,7 @@ public class MUCtivitiesStreamHandler extends SkillStreamHandler {
                         new InfoHandler(),
                         new CategorieHandler(),
                         new LocationHandler(),
+                        new Location1Handler(),
                         new DurationHandler(),
                         new WeatherIntentHandler(),
                         new TippDesTagesHandler(),

@@ -4,7 +4,6 @@ import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.*;
 import com.amazon.ask.response.ResponseBuilder;
-import com.sun.org.apache.regexp.internal.RE;
 import muctivities.constants.Attributes;
 import muctivities.constants.Phrases;
 import muctivities.model.RandomPicker;
