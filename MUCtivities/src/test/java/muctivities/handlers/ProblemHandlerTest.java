@@ -11,17 +11,17 @@ import static org.mockito.Mockito.when;
 
 public class ProblemHandlerTest {
 
-    private ProblemHandler handler;
+	private ProblemHandler handler;
 
-    @Before
-    public void setup() {
-        handler = new ProblemHandler();
-    }
+	@Before
+	public void setup() {
+		handler = new ProblemHandler();
+	}
 
-    @Test
-    public void canHandle() {
-        final HandlerInput inputMock = Mockito.mock(HandlerInput.class);
-        when(inputMock.matches(any())).thenReturn(true);
-        assertTrue(handler.canHandle(inputMock));
-    }
+	@Test
+	public void canHandle() {
+		final HandlerInput inputMock = Mockito.mock(HandlerInput.class);
+		when(inputMock.matches(any())).thenReturn(true);
+		assertTrue(handler.canHandle(inputMock));
+	}
 }
