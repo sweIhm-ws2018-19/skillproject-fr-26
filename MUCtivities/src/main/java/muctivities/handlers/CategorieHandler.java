@@ -59,7 +59,8 @@ public class CategorieHandler implements RequestHandler {
 				sessionAttributes.put(Attributes.STATE_KEY, Attributes.INFO_STATE);
 				sessionAttributes.put(Attributes.LIST_KEY, liste);
 				sessionAttributes.put(Attributes.REPEAT_KEY, Phrases.DURATION_REPROMT);
-				
+				sessionAttributes.put(Attributes.COUNTER_KEY, 1);
+
 				speechText = activitie.getName() + "Passt die Aktivität?";
 				sessionAttributes.put(Attributes.REPEAT_KEY, Phrases.INFO_REPROMT);
 			} catch (Exception e) {

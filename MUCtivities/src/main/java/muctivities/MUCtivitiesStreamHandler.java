@@ -25,12 +25,12 @@ public class MUCtivitiesStreamHandler extends SkillStreamHandler {
     private static Skill getSkill() {
         return Skills.standard()
                 .addRequestHandlers(
+                        new ThatsMyTest(),
                         new LaunchRequestHandler(),
                         new CancelandStopIntentHandler(),
                         new SessionEndedRequestHandler(),
                         new HelpIntentHandler(),
-                        new Suggestion2(),
-                        new Suggestion3(),
+                        new NextSuggestionsHandler(),
                         new NewCategorieHandler(),
                         new DescriptionHandler(),
                         new InfoHandler(),
