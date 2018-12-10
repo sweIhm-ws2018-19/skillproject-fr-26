@@ -29,8 +29,7 @@ public class Suggestion3 implements RequestHandler {
 		sessionAttributes.put(Attributes.STATE_KEY, Attributes.SUGESTION3_STATE);
 		String speechText = "Vorschlag 3. noch nicht implementiert";
 		sessionAttributes.put(Attributes.REPEAT_KEY, speechText);
-		return input.getResponseBuilder().withSpeech(speechText).withSimpleCard(Phrases.MUCTIVITIES_NAME, speechText)
-				.withShouldEndSession(false).build();
+		return input.getResponseBuilder().withSpeech(speechText).withShouldEndSession(false).build();
 
 	}
 

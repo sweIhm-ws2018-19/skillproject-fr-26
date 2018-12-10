@@ -59,8 +59,9 @@ public class CategorieHandler implements RequestHandler {
 				sessionAttributes.put(Attributes.STATE_KEY, Attributes.INFO_STATE);
 				sessionAttributes.put(Attributes.LIST_KEY, liste);
 				sessionAttributes.put(Attributes.REPEAT_KEY, Phrases.DURATION_REPROMT);
-				
-				speechText = activitie.getName() + "Passt die Aktivität?";
+				// String repeat = RandomPicker.get(Phrases.VORSCHLAG1);
+				speechText = String.format(RandomPicker.get(Phrases.VORSCHLAG1), activitie.getName());
+			//	speechText = activitie.getName() + "Passt die Aktivität?";
 				sessionAttributes.put(Attributes.REPEAT_KEY, Phrases.INFO_REPROMT);
 			} catch (Exception e) {
 				speechText = "Ein Fehler ist passiert";

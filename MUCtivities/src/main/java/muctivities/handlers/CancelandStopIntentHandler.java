@@ -27,17 +27,17 @@ import static com.amazon.ask.request.Predicates.intentName;
 import static com.amazon.ask.request.Predicates.sessionAttribute;
 
 public class CancelandStopIntentHandler implements RequestHandler {
-    @Override
-    public boolean canHandle(HandlerInput input) {
-        return input.matches(intentName("AMAZON.StopIntent").or(intentName("AMAZON.CancelIntent"))) || input.matches(
-                intentName("AMAZON.NoIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.DESCRIPTION_STATE)));
-    }
+	@Override
+	public boolean canHandle(HandlerInput input) {
+		return input.matches(intentName("AMAZON.StopIntent").or(intentName("AMAZON.CancelIntent")))
+				|| input.matches(intentName("AMAZON.NoIntent")
+						.and(sessionAttribute(Attributes.STATE_KEY, Attributes.DESCRIPTION_STATE)));
+	}
 
-    @Override
-    public Optional<Response> handle(HandlerInput input) {
-        String endText = RandomPicker.get(Phrases.CANCEL_AND_STOP_INTENT);
+	@Override
+	public Optional<Response> handle(HandlerInput input) {
+		String endText = RandomPicker.get(Phrases.CANCEL_AND_STOP_INTENT);
 
-        return input.getResponseBuilder().withSpeech(endText)
-                .withSimpleCard(Phrases.MUCTIVITIES_NAME, endText).build();
-    }
+		return input.getResponseBuilder().withSpeech(endText).build();
+	}
 }

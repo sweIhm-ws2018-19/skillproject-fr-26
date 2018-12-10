@@ -31,7 +31,6 @@ public class HelpIntentHandler implements RequestHandler {
 
 	@Override
 	public Optional<Response> handle(HandlerInput input) {
-		return input.getResponseBuilder().withSpeech(Phrases.HELP_INTENT)
-				.withSimpleCard(Phrases.MUCTIVITIES_NAME, Phrases.HELP_INTENT).withReprompt(Phrases.HELP_INTENT).build();
+		return input.getResponseBuilder().withSpeech(Phrases.HELP_INTENT).withReprompt(Phrases.HELP_INTENT).build();
 	}
 }
