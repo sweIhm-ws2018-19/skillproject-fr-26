@@ -28,18 +28,17 @@ import java.util.Optional;
 import static com.amazon.ask.request.Predicates.requestType;
 
 public class LaunchRequestHandler implements RequestHandler {
-    @Override
-    public boolean canHandle(HandlerInput input) {
-        return input.matches(requestType(LaunchRequest.class));
-    }
+	@Override
+	public boolean canHandle(HandlerInput input) {
+		return input.matches(requestType(LaunchRequest.class));
+	}
 
-    @Override
-    public Optional<Response> handle(HandlerInput input) {
-        Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
-        String phrase = RandomPicker.get(Phrases.LAUNCH_REQUEST);
+	@Override
+	public Optional<Response> handle(HandlerInput input) {
+		Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
+		String phrase = RandomPicker.get(Phrases.LAUNCH_REQUEST);
 
-        sessionAttributes.put(Attributes.REPEAT_KEY, phrase);
-        return input.getResponseBuilder().withSpeech(phrase).withReprompt(phrase)
-                .build();
-    }
+		sessionAttributes.put(Attributes.REPEAT_KEY, phrase);
+		return input.getResponseBuilder().withSpeech(phrase).withReprompt(phrase).build();
+	}
 }
