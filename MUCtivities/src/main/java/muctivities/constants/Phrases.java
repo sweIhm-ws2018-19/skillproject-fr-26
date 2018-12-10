@@ -1,8 +1,5 @@
 package muctivities.constants;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Phrases {
     private Phrases() {
         throw new IllegalStateException("Utility class");
