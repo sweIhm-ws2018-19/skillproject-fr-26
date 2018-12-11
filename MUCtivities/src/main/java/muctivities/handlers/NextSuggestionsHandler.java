@@ -16,7 +16,6 @@ import muctivities.model.RandomPicker;
 
 public class NextSuggestionsHandler implements RequestHandler {
 
-	private static int MAX_REPEAT = 3;
 
 	@Override
 	public boolean canHandle(HandlerInput input) {
