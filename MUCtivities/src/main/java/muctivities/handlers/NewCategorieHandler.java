@@ -18,8 +18,8 @@ public class NewCategorieHandler implements RequestHandler {
 
 	@Override
 	public boolean canHandle(HandlerInput input) {
-		return input.matches(
-				intentName("AMAZON.NoIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.NEW_CATEGORIE_STATE)));
+		return input.matches(intentName("AMAZON.NoIntent")
+				.and(sessionAttribute(Attributes.STATE_KEY, Attributes.NEW_CATEGORIE_STATE)));
 
 	}
 
