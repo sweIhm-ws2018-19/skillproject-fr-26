@@ -61,7 +61,7 @@ public class CategorieHandler implements RequestHandler {
 				sessionAttributes.put(Attributes.REPEAT_KEY, Phrases.DURATION_REPROMT);
 				sessionAttributes.put(Attributes.COUNTER_KEY, 1);
 
-				speechText = activitie.getName() + "Passt die Aktivität?";
+				speechText = String.format(RandomPicker.get(Phrases.VORSCHLAG1), activitie.getName());
 				sessionAttributes.put(Attributes.REPEAT_KEY, Phrases.INFO_REPROMT);
 			} catch (Exception e) {
 				speechText = "Ein Fehler ist passiert";
@@ -69,14 +69,13 @@ public class CategorieHandler implements RequestHandler {
 			repromptText = speechText;
 
 		} else {
-			speechText =Phrases.CATEGORIE_REPROMT;
+			speechText = Phrases.CATEGORIE_REPROMT;
 			repromptText = speechText;
 		}
 
 		ResponseBuilder responseBuilder = input.getResponseBuilder();
 
-		responseBuilder.withSpeech(speechText).withReprompt(repromptText)
-				.withShouldEndSession(false);
+		responseBuilder.withSpeech(speechText).withReprompt(repromptText).withShouldEndSession(false);
 
 		return responseBuilder.build();
 

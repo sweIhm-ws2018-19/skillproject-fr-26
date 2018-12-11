@@ -11,22 +11,22 @@ import static org.mockito.Mockito.when;
 
 public class DurationHandlerTest {
 
-    private DurationHandler handler;
+	private DurationHandler handler;
 
-    @Before
-    public void setup() {
-        handler = new DurationHandler();
-    }
+	@Before
+	public void setup() {
+		handler = new DurationHandler();
+	}
 
-    @Test
-    public void canHandle() {
-        final HandlerInput inputMock = Mockito.mock(HandlerInput.class);
-        when(inputMock.matches(any())).thenReturn(true);
-        assertTrue(handler.canHandle(inputMock));
-    }
+	@Test
+	public void canHandle() {
+		final HandlerInput inputMock = Mockito.mock(HandlerInput.class);
+		when(inputMock.matches(any())).thenReturn(true);
+		assertTrue(handler.canHandle(inputMock));
+	}
 
-    @Test
-    public void handle() {
-    }
+	@Test
+	public void handle() {
+	}
 
 }

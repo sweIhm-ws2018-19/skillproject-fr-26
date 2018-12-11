@@ -36,7 +36,6 @@ public class Location1Handler implements RequestHandler {
 		Slot locationSlot = slots.get(Attributes.LOCATION_SLOT);
 
 		String speechText;
-	
 
 		Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
 		if (locationSlot != null && locationSlot.getResolutions() != null
@@ -47,7 +46,6 @@ public class Location1Handler implements RequestHandler {
 			sessionAttributes.put(Attributes.LOCATION_KEY, locationBool);
 
 			speechText = RandomPicker.get(Phrases.DURATION_QUESTION);
-			
 
 		} else {
 			sessionAttributes.put(Attributes.STATE_KEY, Attributes.LOCATION_STATE);

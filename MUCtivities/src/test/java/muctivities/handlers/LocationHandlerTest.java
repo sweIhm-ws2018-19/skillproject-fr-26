@@ -11,21 +11,21 @@ import static org.mockito.Mockito.when;
 
 public class LocationHandlerTest {
 
-    private LocationHandler handler;
+	private LocationHandler handler;
 
-    @Before
-    public void setup() {
-        handler = new LocationHandler();
-    }
+	@Before
+	public void setup() {
+		handler = new LocationHandler();
+	}
 
-    @Test
-    public void canHandle() {
-        final HandlerInput inputMock = Mockito.mock(HandlerInput.class);
-        when(inputMock.matches(any())).thenReturn(true);
-        assertTrue(handler.canHandle(inputMock));
-    }
+	@Test
+	public void canHandle() {
+		final HandlerInput inputMock = Mockito.mock(HandlerInput.class);
+		when(inputMock.matches(any())).thenReturn(true);
+		assertTrue(handler.canHandle(inputMock));
+	}
 
-    @Test
-    public void handle() {
-    }
+	@Test
+	public void handle() {
+	}
 }

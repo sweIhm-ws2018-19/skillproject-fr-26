@@ -22,23 +22,23 @@ public class InfoHandler implements RequestHandler {
         return input.matches(intentName("AMAZON.YesIntent"))
                 && (input.matches(sessionAttribute(Attributes.STATE_KEY, Attributes.INFO_STATE))
                 || input.matches(sessionAttribute(Attributes.STATE_KEY, Attributes.NEXTSUGGESTION_STATE)));
+	}
 
-    }
+	@Override
+	public Optional<Response> handle(HandlerInput input) {
 
-    @Override
-    public Optional<Response> handle(HandlerInput input) {
+		Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
 
-        Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
+		sessionAttributes.put(Attributes.STATE_KEY, Attributes.DESCRIPTION_STATE);
 
-        sessionAttributes.put(Attributes.STATE_KEY, Attributes.DESCRIPTION_STATE);
+		String speechAndRepromptText = RandomPicker.get(Phrases.MORE_INFORMATION);
+		sessionAttributes.put(Attributes.REPEAT_KEY, speechAndRepromptText);
+		ResponseBuilder responseBuilder = input.getResponseBuilder();
 
-        String speechAndRepromptText = RandomPicker.get(Phrases.MORE_INFORMATION);
-        sessionAttributes.put(Attributes.REPEAT_KEY, speechAndRepromptText);
-        ResponseBuilder responseBuilder = input.getResponseBuilder();
+		responseBuilder.withSpeech(speechAndRepromptText).withReprompt(speechAndRepromptText)
+				.withShouldEndSession(false);
 
-        responseBuilder.withSpeech(speechAndRepromptText).withReprompt(speechAndRepromptText).withShouldEndSession(false);
-
-        return responseBuilder.build();
-    }
+		return responseBuilder.build();
+	}
 
 }
