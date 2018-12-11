@@ -20,6 +20,7 @@ public final class Attributes {
 	public static final String DURATION_STATE = "_Duration";
 	public static final String CATEGORIE_STATE = "_Categorie";// Sugestion1
 	public static final String NEXTSUGGESTION_STATE = "_NextSuggestion";
+	public static final String NEW_CATEGORIE_STATE = "_NewCategorie";
 
 	public static final String DESCRIPTION_STATE = "_Description";
 	public static final String INFO_STATE = "_INFO";

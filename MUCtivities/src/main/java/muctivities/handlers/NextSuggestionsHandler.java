@@ -16,21 +16,21 @@ import muctivities.model.RandomPicker;
 
 public class NextSuggestionsHandler implements RequestHandler {
 
-
 	@Override
 	public boolean canHandle(HandlerInput input) {
-		return input.matches(intentName("AMAZON.NoIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.INFO_STATE)));
+		return input.matches(
+				intentName("AMAZON.NoIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.INFO_STATE)));
 	}
 
 	@Override
 	public Optional<Response> handle(HandlerInput input) {
 		Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
 
-		int counter = (int)input.getAttributesManager().getSessionAttributes().get(Attributes.COUNTER_KEY);
+		int counter = (int) input.getAttributesManager().getSessionAttributes().get(Attributes.COUNTER_KEY);
 		counter++;
 
-		ArrayList<LinkedHashMap<String, String>> activities = (ArrayList<LinkedHashMap<String, String>>) input.getAttributesManager()
-				.getSessionAttributes().get(Attributes.LIST_KEY);
+		ArrayList<LinkedHashMap<String, String>> activities = (ArrayList<LinkedHashMap<String, String>>) input
+				.getAttributesManager().getSessionAttributes().get(Attributes.LIST_KEY);
 		LinkedHashMap<String, String> activity = RandomPicker.get(activities);
 		activities.remove(activity);
 
@@ -42,7 +42,7 @@ public class NextSuggestionsHandler implements RequestHandler {
 		String speechText = activity.get("name") + " Passt die Aktivität?";
 
 		if (counter == Settings.MAX_SUGGESTIONS) {
-			sessionAttributes.put(Attributes.STATE_KEY, Attributes.DESCRIPTION_STATE);
+			sessionAttributes.put(Attributes.STATE_KEY, Attributes.NEW_CATEGORIE_STATE);
 		} else {
 			sessionAttributes.put(Attributes.STATE_KEY, Attributes.INFO_STATE);
 		}
