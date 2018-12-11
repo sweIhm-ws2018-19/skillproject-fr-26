@@ -48,8 +48,7 @@ public class NextSuggestionsHandler implements RequestHandler {
 			sessionAttributes.put(Attributes.STATE_KEY, Attributes.INFO_STATE);
 		}
 
-		return input.getResponseBuilder().withSpeech(speechText).withSimpleCard(Phrases.MUCTIVITIES_NAME, speechText)
-				.withShouldEndSession(false).build();
+		return input.getResponseBuilder().withSpeech(speechText).withShouldEndSession(false).build();
 
 	}
 
