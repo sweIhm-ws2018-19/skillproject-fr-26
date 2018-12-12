@@ -11,22 +11,21 @@ import static org.mockito.Mockito.when;
 
 public class CategorieHandlerTest {
 
+	private CategorieHandler handler;
 
-    private CategorieHandler handler;
+	@Before
+	public void setup() {
+		handler = new CategorieHandler();
+	}
 
-    @Before
-    public void setup() {
-        handler = new CategorieHandler();
-    }
+	@Test
+	public void canHandle() {
+		final HandlerInput inputMock = Mockito.mock(HandlerInput.class);
+		when(inputMock.matches(any())).thenReturn(true);
+		assertTrue(handler.canHandle(inputMock));
+	}
 
-    @Test
-    public void canHandle() {
-        final HandlerInput inputMock = Mockito.mock(HandlerInput.class);
-        when(inputMock.matches(any())).thenReturn(true);
-        assertTrue(handler.canHandle(inputMock));
-    }
-
-    @Test
-    public void handle() {
-    }
+	@Test
+	public void handle() {
+	}
 }

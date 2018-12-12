@@ -18,8 +18,8 @@ public class NewCategorieHandler implements RequestHandler {
 
 	@Override
 	public boolean canHandle(HandlerInput input) {
-		return input.matches(
-				intentName("AMAZON.NoIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.SUGESTION3_STATE)));
+		return input.matches(intentName("AMAZON.NoIntent")
+				.and(sessionAttribute(Attributes.STATE_KEY, Attributes.NEW_CATEGORIE_STATE)));
 
 	}
 
@@ -27,7 +27,7 @@ public class NewCategorieHandler implements RequestHandler {
 	public Optional<Response> handle(HandlerInput input) {
 		Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
 
-		sessionAttributes.put(Attributes.STATE_KEY, Attributes.CATEGORIE_KEY);
+		sessionAttributes.put(Attributes.STATE_KEY, Attributes.CATEGORIE_STATE);
 		String speechText = RandomPicker.get(Phrases.CATEGORIE_QUESTION);
 		sessionAttributes.put(Attributes.REPEAT_KEY, speechText);
 

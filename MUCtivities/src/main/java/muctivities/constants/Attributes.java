@@ -14,12 +14,13 @@ public final class Attributes {
 	public static final String WEATHER_KEY = "WEATHER";
 	public static final String LIST_KEY = "LIST";
 	public static final String REPEAT_KEY = "REPEAT";
+	public static final String COUNTER_KEY = "COUNTER";
 
 	public static final String LOCATION_STATE = "_Location";
 	public static final String DURATION_STATE = "_Duration";
 	public static final String CATEGORIE_STATE = "_Categorie";// Sugestion1
-	public static final String SUGESTION2_STATE = "_Sugestion2";
-	public static final String SUGESTION3_STATE = "_Sugestion3";
+	public static final String NEXTSUGGESTION_STATE = "_NextSuggestion";
+	public static final String NEW_CATEGORIE_STATE = "_NewCategorie";
 
 	public static final String DESCRIPTION_STATE = "_Description";
 	public static final String INFO_STATE = "_INFO";

@@ -8,6 +8,7 @@ import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
 
 import muctivities.constants.Attributes;
+import muctivities.constants.Phrases;
 
 public class ProblemHandler implements RequestHandler {
 
@@ -22,7 +23,7 @@ public class ProblemHandler implements RequestHandler {
 		Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
 		String speechText = sessionAttributes.containsKey(Attributes.REPEAT_KEY)
 				? (String) sessionAttributes.get(Attributes.REPEAT_KEY)
-				: "Ein Problem ist aufgetreten. Problem Handler";
+				: Phrases.FALLBACK_INTENT;
 		return input.getResponseBuilder().withSpeech(speechText).withShouldEndSession(false).build();
 	}
 

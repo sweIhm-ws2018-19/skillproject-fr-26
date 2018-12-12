@@ -11,21 +11,21 @@ import static org.mockito.Mockito.when;
 
 public class CancelandStopIntentHandlerTest {
 
-    private CancelandStopIntentHandler handler;
+	private CancelandStopIntentHandler handler;
 
-    @Before
-    public void setup() {
-        handler = new CancelandStopIntentHandler();
-    }
+	@Before
+	public void setup() {
+		handler = new CancelandStopIntentHandler();
+	}
 
-    @Test
-    public void canHandle() {
-        final HandlerInput inputMock = Mockito.mock(HandlerInput.class);
-        when(inputMock.matches(any())).thenReturn(true);
-        assertTrue(handler.canHandle(inputMock));
-    }
+	@Test
+	public void canHandle() {
+		final HandlerInput inputMock = Mockito.mock(HandlerInput.class);
+		when(inputMock.matches(any())).thenReturn(true);
+		assertTrue(handler.canHandle(inputMock));
+	}
 
-    @Test
-    public void handle() {
-    }
+	@Test
+	public void handle() {
+	}
 }

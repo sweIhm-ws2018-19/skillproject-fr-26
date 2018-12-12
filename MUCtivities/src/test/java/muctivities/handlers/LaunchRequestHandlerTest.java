@@ -10,17 +10,17 @@ import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.when;
 
 public class LaunchRequestHandlerTest {
-    private LaunchRequestHandler handler;
+	private LaunchRequestHandler handler;
 
-    @Before
-    public void setup() {
-        handler = new LaunchRequestHandler();
-    }
+	@Before
+	public void setup() {
+		handler = new LaunchRequestHandler();
+	}
 
-    @Test
-    public void canHandle() {
-        final HandlerInput inputMock = Mockito.mock(HandlerInput.class);
-        when(inputMock.matches(any())).thenReturn(true);
-        assertTrue(handler.canHandle(inputMock));
-    }
+	@Test
+	public void canHandle() {
+		final HandlerInput inputMock = Mockito.mock(HandlerInput.class);
+		when(inputMock.matches(any())).thenReturn(true);
+		assertTrue(handler.canHandle(inputMock));
+	}
 }

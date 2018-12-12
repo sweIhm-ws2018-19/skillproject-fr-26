@@ -13,32 +13,25 @@ import com.amazon.ask.model.Response;
 
 import muctivities.constants.Attributes;
 
-public class DescriptionHandler implements RequestHandler{
+public class DescriptionHandler implements RequestHandler {
 
 	@Override
 	public boolean canHandle(HandlerInput input) {
-		// TODO Auto-generated method stub
-		return input.matches(intentName("AMAZON.YesIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.DESCRIPTION_STATE)));
-
+		return input.matches(intentName("AMAZON.YesIntent")
+				.and(sessionAttribute(Attributes.STATE_KEY, Attributes.DESCRIPTION_STATE)));
 
 	}
 
 	@Override
 	public Optional<Response> handle(HandlerInput input) {
 		String speechText;
-	
-			Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
 
+		Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
+		Map<String, String> activity = (LinkedHashMap<String, String>) sessionAttributes.get(Attributes.ACTIVITY_KEY);
+		speechText = activity.get("description");
+		sessionAttributes.put(Attributes.REPEAT_KEY, speechText);
 
-//			Activity activitie = (Activity) sessionAttributes.get(Attributes.ACTIVITY_KEY);
-			Map<String, String> activity = (LinkedHashMap<String, String>) sessionAttributes
-					.get(Attributes.ACTIVITY_KEY);
-			speechText=	activity.get("description");
-			sessionAttributes.put(Attributes.REPEAT_KEY, speechText);
-	
-		return input.getResponseBuilder().withSpeech(speechText)
-				// .withReprompt(Phrases.WELCOME_REPROMT)
-				.build();
+		return input.getResponseBuilder().withSpeech(speechText).build();
 	}
 
 }

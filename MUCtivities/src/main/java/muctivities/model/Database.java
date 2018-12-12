@@ -21,8 +21,8 @@ public final class Database {
 	private Database() {
 	}
 
-
-	public static List<Activity> suggestionOfActivities(boolean location, boolean duration, String categoryString) throws IOException {
+	public static List<Activity> suggestionOfActivities(boolean location, boolean duration, String categoryString)
+			throws IOException {
 
 		Kategorie category = Kategorie.parseString(categoryString);
 		List<Activity> activities = getDatabaseEntries();
@@ -32,7 +32,7 @@ public final class Database {
 
 	}
 
-	public static Activity randomActivity() throws IOException  {
+	public static Activity randomActivity() throws IOException {
 		return RandomPicker.get(getDatabaseEntries());
 	}
 
@@ -52,21 +52,22 @@ public final class Database {
 				Kategorie.parseString(obj.getString("category")), obj.getString("name"), obj.getString("info"));
 	}
 
-    /**
-     * // Multiple streams were opened. Only the last is closed.
-     * // throws declaration, best practice? or should we catch it?
-     * @return string
-     * @throws IOException exception
-     */
+	/**
+	 * // Multiple streams were opened. Only the last is closed. // throws
+	 * declaration, best practice? or should we catch it?
+	 * 
+	 * @return string
+	 * @throws IOException exception
+	 */
 	static String readFile() throws IOException {
-        ClassLoader cl = Database.class.getClassLoader();
+		ClassLoader cl = Database.class.getClassLoader();
 
-        try (InputStream fis = cl.getResourceAsStream(AKTIVITES_DATABASE)) {
-            byte[] data = IOUtils.toByteArray(fis);
-            return new String(data, StandardCharsets.UTF_8);
-        } catch (Exception e) {
-            throw new IOException(e);
-        }
+		try (InputStream fis = cl.getResourceAsStream(AKTIVITES_DATABASE)) {
+			byte[] data = IOUtils.toByteArray(fis);
+			return new String(data, StandardCharsets.UTF_8);
+		} catch (Exception e) {
+			throw new IOException(e);
+		}
 
 	}
 
