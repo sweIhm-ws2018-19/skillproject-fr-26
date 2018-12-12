@@ -6,6 +6,7 @@ import com.amazon.ask.model.Response;
 
 import muctivities.constants.*;
 
+import muctivities.model.RandomPicker;
 import muctivities.model.Wetterdienst;
 
 import java.util.Map;
@@ -30,7 +31,7 @@ public class WeatherIntentHandler implements RequestHandler {
 		sessionAttributes.put(Attributes.REPEAT_KEY,
 				orElse ? Phrases.WEATHER_SUNNY_REPROMT : Phrases.WEATHER_RAINY_REPROMPT);
 		sessionAttributes.put(Attributes.WEATHER_KEY, orElse);
-		String speechText = orElse ? Phrases.WEATHER_SUNNY : Phrases.WEATHER_RAINY;
+		String speechText = orElse ? RandomPicker.get(Phrases.WEATHER_SUNNY) : RandomPicker.get(Phrases.WEATHER_RAINY);
 
 		return input.getResponseBuilder().withSpeech(speechText).withShouldEndSession(false).build();
 

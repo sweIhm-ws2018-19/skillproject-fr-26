@@ -15,7 +15,7 @@ public class DatabaseTest {
 		List<Activity> activities;
 		try {
 			activities = Database.getDatabaseEntries();
-			Assert.assertEquals(44, activities.size());
+			Assert.assertEquals(45, activities.size());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

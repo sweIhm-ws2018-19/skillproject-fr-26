@@ -60,8 +60,7 @@ public class CategorieHandler implements RequestHandler {
 				sessionAttributes.put(Attributes.LIST_KEY, liste);
 				sessionAttributes.put(Attributes.REPEAT_KEY, Phrases.DURATION_REPROMT);
 				sessionAttributes.put(Attributes.COUNTER_KEY, 1);
-
-				speechText = String.format(RandomPicker.get(Phrases.VORSCHLAG1), activitie.getName());
+				speechText = String.format(RandomPicker.get(Phrases.FIRST_SUGGESTION), activitie.getName());
 				sessionAttributes.put(Attributes.REPEAT_KEY, Phrases.INFO_REPROMT);
 			} catch (Exception e) {
 				speechText = "Ein Fehler ist passiert";

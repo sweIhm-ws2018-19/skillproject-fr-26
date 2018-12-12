@@ -39,7 +39,7 @@ public class NextSuggestionsHandler implements RequestHandler {
 		sessionAttributes.put(Attributes.REPEAT_KEY, Phrases.INFO_REPROMT);
 		sessionAttributes.put(Attributes.COUNTER_KEY, counter);
 
-		String speechText = activity.get("name") + " Passt die Aktivität?";
+		String speechText = String.format(RandomPicker.get(Phrases.NEXT_SUGGESTION), activity.get("name"));
 
 		if (counter == Settings.MAX_SUGGESTIONS) {
 			sessionAttributes.put(Attributes.STATE_KEY, Attributes.NEW_CATEGORIE_STATE);

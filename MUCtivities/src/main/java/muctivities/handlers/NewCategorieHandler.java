@@ -28,7 +28,7 @@ public class NewCategorieHandler implements RequestHandler {
 		Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
 
 		sessionAttributes.put(Attributes.STATE_KEY, Attributes.CATEGORIE_STATE);
-		String speechText = RandomPicker.get(Phrases.CATEGORIE_QUESTION);
+		String speechText = Phrases.END_OF_SUGGESTIONS;
 		sessionAttributes.put(Attributes.REPEAT_KEY, speechText);
 
 		return input.getResponseBuilder().withSpeech(speechText).withShouldEndSession(false).build();
