@@ -1,36 +1,38 @@
 package muctivities.handlers;
 
-import static com.amazon.ask.request.Predicates.intentName;
-
-import java.util.Optional;
-
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
+import muctivities.constants.*;
+import muctivities.model.Activity;
 
-import muctivities.constants.Phrases;
-import muctivities.model.Wetterdienst;
+import java.util.Map;
+import java.util.Optional;
 
-public class TippDesTagesHandler  implements RequestHandler{
+import static com.amazon.ask.request.Predicates.intentName;
+
+public class TippDesTagesHandler implements RequestHandler {
 
 	@Override
 	public boolean canHandle(HandlerInput input) {
 		return input.matches(intentName("TippDesTages"));
-
 	}
 
 	@Override
 	public Optional<Response> handle(HandlerInput input) {
 		String speechText;
 		try {
-			speechText = "Der Tipp des Tages ist"+ muctivities.model.Database.randomActivity().getName();
-			return input.getResponseBuilder().withSpeech(speechText).withSimpleCard(Phrases.MUCtivities_Name, speechText)
-					.build();
+			Activity activitie = muctivities.model.Database.randomActivity();
+			Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
+			sessionAttributes.put(Attributes.STATE_KEY, Attributes.DESCRIPTION_STATE);
+			sessionAttributes.put(Attributes.ACTIVITY_KEY, activitie);
+			speechText = String.format(Phrases.DAILY_TIPP, activitie.getName());
+			sessionAttributes.put(Attributes.REPEAT_KEY, speechText);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			speechText = "Fehler. Tipp des Tages";
 		}
-		return null;
+		return input.getResponseBuilder().withSpeech(speechText).withShouldEndSession(false).build();
+
 	}
 
 }

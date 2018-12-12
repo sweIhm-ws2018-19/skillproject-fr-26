@@ -3,11 +3,10 @@ package muctivities.model;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.junit.Assert;
+import org.junit.Test;
 
 import java.io.IOException;
 import java.util.List;
-
-import org.junit.Test;
 
 public class DatabaseTest {
 
@@ -16,7 +15,7 @@ public class DatabaseTest {
 		List<Activity> activities;
 		try {
 			activities = Database.getDatabaseEntries();
-			Assert.assertEquals(44, activities.size());
+			Assert.assertEquals(45, activities.size());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -41,18 +40,25 @@ public class DatabaseTest {
 		Activity activity = Database.parseJSONObject(exampleFromDatabase);
 		Assert.assertEquals("Museum", activity.getName());
 		Assert.assertEquals("asdf", activity.getDescription());
-		Assert.assertEquals(false, activity.isAllday());
-		Assert.assertEquals(false, activity.isOutdoor());
-		Assert.assertEquals(Kategorie.SPAẞ, activity.getCategory());
+		Assert.assertFalse(activity.isAllday());
+		Assert.assertFalse(activity.isOutdoor());
+		Assert.assertEquals(Kategorie.SPASS, activity.getCategory());
 	}
 
 	@Test
-	public void suggestionOfActivities() throws Exception {
-		List<Activity> suggestions = Database.suggestionOfActivities(true, true, "spaß");
-		suggestions.forEach(activity -> {
-			Assert.assertEquals(Kategorie.SPAẞ, activity.getCategory());
-		});
+	public void suggestionOfActivities() throws JSONException, IOException {
+		List<Activity> suggestions = Database.suggestionOfActivities(true, true, "Spass");
+		suggestions.forEach(activity -> Assert.assertEquals(Kategorie.SPASS, activity.getCategory()));
 		Assert.assertEquals(3, suggestions.size());
 	}
 
+	@Test
+	public void testRandomPick() {
+		try {
+			Activity activity = Database.randomActivity();
+			Assert.assertNotNull(activity);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

@@ -8,7 +8,7 @@ public class Activity {
 	private final String name;
 	private final String description;
 
-	public Activity(boolean isOutdoor, boolean isAllday, Kategorie category, String name, String description) {
+	Activity(boolean isOutdoor, boolean isAllday, Kategorie category, String name, String description) {
 		this.isOutdoor = isOutdoor;
 		this.isAllday = isAllday;
 		this.category = category;
@@ -16,15 +16,15 @@ public class Activity {
 		this.description = description;
 	}
 
-	public boolean isOutdoor() {
+	boolean isOutdoor() {
 		return isOutdoor;
 	}
 
-	public boolean isAllday() {
+	boolean isAllday() {
 		return isAllday;
 	}
 
-	public Kategorie getCategory() {
+	Kategorie getCategory() {
 		return category;
 	}
 

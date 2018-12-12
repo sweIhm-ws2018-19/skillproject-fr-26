@@ -8,10 +8,10 @@ public class KategorieTest {
 
 	@Test
 	public void testParseString() {
-		assertEquals(Kategorie.SPAẞ, Kategorie.parseString("spaß"));
-		assertEquals(Kategorie.SPAẞ, Kategorie.parseString("Spaß"));
-		assertEquals(Kategorie.SPAẞ, Kategorie.parseString("sPaß"));
-		assertEquals(null, Kategorie.parseString("asdf"));
+		assertEquals(Kategorie.SPASS, Kategorie.parseString("spass"));
+		assertEquals(Kategorie.SPASS, Kategorie.parseString("Spass"));
+		assertEquals(Kategorie.SPASS, Kategorie.parseString("sPass"));
+		assertNull(Kategorie.parseString("asdf"));
 	}
 
 }
