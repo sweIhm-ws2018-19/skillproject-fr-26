@@ -83,7 +83,37 @@
                 {
                     "name": "AMAZON.YesIntent",
                     "samples": [
-                        "Ja"
+                        "Ja",
+						"Will ich",
+						"Möchte ich",
+						"Ok okay",
+						"Von mir aus",
+						"Meinetwegen",
+						"Jap",
+						"Jep",
+						"Jeah",
+						"Mir egal",
+						"Warum nicht",
+						"Wieso nicht",
+						"jo",
+						"Gerne",
+						"Bitte",
+						"Aufjedenfall",
+						"Sicher",
+						"Immer her damit",
+						"Her damit",
+						"Schieß los",
+						"Tu es",
+						"Natürlich",
+						"Klar",
+						"Klaro",
+						"Yes",
+						"Gute Idee",
+						"Guter Vorschlag",
+						"Gefällt mir",
+						"Einverstanden",
+						"Ja bitte",
+						"ok"
                     ]
                 },
                 {

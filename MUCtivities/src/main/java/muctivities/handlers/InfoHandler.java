@@ -17,11 +17,12 @@ import muctivities.model.RandomPicker;
 
 public class InfoHandler implements RequestHandler {
 
-    @Override
-    public boolean canHandle(HandlerInput input) {
-        return input.matches(intentName("AMAZON.YesIntent"))
-                && (input.matches(sessionAttribute(Attributes.STATE_KEY, Attributes.INFO_STATE))
-                || input.matches(sessionAttribute(Attributes.STATE_KEY, Attributes.NEXTSUGGESTION_STATE)));
+	@Override
+	public boolean canHandle(HandlerInput input) {
+		return input.matches(intentName("AMAZON.YesIntent"))
+				&& (input.matches(sessionAttribute(Attributes.STATE_KEY, Attributes.INFO_STATE)
+						.or(sessionAttribute(Attributes.STATE_KEY, Attributes.NEXTSUGGESTION_STATE)
+								.or(sessionAttribute(Attributes.STATE_KEY, Attributes.NEW_CATEGORIE_STATE)))));
 	}
 
 	@Override

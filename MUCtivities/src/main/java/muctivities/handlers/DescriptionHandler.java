@@ -17,7 +17,6 @@ public class DescriptionHandler implements RequestHandler {
 
 	@Override
 	public boolean canHandle(HandlerInput input) {
-		// TODO Auto-generated method stub
 		return input.matches(intentName("AMAZON.YesIntent")
 				.and(sessionAttribute(Attributes.STATE_KEY, Attributes.DESCRIPTION_STATE)));
 
@@ -28,15 +27,11 @@ public class DescriptionHandler implements RequestHandler {
 		String speechText;
 
 		Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
-
-//			Activity activitie = (Activity) sessionAttributes.get(Attributes.ACTIVITY_KEY);
 		Map<String, String> activity = (LinkedHashMap<String, String>) sessionAttributes.get(Attributes.ACTIVITY_KEY);
 		speechText = activity.get("description");
 		sessionAttributes.put(Attributes.REPEAT_KEY, speechText);
 
-		return input.getResponseBuilder().withSpeech(speechText)
-				// .withReprompt(Phrases.WELCOME_REPROMT)
-				.build();
+		return input.getResponseBuilder().withSpeech(speechText).build();
 	}
 
 }
