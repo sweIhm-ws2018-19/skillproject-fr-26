@@ -7,7 +7,7 @@ public class Phrases {
 
     public static final String[] LAUNCH_REQUEST = new String[]{
             "Servus! Ein schöner Tag, um mal wieder etwas zu unternehmen. Sage \"Tipp des Tages\" um einen Vorschlag für eine beliebige Aktivität zu erhalten. Für eine personalisierte Idee, sage \"Was kann ich heute unternehmen?\"",
-            "Servus! Ich bin Peter und du kannst mich nach einem Tipp für Aktivitäten in München oder dem Tipp des Tages fragen.",
+            "Servus! Ich bin das Münchner Kindl und du kannst mich nach einem Tipp für Aktivitäten in München oder dem Tipp des Tages fragen.",
             "Grias di! Frage mich nach einem personalisierten Vorschlag für eine Aktivitäten in München dem Tipp des Tages und ich helfe dir sehr gerne weiter. Wonach suchst du?",
             "Servus!  Wenn dir langweilig ist, bist du hier genau richtig. Du hast die Wahl: Möchtest du einen personalisierten Vorschlag für eine Aktivität in München erhalten oder den Tipp des Tages hören? ",
             "Grias di! Du kannst mich nach einem personalisierten Vorschlag für eine Aktivität in München fragen oder den Tipp des Tages anfordern. Was möchtest du gerne?",};
@@ -17,7 +17,7 @@ public class Phrases {
 
     public static final String[] WEATHER_RAINY = new String[]{
             "Heute ist ein greisliges Wetter draußen. Soll ich lieber eine Aktivität im Trockenen aussuchen?",
-            "Heute ist Regen angesagt. Vielleicht sollten wir lieber nach einer Aktivität im Trockenen/drinnen suchen. Bist du einverstanden?"
+            "Heute ist Regen angesagt. Vielleicht sollten wir lieber nach einer Aktivität drinnen suchen. Bist du einverstanden?"
     };
     public static final String[] WEATHER_SUNNY = new String[]{
             "Für heute ist Sonne angesagt, deshalb empfehle ich eine Aktivität im Freien. Bist du einverstanden damit?",
@@ -65,7 +65,6 @@ public class Phrases {
             "Mei, des wird gspassig. Würdest du gerne mehr darüber erfahren?",};
 
     public static final String[] CANCEL_AND_STOP_INTENT = new String[]{
-            "Komm morgen wieder, um die Erfahrung wieder zu spielen. Sag einfach \"Alexa, öffne Muctivities\" <break time=\"0.05s\" />, um die Fertigkeit erneut zu öffnen.",
             "Alles klar. Ich wünsch dir einen schönen Tag und viel Spaß dabei. Bis zum nächsten Mal! Pfiad di Servus!",
             "Guad, dann wünsch ich dir viel Spaß in München. Bis zum nächsten Mal! Pfiat di, mach’s gut!",};
 }

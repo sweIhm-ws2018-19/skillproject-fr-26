@@ -1,8 +1,8 @@
 package muctivities.model;
 
+import java.security.SecureRandom;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
 
 public final class RandomPicker {
 
@@ -13,7 +13,7 @@ public final class RandomPicker {
 	}
 
 	public static <U> U get(List<U> list) {
-		int randomIdx = new Random().nextInt(list.size());
+		int randomIdx = new SecureRandom().nextInt(list.size());
 		return list.get(randomIdx);
 	}
 
