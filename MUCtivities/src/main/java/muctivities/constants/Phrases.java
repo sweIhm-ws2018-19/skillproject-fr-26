@@ -44,7 +44,8 @@ public class Phrases {
     public static final String INFO_REPROMT = "Wenn dir dieser Vorschlag gefällt, sage „ja“. Wenn du lieber einen neuen Vorschlag möchtest, sage „nein“";
     public static final String[] FIRST_SUGGESTION = new String[]{
             "Super Gschicht, da habe ich schon viele Ideen für dich. Wie wäre es denn mit %s ?",
-            "Sau guad, da fällt mir auf Anhieb eine tolle Freizeitaktivität für dich ein. Wie wäre es denn mit %s ?"
+            "Sau guad, da fällt mir auf Anhieb eine tolle Freizeitaktivität für dich ein. Wie wäre es denn mit %s ?",
+            "Sau guad, München hat in dieser Kategorie viel zu bieten! Wie wäre es denn mit %s"
     };
 
     public static final String[] NEXT_SUGGESTION = new String[]{
