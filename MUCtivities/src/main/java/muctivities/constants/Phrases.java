@@ -7,9 +7,9 @@ public class Phrases {
 
     public static final String[] LAUNCH_REQUEST = new String[]{
             "Servus! Ein schöner Tag, um mal wieder etwas zu unternehmen. Sage \"Tipp des Tages\" um einen Vorschlag für eine beliebige Aktivität zu erhalten. Für eine personalisierte Idee, sage \"Was kann ich heute unternehmen?\"",
-            "Servus! Ich bin das Münchner Kindl und du kannst mich nach einem Tipp für Aktivitäten in München oder dem Tipp des Tages fragen.",
-            "Grias di! Frage mich nach einem personalisierten Vorschlag für eine Aktivitäten in München dem Tipp des Tages und ich helfe dir sehr gerne weiter. Wonach suchst du?",
-            "Servus!  Wenn dir langweilig ist, bist du hier genau richtig. Du hast die Wahl: Möchtest du einen personalisierten Vorschlag für eine Aktivität in München erhalten oder den Tipp des Tages hören? ",
+            "Servus! Ich bin das Münchner Kindl und du kannst mich nach einem personalisierten Vorschlag für eine Aktivität in München oder nach dem Tipp des Tages fragen. Was möchtest du wissen?",
+            "Grias di! Frage mich nach einem personalisierten Vorschlag für eine Aktivität in München oder nach dem Tipp des Tages und ich helfe dir sehr gerne weiter. Wonach suchst du?",
+            "Servus!  Wenn dir langweilig ist, bist du hier genau richtig. Du hast die Wahl: Möchtest du einen personalisierten Vorschlag für eine Aktivität in München erhalten oder den Tipp des Tages hören? Du hast die Wahl.",
             "Grias di! Du kannst mich nach einem personalisierten Vorschlag für eine Aktivität in München fragen oder den Tipp des Tages anfordern. Was möchtest du gerne?",};
 
     public static final String HELP_INTENT = "Danke für das öffnen von MUCtivities. Möchtest du die Erfahrung beginnen?";
@@ -27,7 +27,7 @@ public class Phrases {
     public static final String WEATHER_SUNNY_REPROMT = "bitte sage JA, wenn du einen Vorschlag für eine Aktivität im Freien haben möchtest ";
     public static final String WEATHER_RAINY_REPROMPT = "bitte sage JA, wenn du einen Vorschlag für eine Aktivität im Trockenen haben möchtest";
 
-    public static final String DAILY_TIPP = "Der Tipp des Tages ist %s. Magst du mehr Infos bekommen.";
+    public static final String DAILY_TIPP = "Der Tipp des Tages ist %s. Hättest du gerne mehr Informationen dazu?";
 
     public static final String[] DURATION_QUESTION = new String[]{
             "Wie lange möchtest du unterwegs sein? Ein paar Stunden oder den ganzen Tag?",
