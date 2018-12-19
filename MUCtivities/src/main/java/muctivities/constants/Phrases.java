@@ -11,7 +11,7 @@ public class Phrases {
             "Grias di! Frage mich nach einem personalisierten Vorschlag für eine Aktivität in München oder nach dem Tipp des Tages und ich helfe dir sehr gerne weiter. Wonach suchst du?",
             "Servus!  Wenn dir langweilig ist, bist du hier genau richtig. Du hast die Wahl: Möchtest du einen personalisierten Vorschlag für eine Aktivität in München erhalten oder den Tipp des Tages hören? Du hast die Wahl.",
             "Grias di! Du kannst mich nach einem personalisierten Vorschlag für eine Aktivität in München fragen oder den Tipp des Tages anfordern. Was möchtest du gerne?",};
-
+public static final String LAUNCH_REQUEST_REPEAT ="Das habe ich leider nicht verstanden. Bitte sage personalisierter Vorschlag oder Tipp des Tages.";
     public static final String HELP_INTENT = "Danke für das öffnen von MUCtivities. Möchtest du die Erfahrung beginnen?";
     public static final String FALLBACK_INTENT = "Tut mir leid, ich verstehe das Wort nicht. Wiederhole es oder sage einfach Hilfe.";
 
