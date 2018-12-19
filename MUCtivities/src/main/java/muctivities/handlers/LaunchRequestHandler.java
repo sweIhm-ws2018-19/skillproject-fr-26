@@ -38,7 +38,7 @@ public class LaunchRequestHandler implements RequestHandler {
 		Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
 		String phrase = RandomPicker.get(Phrases.LAUNCH_REQUEST);
 
-		sessionAttributes.put(Attributes.REPEAT_KEY, phrase);
+		sessionAttributes.put(Attributes.REPEAT_KEY, Phrases.LAUNCH_REQUEST_REPEAT);
 		return input.getResponseBuilder().withSpeech(phrase).withReprompt(phrase).build();
 	}
 }

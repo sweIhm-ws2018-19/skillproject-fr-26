@@ -12,6 +12,8 @@ import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
 
 import muctivities.constants.Attributes;
+import muctivities.constants.Phrases;
+import muctivities.model.RandomPicker;
 
 public class DescriptionHandler implements RequestHandler {
 
@@ -28,7 +30,7 @@ public class DescriptionHandler implements RequestHandler {
 
 		Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
 		Map<String, String> activity = (LinkedHashMap<String, String>) sessionAttributes.get(Attributes.ACTIVITY_KEY);
-		speechText = activity.get("description");
+		speechText = activity.get("description") + " " + RandomPicker.get(Phrases.DESCRIPTION_END);
 		sessionAttributes.put(Attributes.REPEAT_KEY, speechText);
 
 		return input.getResponseBuilder().withSpeech(speechText).build();
