@@ -26,7 +26,7 @@ public class TippDesTagesHandler implements RequestHandler {
 			Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
 			sessionAttributes.put(Attributes.STATE_KEY, Attributes.DESCRIPTION_STATE);
 			sessionAttributes.put(Attributes.ACTIVITY_KEY, activitie);
-			speechText = String.format(Phrases.DAILY_TIPP, activitie.getName());
+			speechText = String.format(Phrases.DAILY_TIPP + " ", activitie.getName()) + Phrases.TIP_OF_DAY_END_QUESTION;
 			sessionAttributes.put(Attributes.REPEAT_KEY, speechText);
 		} catch (Exception e) {
 			speechText = "Fehler. Tipp des Tages";
