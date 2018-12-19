@@ -32,10 +32,6 @@ public final class Database {
 
 	}
 
-	public static Activity randomActivity() throws IOException {
-		return RandomPicker.get(getDatabaseEntries());
-	}
-
 	static List<Activity> getDatabaseEntries() throws IOException {
 		JSONArray database = new JSONArray(readFile());
 		List<Activity> activities = new ArrayList<>();

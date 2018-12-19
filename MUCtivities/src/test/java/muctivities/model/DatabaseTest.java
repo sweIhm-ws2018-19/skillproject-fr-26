@@ -52,13 +52,4 @@ public class DatabaseTest {
 		Assert.assertEquals(3, suggestions.size());
 	}
 
-	@Test
-	public void testRandomPick() {
-		try {
-			Activity activity = Database.randomActivity();
-			Assert.assertNotNull(activity);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
 }

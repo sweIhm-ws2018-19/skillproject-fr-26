@@ -5,6 +5,7 @@ import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
 import muctivities.constants.*;
 import muctivities.model.Activity;
+import muctivities.model.TipOfTheDay;
 
 import java.util.Map;
 import java.util.Optional;
@@ -22,11 +23,13 @@ public class TippDesTagesHandler implements RequestHandler {
 	public Optional<Response> handle(HandlerInput input) {
 		String speechText;
 		try {
-			Activity activitie = muctivities.model.Database.randomActivity();
+			Activity activity = TipOfTheDay.get();
 			Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
 			sessionAttributes.put(Attributes.STATE_KEY, Attributes.DESCRIPTION_STATE);
+
 			sessionAttributes.put(Attributes.ACTIVITY_KEY, activitie);
 			speechText = String.format(Phrases.DAILY_TIPP + " ", activitie.getName()) + Phrases.TIP_OF_DAY_END_QUESTION;
+
 			sessionAttributes.put(Attributes.REPEAT_KEY, speechText);
 		} catch (Exception e) {
 			speechText = "Fehler. Tipp des Tages";
