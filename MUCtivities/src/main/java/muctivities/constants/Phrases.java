@@ -39,11 +39,15 @@ public class Phrases {
 			"Guad! Du kannst die folgenden Kategorien für eine Aktivität auswählen: Kultur, Sport oder Spaß. Welche nimmst du?", };
 	public static final String CATEGORIE_REPROMT = "Bitte wähle eine Kategorie aus. Sage „Kultur“, „Sport“ oder „Spaß“ ";
 
-	public static final String INFO_REPROMT = "Wenn dir dieser Vorschlag gefällt, sage „ja“. Wenn du lieber einen neuen Vorschlag möchtest, sage „nein“";
-	public static final String[] FIRST_SUGGESTION = new String[] {
-			"Super Gschicht, da habe ich schon viele Ideen für dich. Wie wäre es denn mit %s ?",
-			"Sau guad, da fällt mir auf Anhieb eine tolle Freizeitaktivität für dich ein. Wie wäre es denn mit %s ?" };
-
+	 public static final String[] NEXT_SUGGESTION = new String[]{
+	            "Ja mei, dann vielleicht ein anderes Mal. Eine super Aktivität ist auch %s (Gefällt dir die Idee?)",
+	            "Kein Problem, es gibt noch mehr/andere tolle Aktivitäten. Wie wäre es denn mit %s?",
+	            "Keine Sorge, München hat noch viel mehr Freizeitaktivitäten zu bieten. Was hältst du von %s?",
+	            "Alles klar. Wie wäre es dann mit %s?",
+	            "Okay. Was hältst du stattdessen von %s? Gefällt dir die Idee besser?",
+	            "Alles klar. Eine andere Idee wäre %s! Gefällt dir die Aktivität besser?"
+	    };
+	
     public static final String INFO_REPROMT = "Wenn dir dieser Vorschlag gefällt, sage „ja“. Wenn du lieber einen neuen Vorschlag möchtest, sage „nein“";
     public static final String[] FIRST_SUGGESTION = new String[]{
             "Super Gschicht, da habe ich schon viele Ideen für dich. Wie wäre es denn mit %s ?",
