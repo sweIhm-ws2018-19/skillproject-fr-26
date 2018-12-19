@@ -63,4 +63,8 @@ public class Phrases {
 	public static final String[] CANCEL_AND_STOP_INTENT = new String[] {
 			"Alles klar. Ich wünsch dir einen schönen Tag und viel Spaß dabei. Bis zum nächsten Mal! Pfiad di Servus!",
 			"Guad, dann wünsch ich dir viel Spaß in München. Bis zum nächsten Mal! Pfiat di, mach’s gut!", };
+	public static final String[] DESCRIPTION_END = new String[] {
+			"Viel Spaß und bis zum nächsten Mal! Pfiad di, Servus!",
+			"Viel Spaß in München und bis zum nächsten Mal! Pfiat di, mach’s gut!" };
+
 }
