@@ -1,4 +1,16 @@
 # Skill Name: MUCtivities
+
+## TravisCI Build:
+
+[![Build Status](https://travis-ci.org/sweIhm-ws2018-19/skillproject-fr-26.svg?branch=master)](https://travis-ci.org/sweIhm-ws2018-19/skillproject-fr-26)
+
+## Sonarcloud Status:
+
+[![Quality Gate](https://sonarcloud.io/api/project_badges/quality_gate?project=alexa-skills-kit-samples%3AMUCtivities)](https://sonarcloud.io/dashboard?id=alexa-skills-kit-samples%3AMUCtivities)
+
+[![Code Coverage](https://sonarcloud.io/api/project_badges/measure?project=alexa-skills-kit-samples%3AMUCtivities&metric=coverage)](https://sonarcloud.io/dashboard?id=alexa-skills-kit-samples%3AMUCtivities)
+
+## Präsentation:
 <a href="https://github.com/sweIhm-ws2018-19/skillproject-fr-26/blob/master/MUCtivities/Dokumente/Dropbox/MUCtivities%20Pr%C3%A4si.pdf?raw=true">Link zu Präsentation</a>
 ## Kategorie:
 - Freizeitaktivitäten 
