@@ -15,10 +15,10 @@ https://github.com/sweIhm-ws2018-19/skillproject-fr-26/releases
 <img src="https://raw.githubusercontent.com/sweIhm-ws2018-19/skillproject-test/master/docs/images/SystemkontextAlexaSkill.png" alt="Systemkontext" class="inline"/>
 
 ## Anwendungsfalldiagramm
-<img src="images/AlexaSkill_Anwendungsfalldiagramm.png" alt="Anwendungsfalldiagramm" class="inline"/>
+<img src="images/anwendungsfall-diagramm.png" alt="Anwendungsfalldiagramm" class="inline"/>
 
-## Klassendiagramm des AWS Lambda Funktion
-<img src="images/LieblingsfarbeSkillKlassenmodell.png" alt="Klassenmodell" class="inline"/>
+## Fachklassendiagramm
+<img src="images/fachklassen-diagramm.png" alt="Klassenmodell" class="inline"/>
 
 ## Aktivitätsdiagramm 
 <img src="images/aktivitätsdiagramm.png" alt="Lieblingsfarbe eingeben" class="inline"/>
