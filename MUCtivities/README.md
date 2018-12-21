@@ -1,5 +1,8 @@
 # Skill Name: MUCtivities
 
+## GitHub Pages
+https://sweihm-ws2018-19.github.io/skillproject-fr-26/
+
 ## TravisCI Build:
 
 [![Build Status](https://travis-ci.org/sweIhm-ws2018-19/skillproject-fr-26.svg?branch=master)](https://travis-ci.org/sweIhm-ws2018-19/skillproject-fr-26)
