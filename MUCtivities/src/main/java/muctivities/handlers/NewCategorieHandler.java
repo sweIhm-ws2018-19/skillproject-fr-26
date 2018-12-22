@@ -12,7 +12,6 @@ import com.amazon.ask.model.Response;
 
 import muctivities.constants.Attributes;
 import muctivities.constants.Phrases;
-import muctivities.model.RandomPicker;
 
 public class NewCategorieHandler implements RequestHandler {
 
