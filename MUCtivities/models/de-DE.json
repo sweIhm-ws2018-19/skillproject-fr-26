@@ -14,6 +14,18 @@
                 {
                     "name": "AMAZON.StopIntent",
                     "samples": [
+                        "muctivities stoppen",
+                        "muctivities schließen",
+                        "beende muctivities",
+                        "muctivities beenden",
+                        "Skill stoppen",
+                        "Aufhören",
+                        "Ich bin fertig",
+                        "Skill schließen",
+                        "Ende",
+                        "Ich brauche doch keine Hilfe",
+                        "Ich habe keine Lust mehr",
+                        "Skill beenden",
                         "Beenden"
                     ]
                 },
@@ -47,6 +59,23 @@
                     "name": "TippDesTages",
                     "slots": [],
                     "samples": [
+                        "Das was schneller geht",
+                        "Was geht schneller",
+                        "Es soll schnell gehen",
+                        "Ich brauche einen schnellen Tipp",
+                        "Ich hätte gerne den Tipp",
+                        "Ich hätte gerne den Tipp des Tages",
+                        "Bitte den Tipp des Tages",
+                        "Tipp bitte",
+                        "Tagestipp",
+                        "Ich brauche den Tipp des Tages",
+                        "Ich brauche den Tipp",
+                        "Ich würde gerne den Tipp des Tages wissen",
+                        "Ich würde gerne den Tipp des Tages hören",
+                        "Ich will den Tipp des Tages",
+                        "Ich möchte den Tipp des Tages hören",
+                        "Ich möchte den Tipp des Tages wissen",
+                        "Tipp",
                         "Tipp des Tages",
                         "Sag mir den Tipp des Tages",
                         "Der Tipp des Tages interessiert mich",
@@ -59,6 +88,32 @@
                     "name": "MUCtivitiesIntent",
                     "slots": [],
                     "samples": [
+                        "idee für aktivität",
+                        "vorschlag für aktivität in münchen",
+                        "vorschlag für aktivität",
+                        "ich hätte gerne einen personalisierten vorschlag",
+                        "Mach mir einen Vorschlag",
+                        "Sag mir eine Aktivität",
+                        "Ich möchte die Idee ",
+                        "Ich möchte die Aktivität",
+                        "Ich möchte den Vorschlag",
+                        "Ich würde gerne eine Idee bekommen",
+                        "Ich würde gerne einen Vorschlag bekommen",
+                        "Ich würde gerne Aktivität bekommen",
+                        "egal",
+                        "Mir egal",
+                        "Personalisierte Aktivität",
+                        "Freizeitaktivität bitte",
+                        "Aktivität bitte",
+                        "Idee bitte",
+                        "Vorschlag bitte",
+                        "Schlag was vor",
+                        "Gib mir eine Idee",
+                        "Mach einen Vorschlag",
+                        "Freizeitaktivität",
+                        "Aktivität",
+                        "Idee",
+                        "Vorschlag",
                         "Was kann ich unternehmen",
                         "Mir ist langweilig",
                         "Was kann ich machen",
@@ -85,6 +140,30 @@
                 {
                     "name": "AMAZON.YesIntent",
                     "samples": [
+                        "der vorschlag hört sich gut an",
+                        "das gefällt mir",
+                        "hört sich nach nem plan an",
+                        "hört sich cool an",
+                        "hört sich interessant an",
+                        "find ich gut",
+                        "hab ich noch nie gemacht",
+                        "cool",
+                        "klingt interessant",
+                        "das ist eine tolle idee",
+                        "ja darauf hab ich lust",
+                        "toller vorschlag",
+                        "der vorschlag ist gut",
+                        "der vorschlag gefällt mir",
+                        "die idee ist gut",
+                        "die idee gefällt mir",
+                        "gefällt mir gut",
+                        "klingt gut",
+                        "hört sich gut an",
+                        "hau rein",
+                        "kann ich mir gut vorstellen",
+                        "coole sache",
+                        "coole idee",
+                        "tolle idee",
                         "Ja",
                         "Will ich",
                         "Möchte ich",
@@ -121,6 +200,8 @@
                 {
                     "name": "AMAZON.NoIntent",
                     "samples": [
+                        "Ist nicht nötig",
+                        "Nein brauch ich nicht",
                         "Nein",
                         "Nö",
                         "Ne",
@@ -285,6 +366,24 @@
                             "name": {
                                 "value": "false",
                                 "synonyms": [
+                                    "ich hab nicht viel zeit",
+                                    "die aktivität soll nicht so lange dauern",
+                                    "ich hätte gerne eine kurze aktivität",
+                                    "ich habe nur abends zeit",
+                                    "ich habe nur nachmittags zeit",
+                                    "ich habe nur vormittags zeit",
+                                    "ich hab nur kurz zeit",
+                                    "ich hab nur paar stunden zeit",
+                                    "ich hab nicht so viel zeit",
+                                    "eher paar stunden",
+                                    "nicht so lang",
+                                    "2 1/2 stunden",
+                                    "anderthalb stunden",
+                                    "1 1/2 stunden",
+                                    "halbe stunde",
+                                    "3 stunden",
+                                    "eine stunde",
+                                    "2 stunden",
                                     "ich möchte nur kurz unterwegs sein",
                                     "ich will nur kurz unterwegs sein",
                                     "ich kann nur kurz unterwegs sein",
@@ -307,6 +406,21 @@
                             "name": {
                                 "value": "true",
                                 "synonyms": [
+                                    "ich hab kein stress",
+                                    "es darf ruhig länger dauern",
+                                    "ich habe 6 stunden zeit",
+                                    "ich habe 5 stunden zeit",
+                                    "ich habe 4 stunden zeit",
+                                    "je länger desto besser",
+                                    "so lang wie möglich",
+                                    "den ganzen tag",
+                                    "10 stunden",
+                                    "9 stunden",
+                                    "8 stunden",
+                                    "7 stunden",
+                                    "6 stunden",
+                                    "5 stunden",
+                                    "4 stunden",
                                     "Die Aktivität darf den ganzen Tag dauern",
                                     "Die Aktivität soll den ganzen Tag dauern",
                                     "Ist mir egal",
@@ -336,17 +450,44 @@
                     "values": [
                         {
                             "name": {
-                                "value": "Spaß"
+                                "value": "Spaß",
+                                "synonyms": [
+                                    "auf spaß hätte ich lust",
+                                    "ich hätte lust auf spaß",
+                                    "auf spaß hab ich lust",
+                                    "ich hab lust auf spaß",
+                                    "kategorie spaß",
+                                    "ich hätte gerne spaß",
+                                    "spaß bitte"
+                                ]
                             }
                         },
                         {
                             "name": {
-                                "value": "Sport"
+                                "value": "Sport",
+                                "synonyms": [
+                                    "auf sport hätte ich lust",
+                                    "ich hätte lust auf sport",
+                                    "auf sport hab ich lust",
+                                    "ich hab lust auf sport",
+                                    "kategorie sport",
+                                    "ich hätte gerne sport",
+                                    "sport bitte"
+                                ]
                             }
                         },
                         {
                             "name": {
-                                "value": "Kultur"
+                                "value": "Kultur",
+                                "synonyms": [
+                                    "auf kultur hätte ich lust",
+                                    "ich hätte lust auf kultur",
+                                    "auf kultur hab ich lust",
+                                    "ich hab lust auf kultur",
+                                    "kategorie kultur",
+                                    "ich hätte gerne kultur",
+                                    "kultur bitte"
+                                ]
                             }
                         }
                     ]
