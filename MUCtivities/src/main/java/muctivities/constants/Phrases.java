@@ -6,11 +6,11 @@ public class Phrases {
 	}
 
 	public static final String[] LAUNCH_REQUEST = new String[] {
-			"Servus! Ein schöner Tag, um mal wieder etwas zu unternehmen. Sage \"Tipp des Tages\" um einen Vorschlag für eine beliebige Aktivität zu erhalten. Für eine personalisierte Idee, sage \"Was kann ich heute unternehmen?\"",
-			"Servus! Ich bin das Münchner Kindl und du kannst mich nach einem personalisierten Vorschlag für eine Aktivität in München oder nach dem Tipp des Tages fragen. Was möchtest du wissen?",
-			"Grias di! Frage mich nach einem personalisierten Vorschlag für eine Aktivität in München oder nach dem Tipp des Tages und ich helfe dir sehr gerne weiter. Wonach suchst du?",
-			"Servus!  Wenn dir langweilig ist, bist du hier genau richtig. Du hast die Wahl: Möchtest du einen personalisierten Vorschlag für eine Aktivität in München erhalten oder den Tipp des Tages hören? Du hast die Wahl.",
-			"Grias di! Du kannst mich nach einem personalisierten Vorschlag für eine Aktivität in München fragen oder den Tipp des Tages anfordern. Was möchtest du gerne?", };
+			"Servus! Ich bin das Münchner Kindl und du kannst mich nach einem personalisierten Vorschlag für eine Aktivität in München oder nach dem Tipp des Tages fragen. ",
+			"Grias di! Ich bin das Münchner Kindl. Frage mich nach einem personalisierten Vorschlag für eine Aktivität in München oder nach dem Tipp des Tages und ich helfe dir sehr gerne weiter. ",
+			"Servus!  Ich bin das Münchner Kindl. Wenn dir langweilig ist, bist du hier genau richtig. Möchtest du einen personalisierten Vorschlag für eine Aktivität in München erhalten oder den Tipp des Tages hören? ",
+			"Grias di! Ich bin das Münchner Kindl. Du kannst mich nach einem personalisierten Vorschlag für eine Aktivität in München fragen oder den Tipp des Tages anfordern.",
+			"Servus! Ich bin das Münchner Kindl. Ein schöner Tag, um mal wieder etwas zu unternehmen. Sage \"Tipp des Tages\" um eine Vorschlag für eine beliebige Aktivität zu erhalten. Für eine personalisierte Idee, sage \"Was kann ich heute unternehmen?\"" };
 	public static final String LAUNCH_REQUEST_REPEAT = "Das habe ich leider nicht verstanden. Bitte sage personalisierter Vorschlag oder Tipp des Tages.";
 	public static final String HELP_INTENT = "Danke für das öffnen von MUCtivities. Möchtest du die Erfahrung beginnen?";
 	public static final String FALLBACK_INTENT = "Tut mir leid, ich verstehe das Wort nicht. Wiederhole es oder sage einfach Hilfe.";
@@ -39,22 +39,19 @@ public class Phrases {
 			"Guad! Du kannst die folgenden Kategorien für eine Aktivität auswählen: Kultur, Sport oder Spaß. Welche nimmst du?", };
 	public static final String CATEGORIE_REPROMT = "Bitte wähle eine Kategorie aus. Sage „Kultur“, „Sport“ oder „Spaß“ ";
 
-	 public static final String[] NEXT_SUGGESTION = new String[]{
-	            "Ja mei, dann vielleicht ein anderes Mal. Eine super Aktivität ist auch %s (Gefällt dir die Idee?)",
-	            "Kein Problem, es gibt noch mehr/andere tolle Aktivitäten. Wie wäre es denn mit %s?",
-	            "Keine Sorge, München hat noch viel mehr Freizeitaktivitäten zu bieten. Was hältst du von %s?",
-	            "Alles klar. Wie wäre es dann mit %s?",
-	            "Okay. Was hältst du stattdessen von %s? Gefällt dir die Idee besser?",
-	            "Alles klar. Eine andere Idee wäre %s! Gefällt dir die Aktivität besser?"
-	    };
-	
-    public static final String INFO_REPROMT = "Wenn dir dieser Vorschlag gefällt, sage „ja“. Wenn du lieber einen neuen Vorschlag möchtest, sage „nein“";
-    public static final String[] FIRST_SUGGESTION = new String[]{
-            "Super Gschicht, da habe ich schon viele Ideen für dich. Wie wäre es denn mit %s ?",
-            "Sau guad, da fällt mir auf Anhieb eine tolle Freizeitaktivität für dich ein. Wie wäre es denn mit %s ?",
-            "Sau guad, München hat in dieser Kategorie viel zu bieten! Wie wäre es denn mit %s"
-    };
+	public static final String[] NEXT_SUGGESTION = new String[] {
+			"Ja mei, dann vielleicht ein anderes Mal. Eine super Aktivität ist auch %s (Gefällt dir die Idee?)",
+			"Kein Problem, es gibt noch mehr/andere tolle Aktivitäten. Wie wäre es denn mit %s?",
+			"Keine Sorge, München hat noch viel mehr Freizeitaktivitäten zu bieten. Was hältst du von %s?",
+			"Alles klar. Wie wäre es dann mit %s?",
+			"Okay. Was hältst du stattdessen von %s? Gefällt dir die Idee besser?",
+			"Alles klar. Eine andere Idee wäre %s! Gefällt dir die Aktivität besser?" };
 
+	public static final String INFO_REPROMT = "Wenn dir dieser Vorschlag gefällt, sage „ja“. Wenn du lieber einen neuen Vorschlag möchtest, sage „nein“";
+	public static final String[] FIRST_SUGGESTION = new String[] {
+			"Super Gschicht, da habe ich schon viele Ideen für dich. Wie wäre es denn mit %s?",
+			"Sau guad, München hat in dieser Kategorie viel zu bieten! Wie wäre es denn mit %s?",
+			"Sau guad, da fällt mir auf Anhieb eine tolle Freizeitaktivität für dich ein. Wie wäre es denn mit %s?"};
 
 	public static final String END_OF_SUGGESTIONS = "Zefix! da war wohl nichts für dich dabei. Möchtest du eine neue Kategorie, dann sage Spaß, Sport, Kultur oder sage beenden?";
 	public static final String TIP_OF_DAY_END_QUESTION = "Möchtest du noch einen personalisierten Vorschlag für eine Aktivität haben oder beenden?";
