@@ -4,314 +4,314 @@
     "duration": false,
     "category": "Kultur",
     "name": "einem Besuch im Theater?",
-    "info": "MÃ¼nchen hat viele SpielstÃ¤tten mit tollem Programm. Die Bayerische Staatsoper, das Volkstheater oder die MÃ¼nchner Kammerspiele sind immer ein Erlebnis."
+    "info": "München hat viele Spielstätten mit tollem Programm. In deiner Nähe befindet sich das Volkstheater am Stiglmaierplatz. Im Programm heute Abend um 19 Uhr 30 ist: ein Sommernachtstraum."
   },
   {
     "location": false,
     "duration": false,
     "category": "Kultur",
     "name": "einem Besuch im Museum Mensch und Natur?",
-    "info": "Das Museum Mensch und Natur ist im Schloss Nymphenburg. Es vermittelt Wissen Ã¼ber die Geschichte und Vielfalt der Erde auf die unterhaltsame Art."
+    "info": "Das Museum Mensch und Natur befindet sich im Schloss Nymphenburg. Es vermittelt Wissen über die Geschichte und Vielfalt der Erde auf die unterhaltsame Art. Es ist heute noch bis 17 Uhr geöffnet."
   },
   {
     "location": false,
     "duration": false,
     "category": "Kultur",
     "name": "einem Besuch im Deutschen Museum?",
-    "info": "Das deutsche Museum ist das grÃ¶ÃŸte Technikmuseum der Welt mit Ã¼ber 50 Themenbereichen. Es ist nicht nur Ausstellungsraum, sondern auch eine riesige Spielwiese. Als Besucher darfst du an KnÃ¶pfen drehen, Hebel und Schalter umlegen und viele Exponate anfassen."
+    "info": "Das deutsche Museum ist das größte Technikmuseum der Welt mit über 50 Themenbereichen. Als Besucher darfst du dort vieles ausprobieren und viele Exponate anfassen. Das Museum hat heute bis 17 Uhr geöffnet und befindet sich am Isartor."
   },
   {
     "location": false,
     "duration": false,
     "category": "Kultur",
     "name": "einem Besuch im Haus der Kunst?",
-    "info": "Das Haus der Kunst liegt am Englischen Garten. Es zeigt Retrospektiven moderner, zeitgenÃ¶ssischer KÃ¼nstler oder themenbezogene Ausstellungen."
+    "info": "Das Haus der Kunst liegt am Englischen Garten. Es zeigt Retrospektiven moderner, zeitgenössischer Künstler oder themenbezogene Ausstellungen. Das Museum hat heute bis 17 Uhr geöffnet."
   },
   {
     "location": false,
     "duration": false,
     "category": "Kultur",
     "name": "einem Besuch in den Pinakotheken?",
-    "info": "Die Pinakotheken sind drei HÃ¤user, nÃ¤mlich die Alte Pinakothek, die neue Pinakothek und die Pinakothek der Moderne. Sie gehÃ¶ren zu den renommiertesten Kunstsammlungen weltweit."
+    "info": "Die Pinakotheken sind drei Häuser, nämlich die Alte Pinakothek, die neue Pinakothek und die Pinakothek der Moderne. Sie gehören zu den renommiertesten Kunstsammlungen weltweit. Sie befinden sich in der Barer Straße und sind heute bis 18 Uhr geöffnet."
   },
   {
     "location": false,
     "duration": false,
     "category": "Kultur",
-    "name": "einem Besuch im Ã„gyptisches Museum?",
-    "info": "Hier begegnet man Ã¼ber 5000 Jahren Ã¤gyptischer Geschichte. Das Museum setzt dabei auf moderne Technik. Du kannst hier alles Ã¼ber das Leben der Ã„gypter erfahren."
+    "name": "einem Besuch im Ägyptisches Museum?",
+    "info": "Hier begegnet man über 5000 Jahren ägyptischer Geschichte. Das Museum setzt dabei auf moderne Technik. Du kannst hier alles über das Leben der Ägypter erfahren. Es befindet sich in der Gabelsbergerstraße 35 und ist heute bis 18 Uhr geöffnet."
   },
   {
     "location": false,
     "duration": false,
     "category": "Kultur",
     "name": "einem Besuch in den Staatlichen Antikensammlungen?",
-    "info": "Die Staatlichen Antikensammlungen prÃ¤sentieren griechische, etruskische und rÃ¶mische Kleinkunst. Hier kannst du in eine lÃ¤ngst vergangene Welt eintauchen."
+    "info": "Die Staatlichen Antikensammlungen präsentieren griechische, etruskische und römische Kleinkunst. Hier kannst du in eine längst vergangene Welt eintauchen. Sie befindet sich am Königsplatz und ist heute bis 18 Uhr geöffnet."
   },
   {
     "location": false,
     "duration": false,
     "category": "Kultur",
     "name": "einer Ausstellung?",
-    "info": "MÃ¼nchen bietet das ganze Jahr Ã¼ber viele spannende Ausstellungen. Zu finden sind sie zum Beispiel im Lenbachhaus oder der Villa Stuck."
+    "info": "München bietet das ganze Jahr über viele spannende Ausstellungen. In deiner Nähe befindet sich zum Beispiel das Lenbachhaus. Heute wird dort die Sammlung \"Der blaue Reiter\" gezeigt."
   },
   {
     "location": false,
     "duration": true,
     "category": "Kultur",
     "name": "einer Stadtrundfahrt mit der Tram 19?",
-    "info": "Die Tram 19 fÃ¤hrt durch einige der schÃ¶nsten Ecken MÃ¼nchens. An interessanten Stellen kann man einfach aussteigen und sich umsehen, und in die nÃ¤chste Tram wieder einsteigen. Und es ist nicht mal teuer: es wird nÃ¤mlich nur ein normaler Fahrschein benÃ¶tigt."
+    "info": "Die Tram 19 fährt durch einige der schönsten Ecken Münchens. An interessanten Stellen kann man einfach aussteigen und sich umsehen, und in die nächste Tram wieder einsteigen. Die nächstgelegene Haltestelle ist der Hauptbahnhof. Die Tram fährt alle 5 Minuten."
   },
   {
     "location": false,
     "duration": true,
     "category": "Kultur",
     "name": "einem Tag im Literaturhaus?",
-    "info": "Das Literaturhaus liegt am Salvatorplatz in der MÃ¼nchner Altstadt. Es wird ein umfangreiches Programm angeboten mit Ausstellungen, Lesungen, Diskussionen und Workshops. Ein toller Tipp fÃ¼r alle, die sich fÃ¼r Literatur interessieren."
+    "info": "Das Literaturhaus liegt am Salvatorplatz in der Münchner Altstadt. Es wird ein umfangreiches Programm angeboten mit Ausstellungen, Lesungen, Diskussionen und Workshops. Es hat heute noch bis 19 Uhr geöffnet."
   },
   {
     "location": false,
     "duration": true,
     "category": "Kultur",
     "name": "dem Botanischen Garten?",
-    "info": "Ihr habt Lust auf einen Trip in tropisches Klima? Dann haben wir einen Ort, an dem Ihr mitten in MÃ¼nchen exotische Pflanzen und Tiere entdecken kÃ¶nnt. Im FrÃ¼hjahr und Sommer blÃ¼ht es Ã¼berall. Und in den GewÃ¤chshÃ¤usern warten das ganze Jahr Ã¼ber fantastische Kakteen und Orchideen auf Euch. Ein nettes CafÃ© gibt es auch."
+    "info": "Hast du Lust auf einen Trip in tropisches Klima? Im Botanischen Garten in Nymphenburg kannst du exotische Pflanzen und Tiere entdecken. Er ist heute noch bis 16 Uhr 30 geöffnet."
   },
   {
     "location": false,
     "duration": false,
     "category": "Sport",
     "name": "einem Besuch im Schwimmbad?",
-    "info": "Egal, wie grau es drauÃŸen ist - im MÃ¼ller'schen Volksbad fÃ¼hlst du dich immer erhaben. Schon das Jugendstil-Flair ist ein Erlebnis fÃ¼r sich. Aber auch in allen anderen MÃ¼nchner SchwimmbÃ¤dern lÃ¤sst sich der Tag in Bad und Sauna verbringen."
+    "info": "Egal, wie grau es draußen ist - im Müller'schen Volksbad fühlst du dich immer erhaben. Schon das Jugendstil-Flair ist ein Erlebnis für sich. Es liegt in der Nähe des Isartors und ist heute noch bis 23 Uhr geöffnet."
   },
   {
     "location": false,
     "duration": false,
     "category": "Sport",
     "name": "Gokart fahren?",
-    "info": "Auf den Kart-Bahnen kann man einmal richtig aufs Gaspedal treten. Willst du dich wie ein kleiner Rennfahrer fÃ¼hlen? Dann ist das genau das richtige fÃ¼r dich. Die GoKart Arena in Neufinsing hat jeden Tag bis 22 Uhr geÃ¶ffnet."
+    "info": "Willst du dich wie ein Rennfahrer fühlen? Dann ist das genau das richtige für dich: hier kannst du richtig aufs Gaspedal treten. Die GoKart Arena in Neufinsing hat jeden Tag bis 22 Uhr geöffnet."
   },
   {
     "location": false,
     "duration": false,
     "category": "Sport",
     "name": "Trampolinspringen im AirHop?",
-    "info": "In der riesigen Trampolinanlage kannst du dich auf Ã¼ber 3.400 Quadratmetern austoben. Du kannst Springen, einen Salto Ã¼ben, VÃ¶lkerball spielen und vieles mehr. Die Arena hat jeden Tag bis 21 Uhr geÃ¶ffnet."
+    "info": "In der riesigen Trampolinanlage kannst du dich auf über 3.400 Quadratmetern austoben. Du kannst Springen, einen Salto üben, Völkerball spielen und vieles mehr. Die Arena liegt in der Ingolstädter Straße 172  und bis 21 Uhr geöffnet."
   },
   {
     "location": false,
     "duration": true,
     "category": "Sport",
     "name": "Bouldern?",
-    "info": "Eine der weltweit grÃ¶ÃŸten Boulderhallen liegt in der NÃ¤he des Ostbahnhofs. Sie bietet rund 1600 Quadratmeter KletterflÃ¤che. Sie hat jeden Tag bis 23 Uhr geÃ¶ffnet."
+    "info": "Eine der weltweit größten Boulderhallen liegt in der Nähe des Ostbahnhofs. Sie bietet rund 1600 Quadratmeter Kletterfläche und hat heute bis 23 Uhr geöffnet."
   },
   {
     "location": false,
     "duration": true,
     "category": "Sport",
     "name": "Klettern?",
-    "info": "Die alpine Herausforderung in der Stadt. Das Kletter- und Boulderzentrum in MÃ¼nchen ist die grÃ¶ÃŸte Kletteranlage der Welt. Die kÃ¼nstlichen BergwÃ¤nde sind bis zu 18 Meter hoch. Es ist fÃ¼r AnfÃ¤nger und Fortgeschrittene geeignet und jeden Tag bis 23 Uhr geÃ¶ffnet."
+    "info": "Die alpine Herausforderung in der Stadt liegt in der Nähe des Ostbahnhofs. Das Kletter- und Boulderzentrum in München ist die größte Kletteranlage der Welt. Es ist für Anfänger und Fortgeschrittene geeignet und bis 23 Uhr geöffnet."
   },
   {
     "location": false,
     "duration": true,
     "category": "Sport",
     "name": "einem Besuch im Schwimmbad?",
-    "info": "Egal, wie grau es drauÃŸen ist - im MÃ¼ller'schen Volksbad fÃ¼hlst du dich immer erhaben. Schon das Jugendstil-Flair ist ein Erlebnis fÃ¼r sich. Schwimmer ziehen hier in Ruhe Bahnen und im Saunabereich gibt's unter anderem ein wunderschÃ¶nes Dampfbad mit Kaskadenbrunnen. Aber auch in allen anderen MÃ¼nchner SchwimmbÃ¤dern lÃ¤sst sich der Tag verbringen."
+    "info": "Egal, wie grau es draußen ist - im Müller'schen Volksbad fühlst du dich immer erhaben. Schon das Jugendstil-Flair ist ein Erlebnis für sich. Es liegt in der Nähe des Isartors und ist heute noch bis 23 Uhr geöffnet."
   },
   {
     "location": false,
     "duration": false,
     "category": "Spass",
     "name": "einem Film im Kino?",
-    "info": "Hast du mal wieder Lust auf einen spannenden Film? Oder darfs lieber eine lustige KomÃ¶die sein? In MÃ¼nchen gibt es eine Vielzahl an groÃŸen und kleinen Kinos die genau den Film fÃ¼r deinen Geschmack bieten!"
+    "info": "Hast du mal wieder Lust auf einen spannenden Film? Oder darfs lieber eine lustige Komödie sein? In deiner Nähe befindet sich das Mathäser Kino am Stachus, das eine Vielzahl an Filmen bietet."
   },
   {
     "location": false,
     "duration": false,
     "category": "Spass",
     "name": "Spannung im Escape Room?",
-    "info": "In dieser spannenden Attraktion bist du mit deinen Freunden in einem mysteriÃ¶sen Raum. LÃ¶se originelle und spannende RÃ¤tsel, um dort zu entkommen. Es gibt viele Anbieter in MÃ¼nchen und sicher auch einen in deiner NÃ¤he!"
+    "info": "In dieser spannenden Attraktion bist du mit deinen Freunden in einem mysteriösen Raum. Löse originelle und spannende Rätsel, um dort zu entkommen. In deiner Nähe befindet sich das \"Exit the room\" in der Georgenstraße 28."
   },
   {
     "location": false,
     "duration": false,
     "category": "Spass",
     "name": "Lasertag?",
-    "info": "Weste an und los gehtâ€™s! Bei Lasertag erlebst du vÃ¶llig neue Dimensionen. Hier sind kÃ¶rperliche Ausdauer, taktisches VerstÃ¤ndnis und Teamgeist gefragt. Geh an deine Grenzen, zeig dein KÃ¶nnen und fÃ¼hre dein Team zum Sieg. TerraMars bietet eine Lasertag Arena in Obersendling an."
+    "info": "Weste an und los geht%u2019s! Bei Lasertag erlebst du völlig neue Dimensionen. Hier sind körperliche Ausdauer, taktisches Verständnis und Teamgeist gefragt. TerraMars bietet eine Lasertag Arena in Obersendling an und hat heute noch bis 22 Uhr geöffnet."
   },
   {
     "location": false,
     "duration": false,
     "category": "Spass",
-    "name": "einer FÃ¼hrung durch die Allianz Arena?",
-    "info": "Wirf einen Blick hinter die Kulissen der Allianz Arena und entdecke die Mannschaftskabine und vieles mehr. In der FC Bayern Erlebniswelt erfÃ¤hrst du alles Ã¼ber den MÃ¼nchner Verein und kannst die zahlreichen Pokale und Meisterschalen bewundern."
+    "name": "einer Führung durch die Allianz Arena?",
+    "info": "Wirf einen Blick hinter die Kulissen der Allianz Arena und entdecke die Mannschaftskabine und vieles mehr. In der FC Bayern Erlebniswelt erfährst du alles über den Münchner Verein und kannst die zahlreichen Pokale und Meisterschalen bewundern. Geöffnet ist sie heute bis 20 Uhr."
   },
   {
     "location": false,
     "duration": true,
     "category": "Spass",
     "name": "einem Besuch in der Therme?",
-    "info": "Einen entspannten Tag kann man toll in der Therme Erding verbringen. Sie ist die grÃ¶ÃŸte Therme der Welt. Hier gibt es 27 Rutschen, ein Wellenbad, eine exotische Therme und Saunen."
+    "info": "Einen entspannten Tag kann man toll in der Therme Erding verbringen. Sie ist die größte Therme der Welt. Hier gibt es 27 Rutschen, ein Wellenbad, eine exotische Therme und Saunen. Sie hat heute bis 23 Uhr geöffnet."
   },
   {
     "location": false,
     "duration": true,
     "category": "Spass",
     "name": "einem Besuch in der Bavaria Filmstadt?",
-    "info": "Entdecke die Welt von Film und Fernsehen. Bei einer FÃ¼hrung Ã¼ber das FilmgelÃ¤nde erfÃ¤hrst du alles Ã¼bers Filmemachen und kannst dir die Originalkulissen von berÃ¼hmten Filmen ansehen."
+    "info": "Entdecke die Welt von Film und Fernsehen. Bei einer Führung über das Filmgelände erfährst du alles übers Filmemachen und kannst dir die Originalkulissen von berühmten Filmen ansehen. Die Filmstadt  liegt in Grünwald und ist bis 18 Uhr geöffnet."
   },
   {
     "location": false,
     "duration": true,
     "category": "Spass",
     "name": "einem Besuch im Sealife?",
-    "info": "Im Sea Life Center im Olympiapark tauchst du in die Unterwasserwelt ein - ganz ohne nass zu werden. Im Aquarium schwimmen 4.500 Tiere verschiedener Fluss- und Meeresarten hinter den Scheiben vorbei. Das Sea Life findest du im Olympiapark und ist tÃ¤glich bis 17 Uhr und am Wochenende bis 18 Uhr geÃ¶ffnet."
+    "info": "Im Sea Life Center im Olympiapark tauchst du in die Unterwasserwelt ein - ganz ohne nass zu werden. Im Aquarium schwimmen 4.500 Tiere verschiedener Fluss- und Meeresarten hinter den Scheiben vorbei. Das Sea Life findest du im Olympiapark und ist heute bis 17 Uhr geöffnet."
   },
   {
     "location": false,
     "duration": true,
     "category": "Spass",
-    "name": "einem Tag im LesecafÃ©?",
-    "info": "Bei Regen vergeht ein Tag viel schÃ¶ner mit einem guten Buch. In LesecafÃ©s findest Du neben BÃ¼chern aber auch entspannte Ecken zum SchmÃ¶kern und eine Auswahl an Kuchen und GetrÃ¤nken. Besonders gemÃ¼tlich kÃ¶nnt Ihr bei Buch&Bohne am Kapuzinerplatz 4 einkehren."
+    "name": "einem Tag im Lesecafé?",
+    "info": "Bei Regen vergeht ein Tag viel schöner mit einem guten Buch. In Lesecafés findest Du neben Büchern aber auch entspannte Ecken zum Schmökern und eine Auswahl an Kuchen und Getränken. Besonders gemütlich kannst du bei Buch&Bohne am Kapuzinerplatz 4 einkehren."
   },
   {
     "location": false,
     "duration": true,
     "category": "Spass",
     "name": "Bowlen?",
-    "info": "Bowling ist immer eine Gaudi und Bowlingbahnen gibt es quer Ã¼ber die Stadt verteilt. Also schnapp dir ein paar Freunde und schau, wer die meisten Pins abrÃ¤umt."
+    "info": "Bowling ist immer eine Gaudi. Also schnapp dir ein paar Freunde und schau, wer die meisten Pins abräumt. Das Bavaria Bowling liegt ganz in deiner Nähe an der Maillinger Straße und ist heute bis 23 Uhr geöffnet."
   },
   {
     "location": true,
     "duration": false,
     "category": "Kultur",
-    "name": "einer Probiertour Ã¼ber den Viktualienmarkt?",
-    "info": "Der Viktualienmarkt ist ein stÃ¤ndiger Markt fÃ¼r qualitativ hochwertige Lebensmittel in der Altstadt von MÃ¼nchen. Er findet seit 1807 tÃ¤glich, auÃŸer an Sonn- und Feiertagen, statt. Hier gib es fest errichtete Buden mit zugroÃŸen Auslagen."
+    "name": "einer Probiertour über den Viktualienmarkt?",
+    "info": "Der Viktualienmarkt ist das kulinarische Zentrum Münchens. Hier findest du alles von frischem Obst bis zu exotischen Gewürzen. Außerdem gibt es Imbissstände und einen gemütlichen Biergarten.  Er hat heute von 8 bis 20 Uhr geöffnet."
   },
   {
     "location": true,
     "duration": false,
     "category": "Kultur",
-    "name": "einer Rikschatour durch MÃ¼nchen?",
-    "info": "Auf dieser Stadtrundfahrt mit FÃ¼hrung erkundest du mit den ausgebildeten Rikscha-Guides die Altstadt MÃ¼nchen und begibst dich auf eine unterhaltsame Reise durch Geschichte und Gegenwart. Du besuchst nicht nur die Highlights, sondern bewegst dich auch abseits der Trampelpfade."
+    "name": "einer Rikschatour durch München?",
+    "info": "Auf dieser Stadtrundfahrt mit Führung erkundest du mit den ausgebildeten Rikscha-Guides die Altstadt München und begibst dich auf eine unterhaltsame Reise durch Geschichte und Gegenwart. Verfügbare Rikscha-Guides warten von 9 bis 16 Uhr am Odeonsplatz."
   },
   {
     "location": true,
     "duration": false,
     "category": "Kultur",
-    "name": "einem Graffitispaziergang durch MÃ¼nchen?",
-    "info": "MÃ¼nchen hat eine lebendige Street-Art-Szene. Vom buntesten Schlachthof Deutschland bis zur KÃ¼nstlerbrÃ¼cke - In ganz MÃ¼nchen lassen sich Graffiti, Stencils und Sticker entdecken. Wer mit offenen Augen durch die Stadt lÃ¤uft, wird fÃ¼ndig werden."
+    "name": "einem Graffitispaziergang durch München?",
+    "info": "München hat eine lebendige Street-Art-Szene. Vom buntesten Schlachthof Deutschland bis zur Künstlerbrücke - In ganz München lassen sich Graffiti, Stencils und Sticker entdecken. Wer mit offenen Augen durch die Stadt läuft, wird fündig werden."
   },
   {
     "location": true,
     "duration": true,
     "category": "Kultur",
     "name": "einer Stadtrallye?",
-    "info": "Erlebe MÃ¼nchen aus einer andere Perspektive! Auf der Stadtrallye wirst du an geheimnisvolle Orte und versteckte PlÃ¤tze gefÃ¼hrt. Begebe dich auf die Spurensuche im GroÃŸstadt-Dschungel und lÃ¶se gemeinsam im Team spannende Aufgaben. Die gemeinsame Auswertung findet anschlieÃŸend in einem schÃ¶nen Lokal statt."
+    "info": "Auf der Stadtrallye wirst du an geheimnisvolle Orte und versteckte Plätze geführt. Begebe dich auf die Spurensuche  und löse gemeinsam im Team spannende Aufgaben. Die gemeinsame Auswertung findet anschließend in einem schönen Lokal statt."
   },
   {
     "location": true,
     "duration": true,
     "category": "Kultur",
     "name": "einer 3-Touren-Stadtrundfahrt?",
-    "info": "Die 3-Touren Stadtrundfahrt bietet dir einen Tag lang MÃ¼nchens SehenswÃ¼rdigkeiten. An insgesamt 12 Stopps kannst du beliebig aus- oder zusteigen. Das 3-Touren-Ticket fÃ¼r Erwachsene kostet 22 Euro, ein Familienticket 49 Euro. Die Adresse der Ticketverkaufsstelle lautet LuisenstraÃŸe 4."
+    "info": "Die 3-Touren Stadtrundfahrt bietet dir einen Tag lang Münchens Sehenswürdigkeiten. An insgesamt 12 Stopps kannst du beliebig aus- oder zusteigen. Das 3-Touren-Ticket für Erwachsene kostet 22 Euro und die Adresse der Ticketverkaufsstelle lautet Luisenstraße 4."
   },
   {
     "location": true,
     "duration": true,
     "category": "Kultur",
-    "name": "einem Besuch in der KZ-GedenkstÃ¤tte Dachau?",
-    "info": "Die KZ-GedenkstÃ¤tte Dachau wurde im Jahr 1965 auf dem GelÃ¤nde des frÃ¼heren Konzentrationslagers errichtet. Neben OriginalschauplÃ¤tzen erinnern auch ein Museum, ein Archiv und eine Bibliothek an die Opfer des NS-Terrors. Die Ã–ffnungszeiten sind tÃ¤glich von 9 bis 17 Uhr."
+    "name": "einem Besuch in der KZ-Gedenkstätte Dachau?",
+    "info": "In der KZ-Gedenkstätte Dachau erinnern neben Originalschauplätzen auch ein Museum, ein Archiv und eine Bibliothek an die Opfer des NS-Terrors. Die Gedenkstätte befindet sich in der Alten Römerstraße 75 in Dachau und hat heute von 9 bis 17 Uhr geöffnet."
   },
   {
     "location": true,
     "duration": false,
     "category": "Sport",
     "name": "Sightrunning?",
-    "info": "RunMunich verbindet Sport und Kultur zu einem einzigartigen Lauferlebnis. Auf spannenden Strecken entlang der Isar, durch den Englischen Garten und historische Altstadtgassen bietet MÃ¼nchen dabei alles, was das LÃ¤uferherz begehrt. Start ist jeweils um 9 Uhr und um 17 Uhr im Innenhof des Deutschen Museums. Die Tour betrÃ¤gt  6 Kilometer."
+    "info": "RunMunich verbindet Sport und Kultur zu einem einzigartigen Lauferlebnis. Auf spannenden 6-Kilometer-Strecken bietet München dabei alles, was das Läuferherz begehrt. Start ist jeweils um 9 Uhr und um 17 Uhr im Innenhof des Deutschen Museums."
   },
   {
     "location": true,
     "duration": false,
     "category": "Sport",
     "name": "einem Besuch auf der AOK Bewegungsinsel?",
-    "info": "Bei der AOK-Bewegungsinsel handelt es sich um einen Outdoor-Trainingspark mit Einbindung von Koordinations- und BalancegerÃ¤ten. Sie ist zu jeder Zeit kostenlos und frei zugÃ¤nglich und befindet sich auf dem OlympiaparkgelÃ¤nde am Willi-Gebhardt-Ufer."
+    "info": "Bei der AOK-Bewegungsinsel handelt es sich um einen Outdoor-Trainingspark mit Einbindung von Koordinations- und Balancegeräten. Sie ist zu jeder Zeit kostenlos und frei zugänglich und befindet sich auf dem Olympiaparkgelände am Willi-Gebhardt-Ufer."
   },
   {
     "location": true,
     "duration": false,
     "category": "Sport",
     "name": "Inline Skaten im Englischen Garten?",
-    "info": "Im Englischen Garten finden Inline Skater kilometerlangen Fahrspass durch abwechslungsreiche Natur. Hier gibt es viele EinkehrmÃ¶glichkeiten und durch das verzweigte Wegenetz kann jeder die RundenlÃ¤nge seinen BedÃ¼rfnissen anpassen."
+    "info": "Im Englischen Garten finden Inline Skater kilometerlangen Fahrspass durch abwechslungsreiche Natur. Der Eingang zum Südteil befindet sich bei der Eisbach Surfwelle in der Prinzregentenstraße."
   },
   {
     "location": true,
     "duration": true,
     "category": "Sport",
     "name": "einem Besuch im Kletterwald?",
-    "info": "Der Kletterwald MÃ¼nchen bietet fÃ¼r GroÃŸ und Klein sowie AnfÃ¤nger und Profikletterer Spass und Action auf insgesamt 5 Parcours. Er befindet sich am Walderlebniszentrum in GrÃ¼nwald. Die Ã–ffnungszeiten sind von Montag bis Freitag von 10 bis 19 Uhr."
+    "info": "Der Kletterwald München bietet für Groß und Klein sowie Anfänger und Profikletterer Spass und Action auf insgesamt 5 Parcours. Er befindet sich am Walderlebniszentrum in Grünwald. Die Öffnungszeiten sind heute von 10 bis 19 Uhr."
   },
   {
     "location": true,
     "duration": true,
     "category": "Sport",
     "name": "einer Radtour entlang der Mangfall?",
-    "info": "Auf meist ebener Strecke entlang der Mangfall fÃ¼hrt dieser Radweg von MÃ¼nchen nach Rosenheim. Aying, der alte Industriestandort BruckmÃ¼hl und Bad Aibling liegen auf dem Weg. SchÃ¶ne EindrÃ¼cke entlang der Route versprechen unter anderem die Rokokokirche Sankt Sebastian in Bad Aibling und das Innschifffahrtmuseum Rosenheim."
+    "info": "Auf meist ebener Strecke entlang der Mangfall führt dieser Radweg von München nach Rosenheim. Aying, der alte Industriestandort Bruckmühl und Bad Aibling liegen auf dem Weg. Schöne Eindrücke entlang der Route versprechen unter anderem die Rokokokirche Sankt Sebastian in Bad Aibling und das Innschifffahrtmuseum Rosenheim."
   },
   {
     "location": true,
     "duration": true,
     "category": "Sport",
     "name": "Sightrunning?",
-    "info": "RunMunich verbindet Sport und Kultur zu einem einzigartigen Lauferlebnis. Auf spannenden Strecken entlang der Isar, durch den Englischen Garten und historische Altstadtgassen bietet MÃ¼nchen dabei alles, was das LÃ¤uferherz begehrt. Start ist jeweils um 9 Uhr und um 14 Uhr im Innenhof des Deutschen Museums. Die Tour betrÃ¤gt 21 Kilometer."
+    "info": "RunMunich verbindet Sport und Kultur zu einem einzigartigen Lauferlebnis. Auf spannenden 6-Kilometer-Strecken bietet München dabei alles, was das Läuferherz begehrt. Start ist jeweils um 9 Uhr und um 17 Uhr im Innenhof des Deutschen Museums."
   },
   {
     "location": true,
     "duration": false,
     "category": "Spass",
     "name": "Flying Fox?",
-    "info": "Der Blick vom Dach des Olympiastadions von 40 Metern HÃ¶he lÃ¤sst einen im ersten Moment etwas zÃ¶gern, jedoch ist der anschlieÃŸende 200m lange Flug quer Ã¼ber das Olympiastadion ein einmaliges Erlebnis. Die Tickets kosten fÃ¼r Erwachsene 40 Euro und fÃ¼r Kinder, SchÃ¼ler und Studenten 35 Euro."
+    "info": "Der Blick vom Dach des Olympiastadions von 40 Metern Höhe lässt einen im ersten Moment etwas zögern, jedoch ist der anschließende 200 Meter lange Flug quer über das Olympiastadion ein einmaliges Erlebnis. Die Tickets kosten für Erwachsene 40 Euro."
   },
   {
     "location": true,
     "duration": false,
     "category": "Spass",
-    "name": "Gokart fahren auf MÃ¼nchens StraÃŸen?",
-    "info": "Wolltest du schon immer mal mit einem Gokart MÃ¼nchens StraÃŸen unsicher machen? Kart Four Rent macht dies mÃ¶glich. Die Karts besitzen einen Viertaktmotor mit 13 PS und werden mit Normalbenzin gefahren. Sie erreichen eine HÃ¶chstgeschwindigkeit von bis zu 90 Km/h. Eine Stunde KartSpass kostet 35 Euro."
+    "name": "Gokart fahren auf Münchens Straßen?",
+    "info": "Mit Kart for Rent kannst du Münchens Straßen unsicher machen. Die Karts erreichen eine Höchstgeschwindigkeit von bis zu 90 Km/h. Eine Stunde Kart-Spass kostet 35 Euro. Die Anlaufstelle befindet sich in der Karl-Wahler-Straße 2 in München."
   },
   {
     "location": true,
     "duration": false,
     "category": "Spass",
     "name": "Minigolf?",
-    "info": "Im Olympiapark stehen 18 Minigolfbahnen und 18 Pit-Pat Tische fÃ¼r dich bereit. Die Minigolfanlage hat tÃ¤glich von 12 bis 18 Uhr geÃ¶ffnet und der Eintrittspreis betrÃ¤gt 5 Euro fÃ¼r Erwachsene und 4 Euro fÃ¼r Kinder."
+    "info": "Im Olympiapark stehen 18 Minigolfbahnen und 18 Pit-Pat Tische für dich bereit. Die Minigolfanlage hat heute von 12 bis 18 Uhr geöffnet und der Eintrittspreis beträgt 5 Euro für Erwachsene und 4 Euro für Kinder."
   },
   {
     "location": true,
     "duration": true,
     "category": "Spass",
     "name": "Einem Besuch im Tierpark Hellabrunn?",
-    "info": "Der MÃ¼nchner Tierpark Hellabrunn ist der erste Geozoo der Welt und einer der tierreichsten Zoos Europas. Er hat jeden Tag von 9 bis 17 Uhr geÃ¶ffnet und befindet sich in der TierparkstraÃŸe 30 in Thalkirchen. Die Tickets kosten fÃ¼r Erwachsene 15 Euro und fÃ¼r Kinder 6 Euro."
+    "info": "Der Münchner Tierpark Hellabrunn ist der erste Geozoo der Welt und einer der tierreichsten Zoos Europas. Er hat heute von 9 bis 17 Uhr geöffnet und befindet sich in der Tierparkstraße 30 in Thalkirchen. Die Tickets kosten für Erwachsene 15 Euro."
   },
   {
     "location": true,
     "duration": true,
     "category": "Spass",
     "name": "Einem Besuch im Wildpark Poing?",
-    "info": "Das Naturerlebnis in der NÃ¤he von MÃ¼nchen begeistert mit ihren teilweise freilaufenden Tieren, GreifvogelvorfÃ¼hrungen und einem riesigen Spielplatz. Der Wildpark hat tÃ¤glich von 9 bis 16 Uhr geÃ¶ffnet und befindet sich in Poing. Die Tickets kosten fÃ¼r Erwachsene 10 Euro und fÃ¼r Kinder 6 Euro."
+    "info": "Das Wildpark begeistert mit teilweise freilaufenden Tieren, Greifvogelvorführungen und einem riesigen Spielplatz. Er hat heute von 9 bis 16 Uhr geöffnet und befindet sich im Osterfeldweg 20 in Poing. Die Tickets kosten für Erwachsene 10 Euro."
   },
   {
     "location": true,
     "duration": true,
     "category": "Spass",
-    "name": "Einem Besuch im MÃ¤rchenwald am Isartal?",
-    "info": "Der Freizeitpark MÃ¤rchenwald am Isartal  lÃ¤sst  nicht nur Kinderherzen hÃ¶her schlagen. Zahlreiche Attraktionen, atemberaubende FahrgeschÃ¤fte und auÃŸergewÃ¶hnliche Spiel- und Kletteranlagen sorgen  fÃ¼r viel Spass. Die Ã–ffnungszeiten sind tÃ¤glich von 9:00 bis 18:00 Uhr."
+    "name": "Einem Besuch im Märchenwald am Isartal?",
+    "info": "Der Freizeitpark Märchenwald am Isartal  sorgt mit zahlreichen Attraktionen, atemberaubenden Fahrgeschäften und außergewöhnlichen Spiel- und Kletteranlagen für viel Spass. Die Öffnungszeiten sind heute von 9:00 bis 18:00 Uhr und die Tickets kosten 14 Euro für Erwachsene."
   },
   {
     "location": false,
     "duration": false,
     "category": "Kultur",
     "name": "einem Konzert?",
-    "info": "Egal ob Klassik oder Rock, in MÃ¼nchen finden immer tolle Konzerte statt. Da ist sicher auch deine Lieblingsband dabei â€“ schau doch mal nach!"
+    "info": "Egal ob Klassik oder Rock, in München finden immer tolle Konzerte statt. Da ist sicher auch deine Lieblingsband dabei %u2013 schau doch mal nach!"
   }
 ]
