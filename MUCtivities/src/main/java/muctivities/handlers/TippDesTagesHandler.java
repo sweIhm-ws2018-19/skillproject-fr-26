@@ -28,7 +28,7 @@ public class TippDesTagesHandler implements RequestHandler {
 			sessionAttributes.put(Attributes.STATE_KEY, Attributes.DESCRIPTION_STATE);
 
 			sessionAttributes.put(Attributes.ACTIVITY_KEY, activity);
-			speechText = String.format(Phrases.DAILY_TIPP + " ", activity.getName()) + Phrases.TIP_OF_DAY_END_QUESTION;
+			speechText = String.format(Phrases.DAILY_TIPP + " ", activity.getName());
 
 			sessionAttributes.put(Attributes.REPEAT_KEY, speechText);
 		} catch (Exception e) {

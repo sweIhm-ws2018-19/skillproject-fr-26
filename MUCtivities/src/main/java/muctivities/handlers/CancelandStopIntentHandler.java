@@ -29,9 +29,7 @@ import static com.amazon.ask.request.Predicates.sessionAttribute;
 public class CancelandStopIntentHandler implements RequestHandler {
 	@Override
 	public boolean canHandle(HandlerInput input) {
-		return input.matches(intentName("AMAZON.StopIntent").or(intentName("AMAZON.CancelIntent")))
-				|| input.matches(intentName("AMAZON.NoIntent")
-						.and(sessionAttribute(Attributes.STATE_KEY, Attributes.DESCRIPTION_STATE)));
+		return input.matches(intentName("AMAZON.StopIntent").or(intentName("AMAZON.CancelIntent")));
 	}
 
 	@Override
