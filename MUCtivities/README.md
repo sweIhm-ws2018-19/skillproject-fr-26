@@ -39,6 +39,3 @@ https://sweihm-ws2018-19.github.io/skillproject-fr-26/
 ## Datenbank/Schnittstellen:
 - Datenbank 💾 mit Aktivitäten in München (nach Kategorien) + Infos ggf. selbst erstellen 
 - Verknüpfung mit Wetter ☀🌧, Standort 🗺, Navigation/ÖPNV
-
-## Fachklassenmodell:
-![Fachklassenmodell MUCtivities](https://user-images.githubusercontent.com/11695964/48536815-fdd02e80-e8af-11e8-8e0c-10999871e15f.png)
