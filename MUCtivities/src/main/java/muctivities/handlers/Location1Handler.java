@@ -20,8 +20,8 @@ public class Location1Handler implements RequestHandler {
 	public boolean canHandle(HandlerInput input) {
 		return input.matches(
 
-				(sessionAttribute(Attributes.STATE_KEY, Attributes.LOCATION_STATE)))
-				&& (input.matches(intentName("AMAZON.YesIntent").or(intentName("AMAZON.NoIntent"))));
+				(sessionAttribute(Attributes.STATE_KEY, Attributes.LOCATION_STATE)));
+//				&& (input.matches(intentName("AMAZON.YesIntent").or(intentName("AMAZON.NoIntent"))));
 	}
 
 	@Override
@@ -30,13 +30,13 @@ public class Location1Handler implements RequestHandler {
 		String speechText;
 
 		Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
-		boolean locationBool = !input.matches(intentName("AMAZON.YesIntent"))
-				^ (boolean) sessionAttributes.get(Attributes.WEATHER_KEY);
+//		boolean locationBool = !input.matches(intentName("AMAZON.YesIntent"))
+//				^ (boolean) sessionAttributes.get(Attributes.WEATHER_KEY);
 
 		sessionAttributes.put(Attributes.STATE_KEY, Attributes.DURATION_STATE);
-		sessionAttributes.put(Attributes.LOCATION_KEY, locationBool);
-		sessionAttributes.put(Attributes.REPEAT_KEY, Phrases.DURATION_REPROMT);
-		speechText = RandomPicker.get(Phrases.DURATION_QUESTION);
+//		sessionAttributes.put(Attributes.LOCATION_KEY, locationBool);
+//		sessionAttributes.put(Attributes.REPEAT_KEY, Phrases.DURATION_REPROMT);
+		speechText = Phrases.DURATION_QUESTION[2];
 		ResponseBuilder responseBuilder = input.getResponseBuilder();
 
 		responseBuilder.withSpeech(speechText).withShouldEndSession(false);

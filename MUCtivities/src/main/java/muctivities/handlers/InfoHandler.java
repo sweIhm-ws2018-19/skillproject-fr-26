@@ -19,10 +19,12 @@ public class InfoHandler implements RequestHandler {
 
 	@Override
 	public boolean canHandle(HandlerInput input) {
-		return input.matches(intentName("AMAZON.YesIntent"))
-				&& (input.matches(sessionAttribute(Attributes.STATE_KEY, Attributes.INFO_STATE)
-						.or(sessionAttribute(Attributes.STATE_KEY, Attributes.NEXTSUGGESTION_STATE)
-								.or(sessionAttribute(Attributes.STATE_KEY, Attributes.NEW_CATEGORIE_STATE)))));
+		return input.matches(sessionAttribute(Attributes.STATE_KEY, Attributes.INFO_STATE));
+//		return input.matches(intentName("AMAZON.YesIntent"))
+//				&& (input.matches(sessionAttribute(Attributes.STATE_KEY, Attributes.INFO_STATE)
+//		));
+//						.or(sessionAttribute(Attributes.STATE_KEY, Attributes.NEXTSUGGESTION_STATE)
+//								.or(sessionAttribute(Attributes.STATE_KEY, Attributes.NEW_CATEGORIE_STATE)))));
 	}
 
 	@Override
@@ -32,8 +34,8 @@ public class InfoHandler implements RequestHandler {
 
 		sessionAttributes.put(Attributes.STATE_KEY, Attributes.DESCRIPTION_STATE);
 
-		String speechAndRepromptText = RandomPicker.get(Phrases.MORE_INFORMATION);
-		sessionAttributes.put(Attributes.REPEAT_KEY, speechAndRepromptText);
+		String speechAndRepromptText = Phrases.MORE_INFORMATION[3];
+//		sessionAttributes.put(Attributes.REPEAT_KEY, speechAndRepromptText);
 		ResponseBuilder responseBuilder = input.getResponseBuilder();
 
 		responseBuilder.withSpeech(speechAndRepromptText).withReprompt(speechAndRepromptText)

@@ -29,12 +29,12 @@ import static com.amazon.ask.request.Predicates.sessionAttribute;
 public class CancelandStopIntentHandler implements RequestHandler {
 	@Override
 	public boolean canHandle(HandlerInput input) {
-		return input.matches(intentName("AMAZON.StopIntent").or(intentName("AMAZON.CancelIntent")));
+		return input.matches(intentName("AMAZON.StopIntent").or(intentName("AMAZON.CancelIntent").or(sessionAttribute(Attributes.STATE_KEY, "_END"))));
 	}
 
 	@Override
 	public Optional<Response> handle(HandlerInput input) {
-		String endText = RandomPicker.get(Phrases.CANCEL_AND_STOP_INTENT);
+		String endText = Phrases.CANCEL_AND_STOP_INTENT[1];
 
 		return input.getResponseBuilder().withSpeech(endText).build();
 	}

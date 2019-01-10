@@ -36,9 +36,9 @@ public class LaunchRequestHandler implements RequestHandler {
 	@Override
 	public Optional<Response> handle(HandlerInput input) {
 		Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
-		String phrase = RandomPicker.get(Phrases.LAUNCH_REQUEST);
+		String phrase = "Servus! Ich bin das Münchner Kindl und du kannst mich nach einem personalisierten Vorschlag für eine Aktivität in München oder nach dem Tipp des Tages fragen.";
 
-		sessionAttributes.put(Attributes.REPEAT_KEY, Phrases.LAUNCH_REQUEST_REPEAT);
+		sessionAttributes.put(Attributes.STATE_KEY, "_START");
 		return input.getResponseBuilder().withSpeech(phrase).withReprompt(phrase).build();
 	}
 }

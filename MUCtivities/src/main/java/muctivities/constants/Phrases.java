@@ -34,11 +34,11 @@ public class Phrases {
 	public static final String[] DURATION_QUESTION = new String[] {
 			"Wie lange möchtest du unterwegs sein? Ein paar Stunden oder den ganzen Tag?",
 			"Wie lang soll die Aktivität dauern? Ein paar Stunden oder den ganzen Tag?",
-			"Wie lang hast du heute Zeit? Ein paar Stunden oder den ganzen Tag? ", };
+			ssml("basd", "Basst") + "! Wie lange hast du heute Zeit? Ein paar Stunden oder den ganzen Tag? ", };
 	public static final String DURATION_REPROMT = "bitte sage „kurz“, wenn du die Aktivität nur ein paar Stunden dauern soll. Sage „lang“ wenn du den ganzen Tag Zeit hast";
 
 	public static final String[] CATEGORIE_QUESTION = new String[] {
-			ssml("basd", "Basst") + ". Um mir eine Aktivität für dich zu überlegen, sage mir worauf du heute Lust hast. Du kannst wählen zwischen: Kultur, Sport oder Spaß.",
+			ssml("gu:6_^d", "Guad") + ". Um mir eine Aktivität für dich zu überlegen, sage mir worauf du heute Lust hast. Du kannst wählen zwischen: Kultur, Sport oder Spaß.",
 			ssml("gu:6_^d", "Guad") + "! Du kannst die folgenden Kategorien für eine Aktivität auswählen: Kultur, Sport oder Spaß.",
 			ssml("gu:6_^d", "Guad") + "! Du kannst die folgenden Kategorien für eine Aktivität auswählen: Kultur, Sport oder Spaß.", };
 	public static final String CATEGORIE_REPROMT = "Bitte wähle eine Kategorie aus. Sage „Kultur“, „Sport“ oder „Spaß“ ";
@@ -53,7 +53,7 @@ public class Phrases {
 	public static final String INFO_REPROMT = "Wenn dir dieser Vorschlag gefällt, sage „ja“. Wenn du lieber einen neuen Vorschlag möchtest, sage „nein“";
 	public static final String[] FIRST_SUGGESTION = new String[] {
 			ssml("sUbb6 gSICd", "Super Gschicht") + " da habe ich schon viele Ideen für dich. Wie wäre es denn mit %s?",
-			"Sau " + ssml("gu:6_^d", "guad") + ", München hat in dieser Kategorie viel zu bieten! Wie wäre es denn mit %s?",
+			ssml("sUbb6 gSICd", "Super Gschicht") + ", München hat in dieser Kategorie viel zu bieten! Wie wäre es denn mit %s?",
 			"Sau " + ssml("gu:6_^d", "guad") + ", da fällt mir auf Anhieb eine tolle Freizeitaktivität für dich ein. Wie wäre es denn mit %s?" };
 
 	public static final String END_OF_SUGGESTIONS = ssml("ts@\"fIks", "Zefix") + "! Da war wohl nichts für dich dabei. Möchtest du eine neue Kategorie, dann sage Spaß, Sport, Kultur oder sage beenden?";

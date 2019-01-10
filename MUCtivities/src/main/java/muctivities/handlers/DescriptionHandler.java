@@ -19,9 +19,9 @@ public class DescriptionHandler implements RequestHandler {
 
 	@Override
 	public boolean canHandle(HandlerInput input) {
-		return input.matches(intentName("AMAZON.YesIntent")
-				.and(sessionAttribute(Attributes.STATE_KEY, Attributes.DESCRIPTION_STATE)));
-
+//		return input.matches(intentName("AMAZON.YesIntent")
+//				.and(sessionAttribute(Attributes.STATE_KEY, Attributes.DESCRIPTION_STATE)));
+		return input.matches(sessionAttribute(Attributes.STATE_KEY, Attributes.DESCRIPTION_STATE));
 	}
 
 	@Override
@@ -29,11 +29,11 @@ public class DescriptionHandler implements RequestHandler {
 		String speechText;
 
 		Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
-		Map<String, String> activity = (LinkedHashMap<String, String>) sessionAttributes.get(Attributes.ACTIVITY_KEY);
-		speechText = activity.get("description") + " " + Phrases.DESCRIPTION_AND_END_QUESTION;
-		sessionAttributes.put(Attributes.REPEAT_KEY, speechText);
+//		Map<String, String> activity = (LinkedHashMap<String, String>) sessionAttributes.get(Attributes.ACTIVITY_KEY);
+		speechText = "In der riesigen Trampolinanlage kannst du Springen, einen Salto üben, Völkerball spielen und vieles mehr. Die Arena befindet sich in der Ingolstädter Straße 172 und hat heute bis 21 Uhr geöffnet. Möchtest du MUCtivities beenden oder einen neuen Vorschlag?";
+//		sessionAttributes.put(Attributes.REPEAT_KEY, speechText);
 //if(sessionAttributes.containsKey(Attributes.COUNTER_KEY)) {
-//	sessionAttributes.put(Attributes.STATE_KEY, Attributes.INFO_STATE);
+	sessionAttributes.put(Attributes.STATE_KEY, "_END");
 //}
 	
 		return input.getResponseBuilder().withSpeech(speechText).withShouldEndSession(false).build();
