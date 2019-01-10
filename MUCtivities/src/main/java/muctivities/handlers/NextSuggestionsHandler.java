@@ -18,10 +18,14 @@ public class NextSuggestionsHandler implements RequestHandler {
 
 	@Override
 	public boolean canHandle(HandlerInput input) {
+		Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
+
 		return input.matches(
-				intentName("AMAZON.NoIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.INFO_STATE)))||
-				input.matches(
-						intentName("MUCtivitiesIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.INFO_STATE)));
+				intentName("AMAZON.NoIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.INFO_STATE)))
+				|| (input.matches(intentName("MUCtivitiesIntent"))
+						&& sessionAttributes.containsKey(Attributes.COUNTER_KEY));
+
+
 	}
 
 	@Override
