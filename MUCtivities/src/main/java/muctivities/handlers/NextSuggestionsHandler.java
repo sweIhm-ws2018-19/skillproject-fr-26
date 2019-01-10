@@ -19,7 +19,9 @@ public class NextSuggestionsHandler implements RequestHandler {
 	@Override
 	public boolean canHandle(HandlerInput input) {
 		return input.matches(
-				intentName("AMAZON.NoIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.INFO_STATE)));
+				intentName("AMAZON.NoIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.INFO_STATE)))||
+				input.matches(
+						intentName("MUCtivitiesIntent").and(sessionAttribute(Attributes.STATE_KEY, Attributes.INFO_STATE)));
 	}
 
 	@Override
