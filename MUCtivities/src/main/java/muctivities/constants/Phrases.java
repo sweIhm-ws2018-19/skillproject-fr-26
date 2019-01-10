@@ -45,14 +45,14 @@ public class Phrases {
 
 	public static final String[] NEXT_SUGGESTION = new String[] {
 			ssml("jO6_^ maI", "Ja mei") + ", dann vielleicht ein anderes Mal. Eine super Aktivität ist auch %s",
-			"Kein Problem, es gibt noch mehr/andere tolle Aktivitäten. Hättest du Lust auf %s?",
+			"Kein Problem, es gibt noch andere tolle Aktivitäten. Hättest du Lust auf %s?",
 			"Keine Sorge, München hat noch viel mehr Freizeitaktivitäten zu bieten. Was hältst du von %s?",
 			"Alles klar. Wie wäre es dann mit %s?", "Okay. Was hältst du stattdessen von %s?",
 			"Alles klar. Eine andere Idee wäre %s!" };
 
 	public static final String INFO_REPROMT = "Wenn dir dieser Vorschlag gefällt, sage „ja“. Wenn du lieber einen neuen Vorschlag möchtest, sage „nein“";
 	public static final String[] FIRST_SUGGESTION = new String[] {
-			ssml("sUbb6 gSICd", "Super Gschicht") + "da habe ich schon viele Ideen für dich. Wie wäre es denn mit %s?",
+			ssml("sUbb6 gSICd", "Super Gschicht") + " da habe ich schon viele Ideen für dich. Wie wäre es denn mit %s?",
 			"Sau " + ssml("gu:6_^d", "guad") + ", München hat in dieser Kategorie viel zu bieten! Wie wäre es denn mit %s?",
 			"Sau " + ssml("gu:6_^d", "guad") + ", da fällt mir auf Anhieb eine tolle Freizeitaktivität für dich ein. Wie wäre es denn mit %s?" };
 
