@@ -28,7 +28,7 @@ public class NoDescriptionHandler implements RequestHandler {
 		String speechText = Phrases.NO_DESCRIPTION;
 		sessionAttributes.put(Attributes.REPEAT_KEY, speechText);
 
-		return input.getResponseBuilder().withSpeech(speechText).build();
+		return input.getResponseBuilder().withSpeech(speechText).withShouldEndSession(false).build();
 	}
 
 }

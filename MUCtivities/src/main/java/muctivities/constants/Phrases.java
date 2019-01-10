@@ -26,8 +26,8 @@ public class Phrases {
 			"Für heute ist Sonne angesagt, deshalb empfehle ich eine Aktivität im Freien. Bist du einverstanden damit?",
 			"Heute wird das Wetter sehr schön. Das solltest du genießen und nach draußen  gehen. Ist das in Ordnung für dich?" };
 	public static final String WEATHER_REPROMPT = "Möchtest du drinnen oder draußen etwas unternehmen?";
-	public static final String WEATHER_SUNNY_REPROMT = "bitte sage JA, wenn du einen Vorschlag für eine Aktivität im Freien haben möchtest ";
-	public static final String WEATHER_RAINY_REPROMPT = "bitte sage JA, wenn du einen Vorschlag für eine Aktivität im Trockenen haben möchtest";
+	public static final String WEATHER_SUNNY_REPROMT = "bitte sage JA, wenn du einen Vorschlag für eine Aktivität im Freien haben möchtest, sage ja, wenn du einen Vorschlag für eine Aktivität im Freien haben möchtest.";
+	public static final String WEATHER_RAINY_REPROMPT = "bitte sage JA, wenn du einen Vorschlag für eine Aktivität im Trockenen haben möchtest, sage Nein, wenn du lieber ins Trockene willst.";
 
 	public static final String DAILY_TIPP = "Tipp des Tages! Wie wäre es mit %s? Möchtest du mehr Informationen dazu?";
 
