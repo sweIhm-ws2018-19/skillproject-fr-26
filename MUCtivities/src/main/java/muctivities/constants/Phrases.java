@@ -56,7 +56,7 @@ public class Phrases {
 			"Sau " + ssml("gu:6_^d", "guad") + ", München hat in dieser Kategorie viel zu bieten! Wie wäre es denn mit %s?",
 			"Sau " + ssml("gu:6_^d", "guad") + ", da fällt mir auf Anhieb eine tolle Freizeitaktivität für dich ein. Wie wäre es denn mit %s?" };
 
-	public static final String END_OF_SUGGESTIONS = ssml("ts@\"fIks", "Zefix") + "! Da war wohl nichts für dich dabei. Möchtest du eine neue Kategorie, dann sage Spaß, Sport, Kultur oder sage beenden?";
+	public static final String END_OF_SUGGESTIONS = ssml("ts@'fIks", "Zefix") + "! Da war wohl nichts für dich dabei. Möchtest du eine neue Kategorie, dann sage Spaß, Sport, Kultur oder sage beenden?";
 	public static final String TIP_OF_DAY_END_QUESTION = "Möchtest du noch einen personalisierten Vorschlag für eine Aktivität haben oder beenden?";
 	public static final String[] MORE_INFORMATION = new String[] {
 			ssml("maI de:z vE6_^d a gaUde:", "Mei des wird a Gaudi") + ". Möchtest du mehr Informationen dazu?",

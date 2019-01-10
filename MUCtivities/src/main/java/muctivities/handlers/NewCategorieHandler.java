@@ -28,15 +28,13 @@ public class NewCategorieHandler implements RequestHandler {
 	@Override
 	public Optional<Response> handle(HandlerInput input) {
 		String speechText;
-		try {	Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
+
+		Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
 
 		sessionAttributes.put(Attributes.STATE_KEY, Attributes.CATEGORIE_STATE);
 		speechText = Phrases.END_OF_SUGGESTIONS;
 		sessionAttributes.put(Attributes.REPEAT_KEY, speechText);
-		speechText="hallo andreas";
-	}catch(Exception e){
-		speechText=e.getMessage();
-	}
+
 		return input.getResponseBuilder().withSpeech(speechText).withShouldEndSession(false).build();
 	}
 }
