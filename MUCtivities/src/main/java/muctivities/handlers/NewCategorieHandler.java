@@ -12,24 +12,31 @@ import com.amazon.ask.model.Response;
 
 import muctivities.constants.Attributes;
 import muctivities.constants.Phrases;
+import muctivities.constants.Settings;
 
 public class NewCategorieHandler implements RequestHandler {
 
 	@Override
 	public boolean canHandle(HandlerInput input) {
-		return input.matches(intentName("AMAZON.NoIntent")
-				.and(sessionAttribute(Attributes.STATE_KEY, Attributes.NEW_CATEGORIE_STATE)));
-
+		return input
+				.matches(intentName("AMAZON.NoIntent")
+						.and(sessionAttribute(Attributes.STATE_KEY, Attributes.NEW_CATEGORIE_STATE)))
+				|| input.matches(intentName("MUCtivitiesIntent")
+						.and(sessionAttribute(Attributes.COUNTER_KEY, Settings.MAX_SUGGESTIONS)));
 	}
 
 	@Override
 	public Optional<Response> handle(HandlerInput input) {
-		Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
+		String speechText;
+		try {	Map<String, Object> sessionAttributes = input.getAttributesManager().getSessionAttributes();
 
 		sessionAttributes.put(Attributes.STATE_KEY, Attributes.CATEGORIE_STATE);
-		String speechText = Phrases.END_OF_SUGGESTIONS;
+		speechText = Phrases.END_OF_SUGGESTIONS;
 		sessionAttributes.put(Attributes.REPEAT_KEY, speechText);
-
+		speechText="hallo andreas";
+	}catch(Exception e){
+		speechText=e.getMessage();
+	}
 		return input.getResponseBuilder().withSpeech(speechText).withShouldEndSession(false).build();
 	}
 }

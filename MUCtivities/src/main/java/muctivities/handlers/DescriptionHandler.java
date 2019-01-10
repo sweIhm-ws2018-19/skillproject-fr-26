@@ -32,10 +32,6 @@ public class DescriptionHandler implements RequestHandler {
 		Map<String, String> activity = (LinkedHashMap<String, String>) sessionAttributes.get(Attributes.ACTIVITY_KEY);
 		speechText = activity.get("description") + " " + Phrases.DESCRIPTION_AND_END_QUESTION;
 		sessionAttributes.put(Attributes.REPEAT_KEY, speechText);
-//if(sessionAttributes.containsKey(Attributes.COUNTER_KEY)) {
-//	sessionAttributes.put(Attributes.STATE_KEY, Attributes.INFO_STATE);
-//}
-	
 		return input.getResponseBuilder().withSpeech(speechText).withShouldEndSession(false).build();
 	}
 
